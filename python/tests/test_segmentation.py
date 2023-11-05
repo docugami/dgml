@@ -1,66 +1,42 @@
+from dataclasses import dataclass
+from pathlib import Path
 import pytest
 
 from dgml.segmentation import get_leaf_structural_chunks_str
 
 
-@pytest.fixture
-def simple_dgml():
-    return """
-        <chunk>
-            <chunk structure="h1">
-                Main Heading with
-                <CompanyName>Acme Corp</CompanyName>
-                as mixed content
-            </chunk>
-            <chunk structure="div">
-                <chunk structure="h1">Sub-Heading</chunk>
-                <chunk structure="div">
-                    Paragraph with sub-elements like <Date>Jan 1, 2023</Date>
-                    and <SignatoryName>John Doe</SignatoryName> as mixed content.
-                </chunk>
-            </chunk>
-            <ConfidentialityObligations structure="div">
-                <chunk structure="div">
-                    These are some obligations:
-                </chunk>
-                <Obligations structure="ol">
-                    <Obligation structure="li">
-                        <chunk structure="lim">1. </chunk>
-                        <chunk structure="div">Item A</chunk>
-                    </Obligation>
-                    <Obligation structure="li">
-                        <chunk structure="lim">2. </chunk>
-                        <chunk structure="div">Item B</chunk>
-                    </Obligation>
-                    <Obligation structure="li">
-                        <chunk structure="lim">3. </chunk>
-                        <chunk structure="div">C</chunk>
-                    </Obligation>
-                </Obligations>
-            </ConfidentialityObligations>
-            <Footer structure="div">pg.1</Footer>
-        </chunk>
-    """
+@dataclass
+class SegmentationTestData:
+    input_file: Path
+    output_file: Path
 
 
-def test_simple_text_segmentation(simple_dgml):
-    chunks = get_leaf_structural_chunks_str(simple_dgml)
+TEST_DATA_DIR = Path(__file__).parent / "test_data"
+SEGMENTATION_TEST_DATA: list[SegmentationTestData] = [
+    SegmentationTestData(
+        input_file=TEST_DATA_DIR / "simple/simple.xml",
+        output_file=TEST_DATA_DIR / "simple/simple.normalized-chunks.txt",
+    ),
+    SegmentationTestData(
+        input_file=TEST_DATA_DIR / "article/Jane Doe.xml",
+        output_file=TEST_DATA_DIR / "article/Jane Doe.normalized-chunks.txt",
+    ),
+]
 
-    # We expect the following exact leaf structural text chunks (whitespace normalized)
-    # based on the simple DGML
-    expected_whitespace_normalized_texts = [
-        "Main Heading with Acme Corp as mixed content",
-        "Sub-Heading",
-        "Paragraph with sub-elements like Jan 1, 2023 and John Doe as mixed content.",
-        "These are some obligations:",
-        "1. Item A",
-        "2. Item B",
-        "3. C pg.1",
-    ]
 
-    assert chunks
-    assert len(chunks) == len(expected_whitespace_normalized_texts)
+@pytest.mark.parametrize("test_data", SEGMENTATION_TEST_DATA)
+def test_segmentation(test_data: SegmentationTestData):
+    with open(test_data.input_file, "r", encoding="utf-8") as input_file:
+        article_shaped_file_xml = input_file.read()
+        chunks = get_leaf_structural_chunks_str(article_shaped_file_xml)
 
-    for i in range(len(expected_whitespace_normalized_texts)):
-        whitespace_normalized_chunk_text = " ".join(chunks[i].text.split())
-        assert whitespace_normalized_chunk_text == expected_whitespace_normalized_texts[i]
+        with open(test_data.output_file, "r", encoding="utf-8") as output_file:
+            expected_whitespace_normalized_texts = output_file.readlines()
+
+            assert chunks
+            assert len(chunks) == len(
+                expected_whitespace_normalized_texts
+            ), f"Length of chunks found in {test_data.input_file} does not match expected output file {test_data.output_file}"
+
+            for i in range(len(expected_whitespace_normalized_texts)):
+                assert chunks[i].text == expected_whitespace_normalized_texts[i].strip()

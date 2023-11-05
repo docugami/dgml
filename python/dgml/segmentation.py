@@ -17,7 +17,11 @@ def has_structural_children(element) -> bool:
     return len(element.findall(f"./*[@{STRUCTURE_KEY}]")) > 0
 
 
-def get_leaf_structural_chunks(element) -> List[Chunk]:
+def get_leaf_structural_chunks(
+    element,
+    min_chunk_size=DEFAULT_MIN_CHUNK_SIZE,
+    whitespace_normalize_text=True,
+) -> List[Chunk]:
     """Returns all leaf structural nodes in the given element, combining small chunks with following siblings."""
     leaf_chunks: List[Chunk] = []
     prepended_small_chunk: Optional[Chunk] = None
@@ -25,9 +29,12 @@ def get_leaf_structural_chunks(element) -> List[Chunk]:
     def traverse(node):
         nonlocal prepended_small_chunk  # Access the variable from the outer scope
         if is_structural(node) and not has_structural_children(node):
+            node_text = " ".join(node.itertext()).strip()
+            if whitespace_normalize_text:
+                node_text = " ".join(node_text.split()).strip()
             chunk = Chunk(
                 tag=node.tag,
-                text=" ".join(node.itertext()).strip(),
+                text=node_text,
                 xml=etree.tostring(node, encoding="unicode"),
                 structure=node.attrib.get(STRUCTURE_KEY),
             )
@@ -35,7 +42,7 @@ def get_leaf_structural_chunks(element) -> List[Chunk]:
                 chunk = prepended_small_chunk + chunk
                 prepended_small_chunk = None  # clear
 
-            if len(chunk.text) < DEFAULT_MIN_CHUNK_SIZE or node.attrib.get(STRUCTURE_KEY) == "lim":
+            if len(chunk.text) < min_chunk_size or node.attrib.get(STRUCTURE_KEY) == "lim":
                 # Prepend small chunks or list item markers to the following chunk
                 prepended_small_chunk = chunk
             else:

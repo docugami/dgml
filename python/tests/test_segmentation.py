@@ -34,15 +34,16 @@ def simple_dgml():
                     </Obligation>
                     <Obligation structure="li">
                         <chunk structure="lim">3. </chunk>
-                        <chunk structure="div">Item C</chunk>
+                        <chunk structure="div">C</chunk>
                     </Obligation>
                 </Obligations>
             </ConfidentialityObligations>
+            <Footer structure="div">pg.1</Footer>
         </chunk>
     """
 
 
-def test_simple_segmentation(simple_dgml):
+def test_simple_text_segmentation(simple_dgml):
     chunks = get_leaf_structural_chunks_str(simple_dgml)
 
     # We expect the following exact leaf structural text chunks (whitespace normalized)
@@ -52,12 +53,9 @@ def test_simple_segmentation(simple_dgml):
         "Sub-Heading",
         "Paragraph with sub-elements like Jan 1, 2023 and John Doe as mixed content.",
         "These are some obligations:",
-        "1.",
-        "Item A",
-        "2.",
-        "Item B",
-        "3.",
-        "Item C",
+        "1. Item A",
+        "2. Item B",
+        "3. C pg.1",
     ]
 
     assert chunks

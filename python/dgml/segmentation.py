@@ -1,9 +1,10 @@
 from lxml import etree
-from typing import List
+from typing import List, Optional
 
 from .models import Chunk
 
 STRUCTURE_KEY = "structure"
+DEFAULT_MIN_CHUNK_SIZE = 8  # Default length threshold for determining small chunks
 
 
 def is_structural(element) -> bool:
@@ -17,26 +18,39 @@ def has_structural_children(element) -> bool:
 
 
 def get_leaf_structural_chunks(element) -> List[Chunk]:
-    """Returns all leaf structural nodes in the given element."""
-    leaf_chunks = []
+    """Returns all leaf structural nodes in the given element, combining small chunks with following siblings."""
+    leaf_chunks: List[Chunk] = []
+    prepended_small_chunk: Optional[Chunk] = None
 
     def traverse(node):
+        nonlocal prepended_small_chunk  # Access the variable from the outer scope
         if is_structural(node) and not has_structural_children(node):
-            # Found a leaf structural node
-            leaf_chunks.append(
-                Chunk(
-                    tag=node.tag,
-                    text=" ".join(node.itertext()).strip(),
-                    xml=etree.tostring(node, encoding="unicode"),
-                    structure=node.attrib.get(STRUCTURE_KEY),
-                )
+            chunk = Chunk(
+                tag=node.tag,
+                text=" ".join(node.itertext()).strip(),
+                xml=etree.tostring(node, encoding="unicode"),
+                structure=node.attrib.get(STRUCTURE_KEY),
             )
+            if prepended_small_chunk:
+                chunk = prepended_small_chunk + chunk
+                prepended_small_chunk = None  # clear
+
+            if len(chunk.text) < DEFAULT_MIN_CHUNK_SIZE or node.attrib.get(STRUCTURE_KEY) == "lim":
+                # Prepend small chunks or list item markers to the following chunk
+                prepended_small_chunk = chunk
+            else:
+                leaf_chunks.append(chunk)
         else:
             # Continue deeper in the tree
             for child in node:
                 traverse(child)
 
     traverse(element)
+
+    # Append any remaining prepended_small_chunk that wasn't followed by a large chunk
+    if prepended_small_chunk:
+        leaf_chunks.append(prepended_small_chunk)
+
     return leaf_chunks
 
 

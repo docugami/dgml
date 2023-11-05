@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "dgml"
+version = "0.0.1"
+description = "Python utilities to work with the Docugami Markup Language (DGML) format."
+authors = ["Taqi Jaffri <tjaffri@docugami.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "dgml" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+lxml = "^4.9.3"
+pydantic = "^2.4.2"
+
+[tool.poetry.group.dev.dependencies]
+black = "*"
+pytest = "*"
+ruff = "*"
+lxml-stubs = "*"
+
+[tool.black]
+line-length = 127
+
+[tool.ruff]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules --ignore=data --ignore=model --ignore training"
+norecursedirs = ".venv"
+
+[tool.pyright]
+include = ["dgml", "tests"]
+ignore = ["**/node_modules", "**/__pycache__", ".venv"]
+reportMissingImports = true
+reportMissingTypeStubs = false
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

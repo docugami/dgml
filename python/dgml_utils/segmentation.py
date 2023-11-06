@@ -9,7 +9,8 @@ from dgml_utils.config import (
     STRUCTURE_KEY,
     TABLE_NAME,
 )
-from dgml_utils.conversions import simplified_xml, text_node_to_text, xhtml_table_to_text
+from dgml_utils.conversions import clean_tag, simplified_xml, text_node_to_text, xhtml_table_to_text
+from dgml_utils.locators import xpath
 from dgml_utils.models import Chunk
 
 
@@ -59,10 +60,11 @@ def get_leaf_structural_chunks(
                 node_text = text_node_to_text(node, whitespace_normalize=whitespace_normalize_text)
 
             chunk = Chunk(
-                tag=node.tag,
+                tag=clean_tag(node),
                 text=node_text,
                 xml=etree.tostring(node, encoding="unicode"),
                 structure=node.attrib.get(STRUCTURE_KEY) or "",
+                xpath=xpath(node),
             )
             if prepended_small_chunk:
                 chunk = prepended_small_chunk + chunk

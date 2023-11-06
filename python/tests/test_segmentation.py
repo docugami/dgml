@@ -72,11 +72,13 @@ def test_segmentation(test_data: SegmentationTestData):
 
         with open(test_data.output_file, "r", encoding="utf-8") as output_file:
             yaml_content = yaml.safe_load(output_file)
-            expected_texts = [item["text"] for item in yaml_content if "text" in item]
+            expected_chunks = [item for item in yaml_content if "text" in item]
 
-            for i in range(len(expected_texts)):
-                assert chunks[i].text == expected_texts[i].strip()
+            for i in range(len(expected_chunks)):
+                assert chunks[i].text == expected_chunks[i]["text"].strip()
+                if "xpath" in expected_chunks[i]:
+                    assert chunks[i].xpath == expected_chunks[i]["xpath"].strip()
 
             assert len(chunks) == len(
-                expected_texts
+                expected_chunks
             ), f"Length of chunks found in {test_data.input_file} does not match expected output file {test_data.output_file}"

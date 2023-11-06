@@ -1,3 +1,4 @@
+import re
 from lxml import etree
 from tabulate import tabulate
 
@@ -9,6 +10,14 @@ def text_node_to_text(node, whitespace_normalize=DEFAULT_WHITESPACE_NORMALIZE_TE
     if whitespace_normalize:
         node_text = " ".join(node_text.split()).strip()
     return node_text
+
+
+def clean_tag(node) -> str:
+    """Returns the clean (no namespace) tag for a node"""
+    if node is None:
+        return ""
+
+    return re.sub(r"\{.*\}", "", node.tag)
 
 
 def xhtml_table_to_text(

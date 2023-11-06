@@ -1,31 +1,33 @@
-<chunk xmlns:dg="http://www.docugami.com/2021/dgml" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-    <chunk structure="h1"> Main Heading with <CompanyName>Acme Corp</CompanyName> as mixed content </chunk>
-    <chunk structure="div">
-        <chunk structure="h1">Sub-Heading</chunk>
-        <chunk structure="div"> Paragraph with sub-elements like <Date>Jan 1, 2023</Date> and <SignatoryName>John
-            Doe</SignatoryName> as mixed content. </chunk>
-    </chunk>
-    <ConfidentialityObligations structure="div">
-        <chunk structure="div">
+<dg:chunk xmlns:dg="http://www.docugami.com/2021/dgml" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:docset="http://www.docugami.com/2021/dgml/TaqiTest20231103/NDA">
+    <dg:chunk structure="h1"> Main Heading with <docset:CompanyName>Acme Corp</docset:CompanyName> as mixed
+        content </dg:chunk>
+    <dg:chunk structure="div">
+        <dg:chunk structure="h1">Sub-Heading</dg:chunk>
+        <dg:chunk structure="div"> Paragraph with sub-elements like <docset:Date>Jan 1, 2023</docset:Date> and <docset:SignatoryName>John
+            Doe</docset:SignatoryName> as mixed content. </dg:chunk>
+    </dg:chunk>
+    <docset:ConfidentialityObligations structure="div">
+        <dg:chunk structure="div">
             These are some obligations:
-        </chunk>
-        <Obligations structure="ol">
-            <Obligation structure="li">
-                <chunk structure="lim">1. </chunk>
-                <chunk structure="div">Item A</chunk>
-            </Obligation>
-            <Obligation structure="li">
-                <chunk structure="lim">2. </chunk>
-                <chunk structure="div">Item B</chunk>
-            </Obligation>
-            <Obligation structure="li">
-                <chunk structure="lim">3. </chunk>
-                <chunk structure="div">C</chunk>
-            </Obligation>
-        </Obligations>
-    </ConfidentialityObligations>
-    <Footer structure="div">pg.1</Footer>
-    <Appendix>
+        </dg:chunk>
+        <docset:Obligations structure="ol">
+            <docset:Obligation structure="li">
+                <dg:chunk structure="lim">1. </dg:chunk>
+                <dg:chunk structure="div">Item A</dg:chunk>
+            </docset:Obligation>
+            <docset:Obligation structure="li">
+                <dg:chunk structure="lim">2. </dg:chunk>
+                <dg:chunk structure="div">Item B</dg:chunk>
+            </docset:Obligation>
+            <docset:Obligation structure="li">
+                <dg:chunk structure="lim">3. </dg:chunk>
+                <dg:chunk structure="div">C</dg:chunk>
+            </docset:Obligation>
+        </docset:Obligations>
+    </docset:ConfidentialityObligations>
+    <docset:Footer structure="div">pg.1</docset:Footer>
+    <docset:Appendix>
         <xhtml:table structure="table">
             <xhtml:tbody structure="tbody">
                 <xhtml:tr structure="tr">
@@ -37,32 +39,32 @@
                 </xhtml:tr>
                 <xhtml:tr structure="tr">
                     <xhtml:td structure="td">
-                        <Fruit>Apple</Fruit>
+                        <docset:Fruit>Apple</docset:Fruit>
                     </xhtml:td>
                     <xhtml:td structure="td">
-                        <Color>Red</Color>
+                        <docset:Color>Red</docset:Color>
                     </xhtml:td>
                     <xhtml:td structure="td">
-                        <Taste>
-                            <dg:chunk structure="p"><Fruit>Apples</Fruit> are mostly sweet, sometimes tart if not
-                                ripe.</dg:chunk>
-                        </Taste>
+                        <docset:Taste>
+                            <dg:chunk structure="p"><docset:Fruit>Apples</docset:Fruit> are mostly sweet,
+                                sometimes tart if not ripe.</dg:chunk>
+                        </docset:Taste>
                     </xhtml:td>
                 </xhtml:tr>
                 <xhtml:tr structure="tr">
                     <xhtml:td structure="td">
-                        <Fruit>Mango</Fruit>
+                        <docset:Fruit>Mango</docset:Fruit>
                     </xhtml:td>
                     <xhtml:td structure="td">
-                        <Color>Yellow</Color>
+                        <docset:Color>Yellow</docset:Color>
                     </xhtml:td>
                     <xhtml:td structure="td">
-                        <Taste>
+                        <docset:Taste>
                             <dg:chunk structure="p">Super sweet when ripe.</dg:chunk>
-                        </Taste>
+                        </docset:Taste>
                     </xhtml:td>
                 </xhtml:tr>
             </xhtml:tbody>
         </xhtml:table>
-    </Appendix>
-</chunk>
+    </docset:Appendix>
+</dg:chunk>

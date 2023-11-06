@@ -1,10 +1,15 @@
 from lxml import etree
 from typing import List, Optional
 
-from .models import Chunk
-
-STRUCTURE_KEY = "structure"
-DEFAULT_MIN_CHUNK_SIZE = 8  # Default length threshold for determining small chunks
+from dgml.config import (
+    DEFAULT_MIN_CHUNK_SIZE,
+    DEFAULT_SUBCHUNK_TABLES,
+    DEFAULT_WHITESPACE_NORMALIZE_TEXT,
+    STRUCTURE_KEY,
+    TABLE_NAME,
+)
+from dgml.conversions import text_node_to_text, xhtml_table_to_text
+from dgml.models import Chunk
 
 
 def is_structural(element) -> bool:
@@ -20,7 +25,8 @@ def has_structural_children(element) -> bool:
 def get_leaf_structural_chunks(
     element,
     min_chunk_size=DEFAULT_MIN_CHUNK_SIZE,
-    whitespace_normalize_text=True,
+    whitespace_normalize_text=DEFAULT_WHITESPACE_NORMALIZE_TEXT,
+    sub_chunk_tables=DEFAULT_SUBCHUNK_TABLES,
 ) -> List[Chunk]:
     """Returns all leaf structural nodes in the given element, combining small chunks with following siblings."""
     leaf_chunks: List[Chunk] = []
@@ -28,10 +34,17 @@ def get_leaf_structural_chunks(
 
     def traverse(node):
         nonlocal prepended_small_chunk  # Access the variable from the outer scope
-        if is_structural(node) and not has_structural_children(node):
-            node_text = " ".join(node.itertext()).strip()
-            if whitespace_normalize_text:
-                node_text = " ".join(node_text.split()).strip()
+
+        table_leaf_node = node.tag == TABLE_NAME and not sub_chunk_tables
+        text_leaf_node = is_structural(node) and not has_structural_children(node)
+
+        if table_leaf_node or text_leaf_node:
+            node_text = ""
+            if table_leaf_node:
+                node_text = xhtml_table_to_text(node)
+            elif text_leaf_node:
+                node_text = text_node_to_text(node, whitespace_normalize=whitespace_normalize_text)
+
             chunk = Chunk(
                 tag=node.tag,
                 text=node_text,
@@ -61,6 +74,16 @@ def get_leaf_structural_chunks(
     return leaf_chunks
 
 
-def get_leaf_structural_chunks_str(dgml: str) -> List[Chunk]:
+def get_leaf_structural_chunks_str(
+    dgml: str,
+    min_chunk_size=DEFAULT_MIN_CHUNK_SIZE,
+    whitespace_normalize_text=DEFAULT_WHITESPACE_NORMALIZE_TEXT,
+    sub_chunk_tables=DEFAULT_SUBCHUNK_TABLES,
+) -> List[Chunk]:
     root = etree.fromstring(dgml)
-    return get_leaf_structural_chunks(root)
+    return get_leaf_structural_chunks(
+        element=root,
+        min_chunk_size=min_chunk_size,
+        whitespace_normalize_text=whitespace_normalize_text,
+        sub_chunk_tables=sub_chunk_tables,
+    )

@@ -1,4 +1,4 @@
-<chunk>
+<chunk xmlns:dg="http://www.docugami.com/2021/dgml" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <chunk structure="h1"> Main Heading with <CompanyName>Acme Corp</CompanyName> as mixed content </chunk>
     <chunk structure="div">
         <chunk structure="h1">Sub-Heading</chunk>
@@ -25,4 +25,44 @@
         </Obligations>
     </ConfidentialityObligations>
     <Footer structure="div">pg.1</Footer>
+    <Appendix>
+        <xhtml:table structure="table">
+            <xhtml:tbody structure="tbody">
+                <xhtml:tr structure="tr">
+                    <xhtml:td structure="td">
+                        <dg:chunk>Fruit</dg:chunk>
+                    </xhtml:td>
+                    <xhtml:td structure="td">Color</xhtml:td>
+                    <xhtml:td structure="td">Taste</xhtml:td>
+                </xhtml:tr>
+                <xhtml:tr structure="tr">
+                    <xhtml:td structure="td">
+                        <Fruit>Apple</Fruit>
+                    </xhtml:td>
+                    <xhtml:td structure="td">
+                        <Color>Red</Color>
+                    </xhtml:td>
+                    <xhtml:td structure="td">
+                        <Taste>
+                            <dg:chunk structure="p"><Fruit>Apples</Fruit> are mostly sweet, sometimes tart if not
+                                ripe.</dg:chunk>
+                        </Taste>
+                    </xhtml:td>
+                </xhtml:tr>
+                <xhtml:tr structure="tr">
+                    <xhtml:td structure="td">
+                        <Fruit>Mango</Fruit>
+                    </xhtml:td>
+                    <xhtml:td structure="td">
+                        <Color>Yellow</Color>
+                    </xhtml:td>
+                    <xhtml:td structure="td">
+                        <Taste>
+                            <dg:chunk structure="p">Super sweet when ripe.</dg:chunk>
+                        </Taste>
+                    </xhtml:td>
+                </xhtml:tr>
+            </xhtml:tbody>
+        </xhtml:table>
+    </Appendix>
 </chunk>

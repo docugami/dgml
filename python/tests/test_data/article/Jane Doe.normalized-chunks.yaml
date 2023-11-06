@@ -1,0 +1,47 @@
+- text: "NON-DISCLOSURE AGREEMENT"
+- text: 'This Non-Disclosure Agreement ("Agreement") is entered into as of November 4, 2023 ("Effective Date"), by and between:'
+- text: "Disclosing Party:"
+- text: 'Widget Corp. , a Delaware corporation with its principal place of business at 123 Innovation Drive , Techville , Delaware , 12345 (" Widget Corp. ")'
+- text: "Receiving Party:"
+- text: 'Jane Doe , an individual residing at 456 Privacy Lane , Safetown , California , 67890 ("Recipient")'
+- text: '(collectively referred to as the "Parties").'
+- text: "1. Definition of Confidential Information"
+- text: 'For purposes of this Agreement, " Confidential Information " shall include all information or material that has or could have commercial value or other utility in the business in which Disclosing Party is engaged. If Confidential Information is in written form, the Disclosing Party shall label or stamp the materials with the word "Confidential" or some similar warning. If Confidential Information is transmitted orally, the Disclosing Party shall promptly provide writing indicating that such oral communication constituted Confidential Information .'
+- text: "2. Exclusions from Confidential Information"
+- text: "Recipient's obligations under this Agreement do not extend to information that is: (a) publicly known at the time of disclosure or subsequently becomes publicly known through no fault of the Recipient; (b) discovered or created by the Recipient before disclosure by Disclosing Party ; (c) learned by the Recipient through legitimate means other than from the Disclosing Party or Disclosing Party's representatives; or (d) is disclosed by Recipient with Disclosing Party's prior written approval."
+- text: "3. Obligations of Receiving Party"
+- text: "Recipient shall hold and maintain the Confidential Information in strictest confidence for the sole and exclusive benefit of the Disclosing Party . Recipient shall carefully restrict access to Confidential Information to employees, contractors, and third parties as is reasonably required and shall require those persons to sign nondisclosure restrictions at least as protective as those in this Agreement."
+- text: "4. Time Periods"
+- text: "The nondisclosure provisions of this Agreement shall survive the termination of this Agreement and Recipient's duty to hold Confidential Information in confidence shall remain in effect until the Confidential Information no longer qualifies as a trade secret or until Disclosing Party sends Recipient written notice releasing Recipient from this Agreement, whichever occurs first."
+- text: "5. Relationships"
+- text: "Nothing contained in this Agreement shall be deemed to constitute either party a partner, joint venture, or employee of the other party for any purpose."
+- text: "6. Severability"
+- text: "If a court finds any provision of this Agreement invalid or unenforceable, the remainder of this Agreement shall be interpreted so as best to effect the intent of the parties."
+- text: "7. Integration"
+- text: "This Agreement expresses the complete understanding of the parties with respect to the subject matter and supersedes all prior proposals, agreements, representations, and understandings. This Agreement may not be amended except in writing signed by both parties."
+- text: "8. Waiver"
+- text: "The failure to exercise any right provided in this Agreement shall not be a waiver of prior or subsequent rights."
+- text: "9. Notice of Immunity"
+- text: "Employee is provided notice that an individual shall not be held criminally or civilly liable under any federal or state trade secret law for the disclosure of a trade secret that is made (i) in confidence to a federal, state, or local government official, either directly or indirectly, or to an attorney; and (ii) solely for the purpose of reporting or investigating a suspected violation of law."
+- text: "10. The following table outlines individuals who are authorized to receive Confidential Information , their role, and the purpose of disclosure:"
+- text: |
+    +-----------------------+-------------------+------------------------------------------+
+    | Authorized Individual | Role              | Purpose of Disclosure                    |
+    +-----------------------+-------------------+------------------------------------------+
+    | John Smith            | Project Manager   | Oversee project to which the NDA relates |
+    +-----------------------+-------------------+------------------------------------------+
+    | Lisa White            | Lead Developer    | Software development and analysis        |
+    +-----------------------+-------------------+------------------------------------------+
+    | Michael Brown         | Financial Analyst | Financial analysis and reporting         |
+    +-----------------------+-------------------+------------------------------------------+
+- text: "IN WITNESS WHEREOF ,"
+- text: "the Parties have executed this Non-Disclosure Agreement as of the Effective Date first above written."
+- text: "Widget Corp."
+- text: "By: _____________________________"
+- text: "Name: Alan Black"
+- text: "Title: Chief Executive Officer"
+- text: "Date: ___________________________"
+- text: "Recipient"
+- text: "By: _____________________________"
+- text: "Name: Jane Doe"
+- text: "Date: ___________________________"

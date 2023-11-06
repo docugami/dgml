@@ -3,7 +3,9 @@ STRUCTURE_KEY = "structure"
 
 DEFAULT_MIN_CHUNK_SIZE = 8  # Default length threshold for determining small chunks
 DEFAULT_SUBCHUNK_TABLES = False
+DEFAULT_TABLE_FORMAT_AS_TEXT = "grid"  # should be a valid format for the tabulate library
 DEFAULT_WHITESPACE_NORMALIZE_TEXT = True
+DEFAULT_INCLUDE_XML_TAGS = False
 
 NAMESPACES = {
     "docset": "http://www.docugami.com/2021/dgml/TaqiTest20231103/NDA",

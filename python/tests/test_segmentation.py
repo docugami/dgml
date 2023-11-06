@@ -3,7 +3,12 @@ from pathlib import Path
 import pytest
 import yaml
 
-from dgml_utils.segmentation import DEFAULT_MIN_CHUNK_SIZE, DEFAULT_SUBCHUNK_TABLES, get_leaf_structural_chunks_str
+from dgml_utils.segmentation import (
+    DEFAULT_MIN_CHUNK_SIZE,
+    DEFAULT_SUBCHUNK_TABLES,
+    DEFAULT_INCLUDE_XML_TAGS,
+    get_leaf_structural_chunks_str,
+)
 
 
 @dataclass
@@ -12,6 +17,7 @@ class SegmentationTestData:
     output_file: Path
     min_chunk_size: int = DEFAULT_MIN_CHUNK_SIZE
     sub_chunk_tables: bool = DEFAULT_SUBCHUNK_TABLES
+    include_xml_tags: bool = DEFAULT_INCLUDE_XML_TAGS
 
 
 TEST_DATA_DIR = Path(__file__).parent / "test_data"
@@ -19,6 +25,11 @@ SEGMENTATION_TEST_DATA: list[SegmentationTestData] = [
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "simple/simple.xml",
         output_file=TEST_DATA_DIR / "simple/simple.normalized-chunks.yaml",
+    ),
+    SegmentationTestData(
+        input_file=TEST_DATA_DIR / "simple/simple.xml",
+        output_file=TEST_DATA_DIR / "simple/simple.normalized-chunks_xml.yaml",
+        include_xml_tags=True,
     ),
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "simple/simple.xml",
@@ -55,6 +66,7 @@ def test_segmentation(test_data: SegmentationTestData):
             dgml=article_shaped_file_xml,
             min_chunk_size=test_data.min_chunk_size,
             sub_chunk_tables=test_data.sub_chunk_tables,
+            include_xml_tags=test_data.include_xml_tags,
         )
         assert chunks
 

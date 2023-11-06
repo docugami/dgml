@@ -1,32 +1,39 @@
 from lxml import etree
 from tabulate import tabulate
 
-from dgml_utils.config import NAMESPACES, TABLE_NAME
+from dgml_utils.config import DEFAULT_TABLE_FORMAT_AS_TEXT, DEFAULT_WHITESPACE_NORMALIZE_TEXT, NAMESPACES, TABLE_NAME
 
 
-def text_node_to_text(node, whitespace_normalize=True) -> str:
+def text_node_to_text(node, whitespace_normalize=DEFAULT_WHITESPACE_NORMALIZE_TEXT) -> str:
     node_text = " ".join(node.itertext())
     if whitespace_normalize:
         node_text = " ".join(node_text.split()).strip()
     return node_text
 
 
-def xhtml_table_to_text(node, format="grid") -> str:
+def xhtml_table_to_text(
+    node,
+    whitespace_normalize=DEFAULT_WHITESPACE_NORMALIZE_TEXT,
+    format=DEFAULT_TABLE_FORMAT_AS_TEXT,
+) -> str:
     """Converts HTML table to formatted text."""
     if node.tag != TABLE_NAME:
         raise Exception("Please provide an XHTML table node for conversion.")
 
     rows = []
     for tr in node.xpath(".//xhtml:tr", namespaces=NAMESPACES):
-        cells = [text_node_to_text(td_node) for td_node in tr.xpath(".//xhtml:td", namespaces=NAMESPACES)]
+        cells = [
+            text_node_to_text(td_node, whitespace_normalize=whitespace_normalize)
+            for td_node in tr.xpath(".//xhtml:td", namespaces=NAMESPACES)
+        ]
         rows.append(cells)
 
     return tabulate(rows, tablefmt=format)
 
 
-def simplified_xml(node) -> str:
+def simplified_xml(node, whitespace_normalize=DEFAULT_WHITESPACE_NORMALIZE_TEXT) -> str:
     """Renders given node to simplified XML without attributes or namespaces."""
-    if not node:
+    if node is None:
         return ""
 
     # Recursive function to copy over elements to a new tree without
@@ -47,4 +54,6 @@ def simplified_xml(node) -> str:
 
     # remove empty non-semantic chunks from output
     xml = xml.replace("<chunk>", "").replace("</chunk>", "")
+    if whitespace_normalize:
+        xml = " ".join(xml.split()).strip()
     return xml.strip()

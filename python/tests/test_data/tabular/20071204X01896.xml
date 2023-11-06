@@ -1,0 +1,1033 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<docset:NationalTransportationSafetyBoardAviationAccidentFactualReport-section
+  cp:version="2.77.276.0.1698121915440-0.0"
+  xmlns:docset="http://www.docugami.com/2021/dgml/TaqiGenerativeLabels/NationalTransportationSafetyBoard"
+  xmlns:addedChunks="http://www.docugami.com/2021/dgml/TaqiGenerativeLabels/NationalTransportationSafetyBoard/addedChunks"
+  xmlns:dg="http://www.docugami.com/2021/dgml"
+  xmlns:dgc="http://www.docugami.com/2021/dgml/docugami/contracts"
+  xmlns:dgm="http://www.docugami.com/2021/dgml/docugami/medical"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:cp="http://classifyprocess.com/2018/07/">
+  <dg:chunk structure="h1">
+    <dg:chunk><docset:NTSBAgency>National Transportation Safety Board </docset:NTSBAgency>Aviation
+      Accident Factual Report </dg:chunk>
+  </dg:chunk>
+  <docset:NationalTransportationSafetyBoardAviationAccidentFactualReport structure="div">
+    <dg:chunk>
+
+      <docset:AviationAccidentFactualReport>
+        <xhtml:table structure="table"
+          style="boundingBox:{left: 201.0; top: 592.6; width: 2145.0; height: 415.8; page: 1;}; ">
+          <xhtml:tbody structure="tbody"
+            style="boundingBox:{left: 201.0; top: 592.6; width: 2145.0; height: 415.8; page: 1;}; ">
+            <xhtml:tr structure="tr"
+              style="boundingBox:{left: 201.0; top: 592.6; width: 2145.0; height: 109.5; page: 1;}; ">
+              <xhtml:td structure="td"
+                style="boundingBox:{left: 201.0; top: 592.6; width: 526.0; height: 109.5; page: 1;}; ">
+                <dg:chunk structure="div">Location: </dg:chunk>
+              </xhtml:td>
+
+              <xhtml:td structure="td"
+                style="boundingBox:{left: 727.1; top: 592.6; width: 639.6; height: 109.5; page: 1;}; ">
+                <docset:Location><docset:Location>Jagel</docset:Location>, Germany </docset:Location>
+              </xhtml:td>
+
+              <xhtml:td structure="td"
+                style="boundingBox:{left: 1366.7; top: 592.6; width: 500.0; height: 109.5; page: 1;}; ">
+                <dg:chunk structure="div">Accident Number: </dg:chunk>
+              </xhtml:td>
+
+              <xhtml:td structure="td"
+                style="boundingBox:{left: 1866.7; top: 592.6; width: 479.4; height: 109.5; page: 1;}; ">
+                <docset:AccidentNumber>DEN08WA037 </docset:AccidentNumber>
+              </xhtml:td>
+            </xhtml:tr>
+
+            <xhtml:tr structure="tr"
+              style="boundingBox:{left: 201.0; top: 702.1; width: 2145.0; height: 81.2; page: 1;}; ">
+              <xhtml:td structure="td"
+                style="boundingBox:{left: 201.0; top: 702.1; width: 526.0; height: 81.2; page: 1;}; ">
+                <docset:LocationDateTime structure="div">Date &amp; Time: </docset:LocationDateTime>
+              </xhtml:td>
+
+              <xhtml:td structure="td"
+                style="boundingBox:{left: 727.1; top: 702.1; width: 639.6; height: 81.2; page: 1;}; ">
+                <docset:DateTime><docset:Date>11/28/2007</docset:Date>, <docset:UTCTime>1800 </docset:UTCTime>
+                  UTC </docset:DateTime>
+              </xhtml:td>
+
+              <xhtml:td structure="td"
+                style="boundingBox:{left: 1366.7; top: 702.1; width: 500.0; height: 81.2; page: 1;}; ">
+                <docset:DateTimeAccidentNumber>Registration: </docset:DateTimeAccidentNumber>
+              </xhtml:td>
+
+              <xhtml:td structure="td"
+                style="boundingBox:{left: 1866.7; top: 702.1; width: 479.4; height: 81.2; page: 1;}; ">
+                <docset:Registration>N141CD </docset:Registration>
+              </xhtml:td>
+            </xhtml:tr>
+
+            <xhtml:tr structure="tr"
+              style="boundingBox:{left: 201.0; top: 783.3; width: 2145.0; height: 82.6; page: 1;}; ">
+              <xhtml:td structure="td"
+                style="boundingBox:{left: 201.0; top: 783.3; width: 526.0; height: 82.6; page: 1;}; ">
+                <docset:LocationAircraft>Aircraft: </docset:LocationAircraft>
+              </xhtml:td>
+
+              <xhtml:td structure="td"
+                style="boundingBox:{left: 727.1; top: 783.3; width: 639.6; height: 82.6; page: 1;}; ">
+                <docset:Aircraft><docset:AircraftManufacturer>Cirrus Design Corp. </docset:AircraftManufacturer>
+                  SR-20 </docset:Aircraft>
+              </xhtml:td>
+
+              <xhtml:td structure="td"
+                style="boundingBox:{left: 1366.7; top: 783.3; width: 500.0; height: 82.6; page: 1;}; ">
+                <docset:AircraftAccidentNumber><dg:chunk>Aircraft Damage</dg:chunk>: </docset:AircraftAccidentNumber>
+              </xhtml:td>
+
+              <xhtml:td structure="td"
+                style="boundingBox:{left: 1866.7; top: 783.3; width: 479.4; height: 82.6; page: 1;}; ">
+                <docset:AircraftDamage>Substantial </docset:AircraftDamage>
+              </xhtml:td>
+            </xhtml:tr>
+
+            <xhtml:tr structure="tr"
+              style="boundingBox:{left: 201.0; top: 865.9; width: 2145.0; height: 82.0; page: 1;}; ">
+              <xhtml:td structure="td"
+                style="boundingBox:{left: 201.0; top: 865.9; width: 526.0; height: 82.0; page: 1;}; ">
+                <docset:DefiningEvent-cell>Defining Event: </docset:DefiningEvent-cell>
+              </xhtml:td>
+              <xhtml:td structure="td"
+                style="boundingBox:{left: 727.1; top: 865.9; width: 639.6; height: 82.0; page: 1;}; ">
+                <docset:DefiningEventJagelGermany />
+              </xhtml:td>
+
+              <xhtml:td structure="td"
+                style="boundingBox:{left: 1366.7; top: 865.9; width: 500.0; height: 82.0; page: 1;}; ">
+                <docset:DefiningEventAccidentNumber>Injuries: </docset:DefiningEventAccidentNumber>
+              </xhtml:td>
+
+              <xhtml:td structure="td"
+                style="boundingBox:{left: 1866.7; top: 865.9; width: 479.4; height: 82.0; page: 1;}; ">
+                <docset:Injuries><docset:Fatalities>1 </docset:Fatalities>Fatal </docset:Injuries>
+              </xhtml:td>
+            </xhtml:tr>
+
+            <xhtml:tr structure="tr"
+              style="boundingBox:{left: 201.0; top: 947.9; width: 2145.0; height: 60.4; page: 1;}; ">
+              <xhtml:td structure="td"
+                style="boundingBox:{left: 201.0; top: 947.9; width: 526.0; height: 60.4; page: 1;}; ">
+                <docset:LocationFlightConductedUnder>Flight Conducted Under: </docset:LocationFlightConductedUnder>
+              </xhtml:td>
+
+              <xhtml:td structure="td"
+                style="boundingBox:{left: 727.1; top: 947.9; width: 639.6; height: 60.4; page: 1;}; ">
+                <docset:Part91-cell structure="div">Part <docset:PartNumber>91</docset:PartNumber>: <dg:chunk>
+                    <docset:GeneralAviation>General Aviation </docset:GeneralAviation>
+                    <docset:FerryFlight>- Ferry </docset:FerryFlight>
+                  </dg:chunk></docset:Part91-cell>
+              </xhtml:td>
+              <xhtml:td structure="td"
+                style="boundingBox:{left: 1366.7; top: 947.9; width: 500.0; height: 60.4; page: 1;}; " />
+              <xhtml:td structure="td"
+                style="boundingBox:{left: 1866.7; top: 947.9; width: 479.4; height: 60.4; page: 1;}; ">
+                <docset:FlightConductedUnderDEN08WA037 />
+              </xhtml:td>
+            </xhtml:tr>
+          </xhtml:tbody>
+        </xhtml:table>
+      </docset:AviationAccidentFactualReport>
+      <dg:chunk>
+        <docset:AccidentDescription structure="p"> On <docset:AccidentDate>November 28,, 2007</docset:AccidentDate>,
+          at <docset:AccidentTime><docset:AccidentTime>
+              <docset:AccidentTime>1800 </docset:AccidentTime>
+              <docset:UTCTime>UTC</docset:UTCTime>
+            </docset:AccidentTime>, <docset:AccidentDate>
+          a </docset:AccidentDate></docset:AccidentTime><docset:AircraftManufacturer>Cirrus Design
+          Corporation </docset:AircraftManufacturer>SR-20, N141CD, serial number <docset:AircraftSerialNumber>
+          1032</docset:AircraftSerialNumber>, while on approach for landing at Jaleg, <dg:chunk>
+          Schleswig-Holsteinschen</dg:chunk>, Germany, struck power lines and subsequently impacted
+          terrain. The airplane was destroyed and the private pilot, the sole person on board the
+          airplane, was fatally injured. Instrument meteorological conditions prevailed at the time
+          of the accident. The cross-country ferry flight originated in the Netherlands and was en
+          route to Sylt, Germany. </docset:AccidentDescription>
+        <docset:InvestigationAuthority structure="p">
+
+          This investigation is under the jurisdiction and control of the German government. Any
+          further information may be obtained from: </docset:InvestigationAuthority>
+        <docset:AccidentInvestigationBureau structure="p">
+
+          <docset:AccidentInvestigationBureau><dg:chunk>German Federal Bureau </dg:chunk>of Aircraft
+          Accidents </docset:AccidentInvestigationBureau>Investigation Bundesstelle fur
+          Flugenfallensuchung (BFU) </docset:AccidentInvestigationBureau>
+        <dg:chunk structure="p">
+
+          <dg:chunk>Herman-Blenk Strasse </dg:chunk><docset:Address>
+            <docset:Address>16 </docset:Address>
+            <docset:PostalCode>38108 </docset:PostalCode>
+          </docset:Address>Braunschweig </dg:chunk>
+      </dg:chunk>
+    </dg:chunk>
+    <dg:chunk>
+      <docset:Germany-section>
+        <dg:chunk structure="div">
+
+          Germany </dg:chunk>
+        <docset:Germany structure="div"> This report is for informational purposes only and contains
+          only information released by, or obtained from, the <docset:ReportSource>BFU of Germany</docset:ReportSource>
+          . </docset:Germany>
+      </docset:Germany-section>
+      <dg:chunk>
+        <dg:chunk structure="h1">
+
+          <dg:chunk>Pilot Information </dg:chunk>
+        </dg:chunk>
+
+        <docset:AircraftAndOwnerOperatorInformation>
+          <xhtml:table structure="table"
+            style="boundingBox:{left: 202.5; top: 366.7; width: 2144.0; height: 591.0; page: 2;}; ">
+            <xhtml:tbody structure="tbody"
+              style="boundingBox:{left: 202.5; top: 366.7; width: 2144.0; height: 591.0; page: 2;}; ">
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 366.7; width: 2144.0; height: 83.0; page: 2;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 366.7; width: 789.2; height: 83.0; page: 2;}; ">
+                  Certificate: </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 991.7; top: 366.7; width: 1354.8; height: 83.0; page: 2;}; ">
+                  <docset:Certificate>Age: </docset:Certificate>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 450.7; width: 2144.0; height: 72.0; page: 2;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 449.7; width: 789.2; height: 73.0; page: 2;}; ">
+                  <docset:Certificate>Airplane Rating(s): </docset:Certificate>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 991.7; top: 449.7; width: 1354.8; height: 73.0; page: 2;}; ">
+                  <docset:SeatOccupied-cell>Seat Occupied: </docset:SeatOccupied-cell>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 523.7; width: 2144.0; height: 72.0; page: 2;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 522.7; width: 789.2; height: 73.0; page: 2;}; ">
+                  <docset:Certificate>Other Aircraft Rating(s): </docset:Certificate>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 991.7; top: 522.7; width: 1354.8; height: 73.0; page: 2;}; ">
+                  <docset:RestraintUsed-cell>Restraint Used: </docset:RestraintUsed-cell>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 596.7; width: 2144.0; height: 71.0; page: 2;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 595.7; width: 789.2; height: 72.0; page: 2;}; ">
+                  <docset:Certificate>Instrument Rating(s): </docset:Certificate>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 991.7; top: 595.7; width: 1354.8; height: 72.0; page: 2;}; ">
+                  <docset:SecondPilotPresent-cell><dg:chunk>Second Pilot Present</dg:chunk>: </docset:SecondPilotPresent-cell>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 668.7; width: 2144.0; height: 72.0; page: 2;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 667.7; width: 789.2; height: 73.0; page: 2;}; ">
+                  <docset:Certificate>Instructor Rating(s): </docset:Certificate>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 991.7; top: 667.7; width: 1354.8; height: 73.0; page: 2;}; ">
+                  <docset:ToxicologyPerformed-cell>Toxicology Performed: </docset:ToxicologyPerformed-cell>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 741.7; width: 2144.0; height: 72.0; page: 2;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 740.7; width: 789.2; height: 73.0; page: 2;}; ">
+                  <docset:Certificate><dg:chunk>Medical Certification</dg:chunk>: </docset:Certificate>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 991.7; top: 740.7; width: 1354.8; height: 73.0; page: 2;}; ">
+                  <docset:MedicalCertification><dg:chunk>Last FAA Medical <dgm:_testRef>Exam</dgm:_testRef></dg:chunk>
+                    : </docset:MedicalCertification>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 814.7; width: 2144.0; height: 71.0; page: 2;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 813.7; width: 789.2; height: 72.0; page: 2;}; ">
+                  <docset:Certificate><dg:chunk><docset:OccupationalPilot>Occupational </docset:OccupationalPilot>
+                    Pilot</dg:chunk>: </docset:Certificate>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 991.7; top: 813.7; width: 1354.8; height: 72.0; page: 2;}; ">
+                  <docset:LastFlightReviewOrEquivalent-cell structure="div"><dg:chunk>Last Flight
+                    Review </dg:chunk>or Equivalent: </docset:LastFlightReviewOrEquivalent-cell>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 886.7; width: 2144.0; height: 71.0; page: 2;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 885.7; width: 2144.0; height: 72.0; page: 2;}; "
+                  colspan="2">
+                  <docset:FlightTime-cell>Flight Time: </docset:FlightTime-cell>
+                </xhtml:td>
+              </xhtml:tr>
+            </xhtml:tbody>
+          </xhtml:table>
+        </docset:AircraftAndOwnerOperatorInformation>
+      </dg:chunk>
+      <dg:chunk>
+        <dg:chunk structure="h1">
+
+          Aircraft and Owner/Operator Information </dg:chunk>
+
+        <docset:AircraftAndOwnerOperatorInformation>
+          <xhtml:table structure="table"
+            style="boundingBox:{left: 202.5; top: 1086.7; width: 2144.0; height: 853.0; page: 2;}; ">
+            <xhtml:tbody structure="tbody"
+              style="boundingBox:{left: 202.5; top: 1086.7; width: 2144.0; height: 853.0; page: 2;}; ">
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1086.7; width: 2144.0; height: 83.0; page: 2;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1086.7; width: 560.0; height: 83.0; page: 2;}; "><dg:chunk>Aircraft
+                  Make</dg:chunk>: </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 762.5; top: 1086.7; width: 458.3; height: 83.0; page: 2;}; ">
+                  <docset:AircraftMake>Cirrus Design Corp. </docset:AircraftMake>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1220.8; top: 1086.7; width: 581.2; height: 83.0; page: 2;}; ">
+                  Registration: </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1802.1; top: 1086.7; width: 544.4; height: 83.0; page: 2;}; ">
+                  <docset:Registration>N141CD </docset:Registration>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1170.7; width: 2144.0; height: 72.0; page: 2;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1169.7; width: 560.0; height: 73.0; page: 2;}; ">
+                  <docset:AircraftMakeModelSeries>Model/Series: </docset:AircraftMakeModelSeries>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 762.5; top: 1169.7; width: 458.3; height: 73.0; page: 2;}; ">
+                  <docset:ModelSeries>SR-20 </docset:ModelSeries>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1220.8; top: 1169.7; width: 581.2; height: 73.0; page: 2;}; ">
+                  <docset:ModelSeriesRegistration><dg:chunk>Aircraft Category</dg:chunk>: </docset:ModelSeriesRegistration>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1802.1; top: 1169.7; width: 544.4; height: 73.0; page: 2;}; ">
+                  <docset:AircraftCategory>Airplane </docset:AircraftCategory>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1243.7; width: 2144.0; height: 72.0; page: 2;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1242.7; width: 560.0; height: 73.0; page: 2;}; ">
+                  <docset:YearofManufacture-cell>Year of Manufacture: </docset:YearofManufacture-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 762.5; top: 1242.7; width: 458.3; height: 73.0; page: 2;}; ">
+                  <docset:YearofManufactureCirrusDesignCorp />
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1220.8; top: 1242.7; width: 581.2; height: 73.0; page: 2;}; ">
+                  <docset:YearofManufactureRegistration>Amateur Built: </docset:YearofManufactureRegistration>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1802.1; top: 1242.7; width: 544.4; height: 73.0; page: 2;}; ">
+                  <docset:AmateurBuilt>No </docset:AmateurBuilt>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1316.7; width: 2144.0; height: 71.0; page: 2;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1315.7; width: 560.0; height: 72.0; page: 2;}; ">
+                  <docset:AircraftMakeAirworthinessCertificate><dg:chunk>Airworthiness Certificate</dg:chunk>
+                    : </docset:AircraftMakeAirworthinessCertificate>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 762.5; top: 1315.7; width: 458.3; height: 72.0; page: 2;}; ">
+                  <docset:AirworthinessCertificateCirrusDesignCorp />
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1220.8; top: 1315.7; width: 581.2; height: 72.0; page: 2;}; ">
+                  <docset:SerialNumber-cell>Serial Number: </docset:SerialNumber-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1802.1; top: 1315.7; width: 544.4; height: 72.0; page: 2;}; ">
+                  <docset:AirworthinessCertificateN141CD />
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1388.7; width: 2144.0; height: 72.0; page: 2;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1387.7; width: 560.0; height: 73.0; page: 2;}; ">
+                  <docset:LandingGearType-cell>Landing <dg:chunk>Gear Type</dg:chunk>: </docset:LandingGearType-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 762.5; top: 1387.7; width: 458.3; height: 73.0; page: 2;}; ">
+                  <docset:LandingGearTypeCirrusDesignCorp />
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1220.8; top: 1387.7; width: 581.2; height: 73.0; page: 2;}; ">
+                  <docset:Seats-cell>Seats: </docset:Seats-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1802.1; top: 1387.7; width: 544.4; height: 73.0; page: 2;}; ">
+                  <docset:LandingGearTypeN141CD />
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1461.7; width: 2144.0; height: 72.0; page: 2;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1460.7; width: 560.0; height: 73.0; page: 2;}; ">
+                  <docset:AircraftMakeDateTypeofLastInspection>Date/Type of Last Inspection: </docset:AircraftMakeDateTypeofLastInspection>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 762.5; top: 1460.7; width: 458.3; height: 73.0; page: 2;}; ">
+                  <docset:DateTypeofLastInspectionCirrusDesignCorp />
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1220.8; top: 1460.7; width: 581.2; height: 73.0; page: 2;}; ">
+                  <docset:DateTypeofLastInspectionRegistration><dg:chunk>Certified Max Gross Wt</dg:chunk>
+                    .: </docset:DateTypeofLastInspectionRegistration>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1802.1; top: 1460.7; width: 544.4; height: 73.0; page: 2;}; ">
+                  <docset:DateTypeofLastInspectionN141CD />
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1534.7; width: 2144.0; height: 72.0; page: 2;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1533.7; width: 560.0; height: 73.0; page: 2;}; ">
+                  <docset:AircraftMakeTimeSinceLastInspection>Time Since Last Inspection: </docset:AircraftMakeTimeSinceLastInspection>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 762.5; top: 1533.7; width: 458.3; height: 73.0; page: 2;}; ">
+                  <docset:TimeSinceLastInspectionCirrusDesignCorp />
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1220.8; top: 1533.7; width: 581.2; height: 73.0; page: 2;}; ">
+                  <docset:Engines-cell>Engines: </docset:Engines-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1802.1; top: 1533.7; width: 544.4; height: 73.0; page: 2;}; ">
+                  <docset:TimeSinceLastInspectionN141CD />
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1607.7; width: 2144.0; height: 71.0; page: 2;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1606.7; width: 560.0; height: 72.0; page: 2;}; ">
+                  <docset:AirframeTotalTime-cell><dg:chunk>Airframe Total Time</dg:chunk>: </docset:AirframeTotalTime-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 762.5; top: 1606.7; width: 458.3; height: 72.0; page: 2;}; ">
+                  <docset:AirframeTotalTimeCirrusDesignCorp />
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1220.8; top: 1606.7; width: 581.2; height: 72.0; page: 2;}; ">
+                  <docset:AirframeTotalTimeRegistration><dg:chunk>Engine Manufacturer</dg:chunk>: </docset:AirframeTotalTimeRegistration>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1802.1; top: 1606.7; width: 544.4; height: 72.0; page: 2;}; ">
+                  <docset:AirframeTotalTimeN141CD />
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1679.7; width: 2144.0; height: 72.0; page: 2;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1678.7; width: 560.0; height: 73.0; page: 2;}; ">
+                  <docset:Elt-cell>ELT: </docset:Elt-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 762.5; top: 1678.7; width: 458.3; height: 73.0; page: 2;}; ">
+                  <docset:ELTCirrusDesignCorp />
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1220.8; top: 1678.7; width: 581.2; height: 73.0; page: 2;}; ">
+                  <docset:ELTRegistration>Engine Model/Series: </docset:ELTRegistration>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1802.1; top: 1678.7; width: 544.4; height: 73.0; page: 2;}; ">
+                  <docset:ELTN141CD />
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1752.7; width: 2144.0; height: 72.0; page: 2;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1751.7; width: 560.0; height: 73.0; page: 2;}; ">
+                  <docset:RegisteredOwner-cell><dg:chunk>Registered Owner</dg:chunk>: </docset:RegisteredOwner-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 762.5; top: 1751.7; width: 458.3; height: 73.0; page: 2;}; ">
+                  <docset:RegisteredOwnerCirrusDesignCorp />
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1220.8; top: 1751.7; width: 581.2; height: 73.0; page: 2;}; ">
+                  <docset:RatedPower-cell><dg:chunk>Rated Power</dg:chunk>: </docset:RatedPower-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1802.1; top: 1751.7; width: 544.4; height: 73.0; page: 2;}; ">
+                  <docset:RegisteredOwnerN141CD />
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1825.7; width: 2144.0; height: 114.0; page: 2;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1824.7; width: 560.0; height: 115.0; page: 2;}; ">
+                  <docset:Operator-cell>Operator: </docset:Operator-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 762.5; top: 1824.7; width: 458.3; height: 115.0; page: 2;}; ">
+                  <docset:OperatorCirrusDesignCorp />
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1220.8; top: 1824.7; width: 581.2; height: 115.0; page: 2;}; ">
+                  <docset:OperatorRegistration>Operating Certificate(s) Held: </docset:OperatorRegistration>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1802.1; top: 1824.7; width: 544.4; height: 115.0; page: 2;}; ">
+                  <docset:OperatingCertificateSHeld>None </docset:OperatingCertificateSHeld>
+                </xhtml:td>
+              </xhtml:tr>
+            </xhtml:tbody>
+          </xhtml:table>
+        </docset:AircraftAndOwnerOperatorInformation>
+      </dg:chunk>
+      <dg:chunk>
+        <dg:chunk structure="h1">
+
+          Meteorological Information and Flight Plan </dg:chunk>
+
+        <docset:MeteorologicalInformationAndFlightPlan>
+          <xhtml:table structure="table"
+            style="boundingBox:{left: 202.5; top: 367; width: 2144.0; height: 969; page: 3;}; ">
+            <xhtml:tbody structure="tbody"
+              style="boundingBox:{left: 202.5; top: 367; width: 2144.0; height: 969; page: 3;}; ">
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 367; width: 2144.0; height: 83; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 367; width: 597.5; height: 83; page: 3;}; ">Conditions
+                  at <dg:chunk>Accident Site</dg:chunk>: </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 800.0; top: 367; width: 464.6; height: 83; page: 3;}; ">
+                  <docset:ConditionsatAccidentSite>Instrument Conditions </docset:ConditionsatAccidentSite>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1264.6; top: 367; width: 560.4; height: 83; page: 3;}; ">
+                  <docset:ConditionofLight-cell>Condition of Light: </docset:ConditionofLight-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1825.0; top: 367; width: 521.5; height: 83; page: 3;}; " />
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 451; width: 2144.0; height: 72; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 450; width: 597.5; height: 73; page: 3;}; ">
+                  <docset:ConditionsatAccidentSiteObservationFacilityElevation><dg:chunk>Observation
+                    Facility</dg:chunk>, Elevation: </docset:ConditionsatAccidentSiteObservationFacilityElevation>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 800.0; top: 450; width: 464.6; height: 73; page: 3;}; ">
+                  <docset:ObservationFacilityElevationInstrumentConditions />
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1264.6; top: 450; width: 1081.9; height: 73; page: 3;}; "
+                  colspan="2">
+                  <docset:DistanceFromAccidentSite-cell>Distance from <dg:chunk>Accident Site</dg:chunk>
+                    : </docset:DistanceFromAccidentSite-cell>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 524; width: 2144.0; height: 71; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 523; width: 597.5; height: 72; page: 3;}; ">
+                  <docset:ObservationTime-cell><dg:chunk>Observation Time</dg:chunk>: </docset:ObservationTime-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 800.0; top: 523; width: 464.6; height: 72; page: 3;}; ">
+                  <docset:ObservationTimeInstrumentConditions />
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1264.6; top: 523; width: 1081.9; height: 72; page: 3;}; "
+                  colspan="2">
+                  <docset:DirectionFromAccidentSite-cell>Direction from <dg:chunk>Accident Site</dg:chunk>
+                    : </docset:DirectionFromAccidentSite-cell>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 596; width: 2144.0; height: 72; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 595; width: 597.5; height: 73; page: 3;}; ">
+                  <docset:LowestCloudCondition-cell><dg:chunk>Lowest Cloud Condition</dg:chunk>: </docset:LowestCloudCondition-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 800.0; top: 595; width: 464.6; height: 73; page: 3;}; ">
+                  <docset:LowestCloudConditionInstrumentConditions />
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1264.6; top: 595; width: 560.4; height: 73; page: 3;}; ">
+                  <docset:LowestCloudConditionConditionofLight>Visibility </docset:LowestCloudConditionConditionofLight>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1825.0; top: 595; width: 521.5; height: 73; page: 3;}; ">
+                  <docset:LowestCloudCondition />
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 669; width: 2144.0; height: 72; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 668; width: 597.5; height: 73; page: 3;}; ">
+                  <docset:LowestCeiling-cell>Lowest Ceiling: </docset:LowestCeiling-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 800.0; top: 668; width: 464.6; height: 73; page: 3;}; ">
+                  <docset:LowestCeilingInstrumentConditions />
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1264.6; top: 668; width: 560.4; height: 73; page: 3;}; ">
+                  <docset:VisibilityRvr-cell>Visibility (RVR): </docset:VisibilityRvr-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1825.0; top: 668; width: 521.5; height: 73; page: 3;}; ">
+                  <docset:LowestCeiling />
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 742; width: 2144.0; height: 115; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 741; width: 597.5; height: 116; page: 3;}; ">
+                  <docset:ConditionsatAccidentSiteWindSpeedGusts>Wind Speed/Gusts: </docset:ConditionsatAccidentSiteWindSpeedGusts>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 800.0; top: 741; width: 464.6; height: 116; page: 3;}; ">
+                  <docset:WindSpeedGusts>/ </docset:WindSpeedGusts>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1264.6; top: 741; width: 560.4; height: 116; page: 3;}; ">
+                  <docset:WindSpeedGustsConditionofLight>Turbulence Type Forecast/Actual: </docset:WindSpeedGustsConditionofLight>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1825.0; top: 741; width: 521.5; height: 116; page: 3;}; ">
+                  <docset:TurbulenceTypeForecastActual>/ </docset:TurbulenceTypeForecastActual>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 858; width: 2144.0; height: 115; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 857; width: 597.5; height: 116; page: 3;}; ">
+                  <docset:WindDirection-cell structure="div"><dg:chunk>Wind Direction</dg:chunk>: </docset:WindDirection-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 800.0; top: 857; width: 464.6; height: 116; page: 3;}; ">
+                  <docset:WindDirectionInstrumentConditions />
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1264.6; top: 857; width: 560.4; height: 116; page: 3;}; ">
+                  <docset:WindDirectionConditionofLight>Turbulence Severity Forecast/Actual: </docset:WindDirectionConditionofLight>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1825.0; top: 857; width: 521.5; height: 116; page: 3;}; ">
+                  <docset:TurbulenceSeverityForecastActual>/ </docset:TurbulenceSeverityForecastActual>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 974; width: 2144.0; height: 72; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 973; width: 597.5; height: 73; page: 3;}; ">
+                  <docset:AltimeterSetting-cell>Altimeter Setting: </docset:AltimeterSetting-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 800.0; top: 973; width: 464.6; height: 73; page: 3;}; ">
+                  <docset:AltimeterSettingInstrumentConditions />
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1264.6; top: 973; width: 560.4; height: 73; page: 3;}; ">
+                  <docset:AltimeterSettingConditionofLight>Temperature/Dew Point: </docset:AltimeterSettingConditionofLight>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1825.0; top: 973; width: 521.5; height: 73; page: 3;}; ">
+                  <docset:AltimeterSetting />
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1047; width: 2144.0; height: 72; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1046; width: 2144.0; height: 73; page: 3;}; "
+                  colspan="4">
+                  <docset:PrecipitationAndObscuration-cell structure="div">Precipitation and
+                    Obscuration: </docset:PrecipitationAndObscuration-cell>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1120; width: 2144.0; height: 71; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1119; width: 597.5; height: 72; page: 3;}; ">
+                  <docset:DeparturePoint-cell><dg:chunk>Departure Point</dg:chunk>: </docset:DeparturePoint-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 800.0; top: 1119; width: 464.6; height: 72; page: 3;}; ">
+                  <docset:DeparturePointInstrumentConditions />
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1264.6; top: 1119; width: 560.4; height: 72; page: 3;}; ">
+                  <docset:DeparturePointConditionofLight structure="div">Type of <dg:chunk>Flight
+                      Plan </dg:chunk>Filed: </docset:DeparturePointConditionofLight>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1825.0; top: 1119; width: 521.5; height: 72; page: 3;}; ">
+                  <docset:TypeofFlightPlanFiled>Unknown </docset:TypeofFlightPlanFiled>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1192; width: 2144.0; height: 72; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1191; width: 597.5; height: 73; page: 3;}; ">
+                  <docset:ConditionsatAccidentSiteDestination structure="div">Destination: </docset:ConditionsatAccidentSiteDestination>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 800.0; top: 1191; width: 464.6; height: 73; page: 3;}; ">
+                  <docset:Destination><docset:Jaleg>Jaleg</docset:Jaleg>, <docset:UN>UN </docset:UN></docset:Destination>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1264.6; top: 1191; width: 560.4; height: 73; page: 3;}; ">
+                  <docset:TypeofClearance-cell>Type of Clearance: </docset:TypeofClearance-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1825.0; top: 1191; width: 521.5; height: 73; page: 3;}; ">
+                  <docset:Destination />
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1265; width: 2144.0; height: 71; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1264; width: 597.5; height: 72; page: 3;}; ">
+                  <docset:DepartureTime-cell><dg:chunk>Departure Time</dg:chunk>: </docset:DepartureTime-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 800.0; top: 1264; width: 464.6; height: 72; page: 3;}; ">
+                  <docset:DepartureTimeInstrumentConditions />
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1264.6; top: 1264; width: 560.4; height: 72; page: 3;}; ">
+                  <docset:TypeofAirspace-cell>Type of Airspace: </docset:TypeofAirspace-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1825.0; top: 1264; width: 521.5; height: 72; page: 3;}; ">
+                  <docset:DepartureTime />
+                </xhtml:td>
+              </xhtml:tr>
+            </xhtml:tbody>
+          </xhtml:table>
+        </docset:MeteorologicalInformationAndFlightPlan>
+      </dg:chunk>
+      <dg:chunk>
+        <dg:chunk structure="h1">
+
+          <dg:chunk>Airport Information </dg:chunk>
+        </dg:chunk>
+
+        <docset:MeteorologicalInformationAndFlightPlan>
+          <xhtml:table structure="table"
+            style="boundingBox:{left: 202.5; top: 1460; width: 2144.0; height: 250; page: 3;}; ">
+            <xhtml:tbody structure="tbody"
+              style="boundingBox:{left: 202.5; top: 1460; width: 2144.0; height: 250; page: 3;}; ">
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1460; width: 2144.0; height: 71; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1460; width: 774.6; height: 71; page: 3;}; ">
+                  Airport: </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 977.1; top: 1460; width: 1369.4; height: 71; page: 3;}; ">
+                  <docset:RunwaySurfaceType-cell><dg:chunk>Runway Surface Type</dg:chunk>: </docset:RunwaySurfaceType-cell>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1532; width: 2144.0; height: 59; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1531; width: 774.6; height: 60; page: 3;}; ">
+                  <docset:AirportAirportElevation><dg:chunk>Airport Elevation</dg:chunk>: </docset:AirportAirportElevation>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 977.1; top: 1531; width: 1369.4; height: 60; page: 3;}; ">
+                  <docset:RunwaySurfaceCondition-cell><dg:chunk>Runway Surface Condition</dg:chunk>: </docset:RunwaySurfaceCondition-cell>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1592; width: 2144.0; height: 59; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1591; width: 774.6; height: 60; page: 3;}; ">
+                  <docset:AirportRunwayUsed>Runway Used: </docset:AirportRunwayUsed>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 977.1; top: 1591; width: 1369.4; height: 60; page: 3;}; ">
+                  <docset:RunwayUsed><dg:chunk>IFR Approach</dg:chunk>: </docset:RunwayUsed>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1652; width: 2144.0; height: 58; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1651; width: 774.6; height: 59; page: 3;}; ">
+                  <docset:AirportRunwayLengthWidth>Runway Length/Width: </docset:AirportRunwayLengthWidth>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 977.1; top: 1651; width: 1369.4; height: 59; page: 3;}; ">
+                  <docset:VfrApproachLanding-cell>VFR Approach/Landing: </docset:VfrApproachLanding-cell>
+                </xhtml:td>
+              </xhtml:tr>
+            </xhtml:tbody>
+          </xhtml:table>
+        </docset:MeteorologicalInformationAndFlightPlan>
+      </dg:chunk>
+      <dg:chunk>
+        <dg:chunk structure="h1"> Wreckage and <dg:chunk>Impact Information </dg:chunk></dg:chunk>
+
+        <docset:MeteorologicalInformationAndFlightPlan>
+          <xhtml:table structure="table"
+            style="boundingBox:{left: 202.5; top: 1835; width: 2144.0; height: 300; page: 3;}; ">
+            <xhtml:tbody structure="tbody"
+              style="boundingBox:{left: 202.5; top: 1835; width: 2144.0; height: 300; page: 3;}; ">
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1835; width: 2144.0; height: 83; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1835; width: 393.3; height: 83; page: 3;}; ">
+                  <dg:chunk structure="div"><dg:chunk>Crew Injuries</dg:chunk>: </dg:chunk>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 595.8; top: 1835; width: 447.9; height: 83; page: 3;}; ">
+                  <docset:CrewInjuries><docset:Fatalities>1 </docset:Fatalities>Fatal </docset:CrewInjuries>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1043.8; top: 1835; width: 643.7; height: 83; page: 3;}; ">
+                  <dg:chunk structure="div"><dg:chunk>Aircraft Damage</dg:chunk>: </dg:chunk>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1687.5; top: 1835; width: 659.0; height: 83; page: 3;}; ">
+                  <docset:AircraftDamage>Substantial </docset:AircraftDamage>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1919; width: 2144.0; height: 71; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1918; width: 393.3; height: 72; page: 3;}; ">
+                  <docset:CrewInjuriesPassengerInjuries><dg:chunk>Passenger Injuries</dg:chunk>: </docset:CrewInjuriesPassengerInjuries>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 595.8; top: 1918; width: 447.9; height: 72; page: 3;}; ">
+                  <docset:PassengerInjuries>N/A </docset:PassengerInjuries>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1043.8; top: 1918; width: 643.7; height: 72; page: 3;}; ">
+                  <docset:AircraftFire-cell><dg:chunk>Aircraft Fire</dg:chunk>: </docset:AircraftFire-cell>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1687.5; top: 1918; width: 659.0; height: 72; page: 3;}; ">
+                  <docset:PassengerInjuriesSubstantial />
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 1991; width: 2144.0; height: 72; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 1990; width: 393.3; height: 73; page: 3;}; ">
+                  <docset:CrewInjuriesGroundInjuries structure="div"><dg:chunk>Ground Injuries</dg:chunk>
+                    : </docset:CrewInjuriesGroundInjuries>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 595.8; top: 1990; width: 447.9; height: 73; page: 3;}; ">
+                  <docset:GroundInjuries>N/A </docset:GroundInjuries>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1043.8; top: 1990; width: 643.7; height: 73; page: 3;}; ">
+                  <docset:GroundInjuriesAircraftDamage><dg:chunk>Aircraft Explosion</dg:chunk>: </docset:GroundInjuriesAircraftDamage>
+                </xhtml:td>
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1687.5; top: 1990; width: 659.0; height: 73; page: 3;}; ">
+                  <docset:GroundInjuriesSubstantial />
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 2064; width: 2144.0; height: 71; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 2063; width: 393.3; height: 72; page: 3;}; ">
+                  <docset:CrewInjuriesTotalInjuries><dg:chunk>Total Injuries</dg:chunk>: </docset:CrewInjuriesTotalInjuries>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 595.8; top: 2063; width: 447.9; height: 72; page: 3;}; ">
+                  <docset:TotalInjuries><docset:Fatalities>1 </docset:Fatalities>Fatal </docset:TotalInjuries>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 1043.8; top: 2063; width: 1302.7; height: 72; page: 3;}; "
+                  colspan="2">
+                  <docset:LatitudeLongitude-cell>Latitude, Longitude: </docset:LatitudeLongitude-cell>
+                </xhtml:td>
+              </xhtml:tr>
+            </xhtml:tbody>
+          </xhtml:table>
+        </docset:MeteorologicalInformationAndFlightPlan>
+      </dg:chunk>
+      <dg:chunk>
+        <dg:chunk structure="div">
+
+          <dg:chunk>Administrative Information </dg:chunk>
+        </dg:chunk>
+
+        <docset:MeteorologicalInformationAndFlightPlan>
+          <xhtml:table structure="table"
+            style="boundingBox:{left: 202.5; top: 2259; width: 2144.0; height: 358; page: 3;}; ">
+            <xhtml:tbody structure="tbody"
+              style="boundingBox:{left: 202.5; top: 2259; width: 2144.0; height: 358; page: 3;}; ">
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 2259; width: 2144.0; height: 83; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 2259; width: 595.4; height: 83; page: 3;}; ">Investigator
+                  In Charge (IIC): </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 797.9; top: 2259; width: 1548.6; height: 83; page: 3;}; ">
+                  <docset:InvestigatorinChargeIic>David C Bowling </docset:InvestigatorinChargeIic>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 2343; width: 2144.0; height: 72; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 2342; width: 595.4; height: 73; page: 3;}; ">
+                  <docset:InvestigatorInChargeIICAdditionalParticipatingPersons><dg:chunk>Additional
+                    Participating Persons</dg:chunk>: </docset:InvestigatorInChargeIICAdditionalParticipatingPersons>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 797.9; top: 2342; width: 1548.6; height: 73; page: 3;}; ">
+                  <docset:AdditionalParticipatingPersons><docset:Author>Karsten Severin</docset:Author>;
+                    German BFU </docset:AdditionalParticipatingPersons>
+                </xhtml:td>
+              </xhtml:tr>
+
+              <xhtml:tr structure="tr"
+                style="boundingBox:{left: 202.5; top: 2416; width: 2144.0; height: 201; page: 3;}; ">
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 202.5; top: 2415; width: 595.4; height: 202; page: 3;}; ">
+                  <docset:InvestigatorInChargeIICInvestigationDocket><dg:chunk>Investigation Docket</dg:chunk>
+                    : </docset:InvestigatorInChargeIICInvestigationDocket>
+                </xhtml:td>
+
+                <xhtml:td structure="td"
+                  style="boundingBox:{left: 797.9; top: 2415; width: 1548.6; height: 202; page: 3;}; ">
+                  <docset:InvestigationDocket>
+                    <docset:AccidentDocket structure="p"><dgc:Org>NTSB </dgc:Org>accident and
+                      incident dockets serve as permanent archival information for the <docset:NTSBDocket>
+                      NTSB</docset:NTSBDocket>’s investigations. Dockets released prior to <docset:AccidentDocketReleaseDate>June
+                      1, 2009 </docset:AccidentDocketReleaseDate>are publicly available from the <docset:NTSBDocketAccess>
+                      NTSB’s </docset:NTSBDocketAccess>Record Management Division at <docset:ContactNTSB>
+                      pubinq@ntsb.gov</docset:ContactNTSB>, or at <docset:ContactInformation><docset:NTSBDocketNumber>
+                      800</docset:NTSBDocketNumber>-<docset:ContactNumber>877</docset:ContactNumber>
+                      -<docset:NTSBDocketNumber>6799</docset:NTSBDocketNumber></docset:ContactInformation>.
+                      Dockets released after this date are available at <docset:NTSBDocketAccess>
+                      http://dms.ntsb.gov/pubdms/. </docset:NTSBDocketAccess></docset:AccidentDocket>
+
+                  </docset:InvestigationDocket>
+                </xhtml:td>
+              </xhtml:tr>
+            </xhtml:tbody>
+          </xhtml:table>
+        </docset:MeteorologicalInformationAndFlightPlan>
+      </dg:chunk>
+    </dg:chunk>
+  </docset:NationalTransportationSafetyBoardAviationAccidentFactualReport>
+</docset:NationalTransportationSafetyBoardAviationAccidentFactualReport-section>

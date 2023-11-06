@@ -36,6 +36,14 @@ SEGMENTATION_TEST_DATA: list[SegmentationTestData] = [
         min_chunk_size=0,  # want all the chunks, regardless of size
         sub_chunk_tables=True,  # want all cells inside tables chunked out
     ),
+    SegmentationTestData(
+        input_file=TEST_DATA_DIR / "tabular/20071204X01896.xml",
+        output_file=TEST_DATA_DIR / "tabular/20071204X01896.normalized-chunks.yaml",
+    ),
+    SegmentationTestData(
+        input_file=TEST_DATA_DIR / "tabular/20071210X01921.xml",
+        output_file=TEST_DATA_DIR / "tabular/20071210X01921.normalized-chunks.yaml",
+    ),
 ]
 
 

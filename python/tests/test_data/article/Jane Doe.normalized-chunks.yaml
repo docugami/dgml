@@ -23,7 +23,8 @@
 - text: "The failure to exercise any right provided in this Agreement shall not be a waiver of prior or subsequent rights."
 - text: "9. Notice of Immunity"
 - text: "Employee is provided notice that an individual shall not be held criminally or civilly liable under any federal or state trade secret law for the disclosure of a trade secret that is made (i) in confidence to a federal, state, or local government official, either directly or indirectly, or to an attorney; and (ii) solely for the purpose of reporting or investigating a suspected violation of law."
-- text: "10. The following table outlines individuals who are authorized to receive Confidential Information , their role, and the purpose of disclosure:"
+- text: "10. Table of Authorized Disclosures"
+- text: "The following table outlines individuals who are authorized to receive Confidential Information , their role, and the purpose of disclosure:"
 - text: |
     +-----------------------+-------------------+------------------------------------------+
     | Authorized Individual | Role              | Purpose of Disclosure                    |

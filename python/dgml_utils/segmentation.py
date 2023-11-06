@@ -12,14 +12,22 @@ from dgml_utils.conversions import text_node_to_text, xhtml_table_to_text
 from dgml_utils.models import Chunk
 
 
+def is_descendant_of_structural(element) -> bool:
+    """True if element is a descendant of a node with the structure attribute set."""
+    for ancestor in element.iterancestors():
+        if STRUCTURE_KEY in ancestor.attrib:
+            return True
+    return False
+
+
 def is_structural(element) -> bool:
     """True if element itself has the structure attribute set."""
     return element is not None and STRUCTURE_KEY in element.attrib
 
 
 def has_structural_children(element) -> bool:
-    """True if element has any children with the structure attribute set."""
-    return len(element.findall(f"./*[@{STRUCTURE_KEY}]")) > 0
+    """True if element has any descendents (at any depth) with the structure attribute set."""
+    return len(element.findall(f".//*[@{STRUCTURE_KEY}]")) > 0
 
 
 def get_leaf_structural_chunks(
@@ -37,19 +45,20 @@ def get_leaf_structural_chunks(
 
         table_leaf_node = node.tag == TABLE_NAME and not sub_chunk_tables
         text_leaf_node = is_structural(node) and not has_structural_children(node)
+        is_structure_orphaned_node = is_descendant_of_structural(node) and not has_structural_children(node)
 
-        if table_leaf_node or text_leaf_node:
+        if table_leaf_node or text_leaf_node or is_structure_orphaned_node:
             node_text = ""
             if table_leaf_node:
                 node_text = xhtml_table_to_text(node)
-            elif text_leaf_node:
+            elif text_leaf_node or is_structure_orphaned_node:
                 node_text = text_node_to_text(node, whitespace_normalize=whitespace_normalize_text)
 
             chunk = Chunk(
                 tag=node.tag,
                 text=node_text,
                 xml=etree.tostring(node, encoding="unicode"),
-                structure=node.attrib.get(STRUCTURE_KEY),
+                structure=node.attrib.get(STRUCTURE_KEY) or "",
             )
             if prepended_small_chunk:
                 chunk = prepended_small_chunk + chunk

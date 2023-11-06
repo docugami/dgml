@@ -1,8 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Dict
 
-from dgml_utils.conversions import clean_tag
-
 
 @dataclass
 class Chunk:
@@ -22,7 +20,7 @@ class Chunk:
 
         if isinstance(other, Chunk):
             return Chunk(
-                tag=merge_strings(clean_tag(self), clean_tag(other)),
+                tag=merge_strings(self.tag, other.tag),
                 text=self.text + " " + other.text,
                 xml=self.xml + " " + other.xml,
                 structure=self.structure + " " + other.structure,

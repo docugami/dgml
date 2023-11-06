@@ -1,8 +1,13 @@
-import re
 from lxml import etree
 from tabulate import tabulate
 
-from dgml_utils.config import DEFAULT_TABLE_FORMAT_AS_TEXT, DEFAULT_WHITESPACE_NORMALIZE_TEXT, NAMESPACES, TABLE_NAME
+from dgml_utils.config import (
+    DEFAULT_TABLE_FORMAT_AS_TEXT,
+    DEFAULT_WHITESPACE_NORMALIZE_TEXT,
+    DEFAULT_ANCESTOR_XML_TAGS,
+    NAMESPACES,
+    TABLE_NAME,
+)
 
 
 def text_node_to_text(node, whitespace_normalize=DEFAULT_WHITESPACE_NORMALIZE_TEXT) -> str:
@@ -17,7 +22,7 @@ def clean_tag(node) -> str:
     if node is None:
         return ""
 
-    return re.sub(r"\{.*\}", "", node.tag)
+    return etree.QName(node).localname
 
 
 def xhtml_table_to_text(
@@ -40,8 +45,12 @@ def xhtml_table_to_text(
     return tabulate(rows, tablefmt=format)
 
 
-def simplified_xml(node, whitespace_normalize=DEFAULT_WHITESPACE_NORMALIZE_TEXT) -> str:
-    """Renders given node to simplified XML without attributes or namespaces."""
+def simplified_xml(
+    node,
+    whitespace_normalize=DEFAULT_WHITESPACE_NORMALIZE_TEXT,
+    ancestor_semantic_tags_count=DEFAULT_ANCESTOR_XML_TAGS,
+) -> str:
+    """Renders given node to simplified XML without attributes or namespaces. Includes give # of ancestor tags."""
     if node is None:
         return ""
 
@@ -59,6 +68,19 @@ def simplified_xml(node, whitespace_normalize=DEFAULT_WHITESPACE_NORMALIZE_TEXT)
         return stripped_el
 
     simplified_node = strip_ns_and_attribs(node)
+
+    # Retrieve all ancestors (or self) and filter out 'chunk' tags, limited to the count specified
+    ancestors_semantic_tags = [ancestor for ancestor in node.xpath("ancestor::*") if clean_tag(ancestor) != "chunk"][
+        -ancestor_semantic_tags_count:
+    ]
+
+    # Wrap with simplified output with ancestor tags
+    for ancestor in reversed(ancestors_semantic_tags):
+        ancestor_tag = clean_tag(ancestor)
+        ancestor_el = etree.Element(ancestor_tag)
+        ancestor_el.append(simplified_node)
+        simplified_node = ancestor_el
+
     xml = etree.tostring(simplified_node, encoding="unicode")
 
     # remove empty non-semantic chunks from output

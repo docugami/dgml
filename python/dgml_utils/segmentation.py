@@ -6,10 +6,16 @@ from dgml_utils.config import (
     DEFAULT_MIN_CHUNK_SIZE,
     DEFAULT_SUBCHUNK_TABLES,
     DEFAULT_WHITESPACE_NORMALIZE_TEXT,
+    DEFAULT_ANCESTOR_XML_TAGS,
     STRUCTURE_KEY,
     TABLE_NAME,
 )
-from dgml_utils.conversions import clean_tag, simplified_xml, text_node_to_text, xhtml_table_to_text
+from dgml_utils.conversions import (
+    clean_tag,
+    simplified_xml,
+    text_node_to_text,
+    xhtml_table_to_text,
+)
 from dgml_utils.locators import xpath
 from dgml_utils.models import Chunk
 
@@ -37,7 +43,8 @@ def get_leaf_structural_chunks(
     min_chunk_size=DEFAULT_MIN_CHUNK_SIZE,
     whitespace_normalize_text=DEFAULT_WHITESPACE_NORMALIZE_TEXT,
     sub_chunk_tables=DEFAULT_SUBCHUNK_TABLES,
-    include_xml_tags: bool = DEFAULT_INCLUDE_XML_TAGS,
+    include_xml_tags=DEFAULT_INCLUDE_XML_TAGS,
+    ancestor_semantic_tags_count=DEFAULT_ANCESTOR_XML_TAGS,
 ) -> List[Chunk]:
     """Returns all leaf structural nodes in the given element, combining small chunks with following siblings."""
     leaf_chunks: List[Chunk] = []
@@ -94,7 +101,8 @@ def get_leaf_structural_chunks_str(
     min_chunk_size=DEFAULT_MIN_CHUNK_SIZE,
     whitespace_normalize_text=DEFAULT_WHITESPACE_NORMALIZE_TEXT,
     sub_chunk_tables=DEFAULT_SUBCHUNK_TABLES,
-    include_xml_tags: bool = DEFAULT_INCLUDE_XML_TAGS,
+    include_xml_tags=DEFAULT_INCLUDE_XML_TAGS,
+    ancestor_semantic_tags_count=DEFAULT_ANCESTOR_XML_TAGS,
 ) -> List[Chunk]:
     root = etree.fromstring(dgml)
     return get_leaf_structural_chunks(
@@ -103,4 +111,5 @@ def get_leaf_structural_chunks_str(
         whitespace_normalize_text=whitespace_normalize_text,
         sub_chunk_tables=sub_chunk_tables,
         include_xml_tags=include_xml_tags,
+        ancestor_semantic_tags_count=ancestor_semantic_tags_count,
     )

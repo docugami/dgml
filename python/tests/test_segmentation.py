@@ -3,7 +3,7 @@ from pathlib import Path
 import pytest
 import yaml
 
-from dgml.segmentation import DEFAULT_MIN_CHUNK_SIZE, DEFAULT_SUBCHUNK_TABLES, get_leaf_structural_chunks_str
+from dgml_utils.segmentation import DEFAULT_MIN_CHUNK_SIZE, DEFAULT_SUBCHUNK_TABLES, get_leaf_structural_chunks_str
 
 
 @dataclass

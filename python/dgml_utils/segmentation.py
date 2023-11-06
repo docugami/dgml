@@ -1,15 +1,15 @@
 from lxml import etree
 from typing import List, Optional
 
-from dgml.config import (
+from dgml_utils.config import (
     DEFAULT_MIN_CHUNK_SIZE,
     DEFAULT_SUBCHUNK_TABLES,
     DEFAULT_WHITESPACE_NORMALIZE_TEXT,
     STRUCTURE_KEY,
     TABLE_NAME,
 )
-from dgml.conversions import text_node_to_text, xhtml_table_to_text
-from dgml.models import Chunk
+from dgml_utils.conversions import text_node_to_text, xhtml_table_to_text
+from dgml_utils.models import Chunk
 
 
 def is_structural(element) -> bool:

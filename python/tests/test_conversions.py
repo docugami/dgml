@@ -1,8 +1,7 @@
 import pytest
 from lxml import etree
-from dgml.config import NAMESPACES
 
-from dgml.conversions import text_node_to_text, xhtml_table_to_text
+from dgml_utils.conversions import text_node_to_text, xhtml_table_to_text
 
 
 def test_text_node_to_text():

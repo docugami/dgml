@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "dgml"
+name = "dgml-utils"
 version = "0.0.1"
 description = "Python utilities to work with the Docugami Markup Language (DGML) format."
 authors = ["Taqi Jaffri <tjaffri@docugami.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{ include = "dgml" }]
+packages = [{ include = "dgml_utils" }]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -31,7 +31,7 @@ addopts = "--doctest-modules --ignore=data --ignore=model --ignore training"
 norecursedirs = ".venv"
 
 [tool.pyright]
-include = ["dgml", "tests"]
+include = ["dgml_utils", "tests"]
 ignore = ["**/node_modules", "**/__pycache__", ".venv"]
 reportMissingImports = true
 reportMissingTypeStubs = false

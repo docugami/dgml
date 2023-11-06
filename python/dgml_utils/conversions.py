@@ -1,8 +1,7 @@
-import re
 from lxml import etree
 from tabulate import tabulate
 
-from dgml.config import NAMESPACES, TABLE_NAME
+from dgml_utils.config import NAMESPACES, TABLE_NAME
 
 
 def text_node_to_text(node, whitespace_normalize=True) -> str:

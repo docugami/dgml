@@ -13,9 +13,15 @@ class Chunk(BaseModel):
     metadata: Dict = {}
 
     def __add__(self, other):
+        def merge_strings(ours, theirs):
+            if theirs in ours:
+                return ours  # ours already contains theirs as a substripg
+
+            return (ours + " " + theirs).strip()
+
         if isinstance(other, Chunk):
             return Chunk(
-                tag=clean_tag(self) + " " + clean_tag(other),
+                tag=merge_strings(clean_tag(self), clean_tag(other)),
                 text=self.text + " " + other.text,
                 xml=self.xml + " " + other.xml,
                 structure=self.structure + " " + other.structure,

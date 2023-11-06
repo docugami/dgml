@@ -1,16 +1,17 @@
+from dataclasses import dataclass, field
 from typing import Dict
-from pydantic import BaseModel
 
 from dgml_utils.conversions import clean_tag
 
 
-class Chunk(BaseModel):
+@dataclass
+class Chunk:
     tag: str
     text: str
     xml: str
     structure: str
     xpath: str
-    metadata: Dict = {}
+    metadata: Dict = field(default_factory=dict)
 
     def __add__(self, other):
         def merge_strings(ours, theirs):

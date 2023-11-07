@@ -16,9 +16,6 @@ jobs:
     - name: Check out the code
       uses: actions/checkout@v3
 
-    - name: List files
-      run: ls -a
-
     - name: Set working directory
       run: cd python
 
@@ -28,7 +25,7 @@ jobs:
       shell: bash
 
     - name: Install dependencies
-      run: poetry install
+      run: poetry install --path python
 
     - name: Lint code
       run: make lint

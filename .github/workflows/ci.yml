@@ -16,6 +16,11 @@ jobs:
     - name: Check out the code
       uses: actions/checkout@v2
 
+    - name: Install Poetry
+      run: |
+        curl -sSL https://install.python-poetry.org | python3 -
+      shell: bash
+
     - name: Install dependencies
       run: poetry install
 

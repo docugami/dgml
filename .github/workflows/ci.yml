@@ -16,6 +16,10 @@ jobs:
     - name: Check out the code
       uses: actions/checkout@v2
 
+    - name: Set working directory
+      run: cd python
+      working-directory: python
+
     - name: Install Poetry
       run: |
         curl -sSL https://install.python-poetry.org | python3 -

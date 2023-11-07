@@ -16,24 +16,22 @@ jobs:
     - name: Check out the code
       uses: actions/checkout@v3
 
-    - name: Set working directory
-      run: cd python
-
     - name: Install Poetry
       run: |
         curl -sSL https://install.python-poetry.org | python3 -
       shell: bash
 
-    - name: List files
-      run: ls -a
-
     - name: Install dependencies
+      working-directory: ./python
+
       run: poetry install --path python
 
     - name: Lint code
+      working-directory: ./python
       run: make lint
 
     - name: Test code
+      working-directory: ./python
       run: make test
 
     - name: Check PR status

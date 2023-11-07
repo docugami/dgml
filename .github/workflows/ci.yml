@@ -14,11 +14,13 @@ jobs:
 
     steps:
     - name: Check out the code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
+
+    - name: List files
+      run: ls -a
 
     - name: Set working directory
       run: cd python
-      working-directory: python
 
     - name: Install Poetry
       run: |

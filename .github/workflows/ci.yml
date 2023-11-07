@@ -13,11 +13,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Set working directory
-      run: cd python
 
     - name: Check out the code
       uses: actions/checkout@v2
+
+    - name: Set working directory
+      run: cd python
 
     - name: Install Poetry
       run: |

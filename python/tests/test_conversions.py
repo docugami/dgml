@@ -1,14 +1,7 @@
 import pytest
 from lxml import etree
 
-from dgml_utils.conversions import text_node_to_text, xhtml_table_to_text
-
-
-def test_text_node_to_text():
-    element = etree.Element("root")
-    element.text = "  Hello   \n\nWorld  "
-    assert text_node_to_text(element) == "Hello World"
-    assert text_node_to_text(element, whitespace_normalize=False) == "  Hello   \n\nWorld  "
+from dgml_utils.conversions import xhtml_table_to_text
 
 
 def test_xhtml_table_to_text():

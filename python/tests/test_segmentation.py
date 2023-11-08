@@ -7,6 +7,7 @@ from dgml_utils.segmentation import (
     DEFAULT_MIN_CHUNK_SIZE,
     DEFAULT_SUBCHUNK_TABLES,
     DEFAULT_INCLUDE_XML_TAGS,
+    DEFAULT_XML_HIERARCHY_LEVELS,
     get_leaf_structural_chunks_str,
 )
 
@@ -18,6 +19,7 @@ class SegmentationTestData:
     min_chunk_size: int = DEFAULT_MIN_CHUNK_SIZE
     sub_chunk_tables: bool = DEFAULT_SUBCHUNK_TABLES
     include_xml_tags: bool = DEFAULT_INCLUDE_XML_TAGS
+    xml_hierarchy_levels: int = DEFAULT_XML_HIERARCHY_LEVELS
 
 
 TEST_DATA_DIR = Path(__file__).parent / "test_data"
@@ -30,6 +32,7 @@ SEGMENTATION_TEST_DATA: list[SegmentationTestData] = [
         input_file=TEST_DATA_DIR / "simple/simple.xml",
         output_file=TEST_DATA_DIR / "simple/simple.normalized-chunks_xml.yaml",
         include_xml_tags=True,
+        xml_hierarchy_levels=3,
     ),
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "simple/simple.xml",
@@ -67,6 +70,7 @@ def test_segmentation(test_data: SegmentationTestData):
             min_chunk_size=test_data.min_chunk_size,
             sub_chunk_tables=test_data.sub_chunk_tables,
             include_xml_tags=test_data.include_xml_tags,
+            xml_hierarchy_levels=test_data.xml_hierarchy_levels,
         )
         assert chunks
 
@@ -76,8 +80,15 @@ def test_segmentation(test_data: SegmentationTestData):
 
             for i in range(len(expected_chunks)):
                 assert chunks[i].text == expected_chunks[i]["text"].strip()
+                if "parent_3_text" in expected_chunks[i]:
+                    assert chunks[i].parent
+                    assert chunks[i].parent.text == expected_chunks[i]["parent_3_text"].strip()  # type: ignore
                 if "xpath" in expected_chunks[i]:
                     assert chunks[i].xpath == expected_chunks[i]["xpath"].strip()
+                if "tag" in expected_chunks[i]:
+                    assert chunks[i].tag == expected_chunks[i]["tag"].strip()
+                if "structure" in expected_chunks[i]:
+                    assert chunks[i].structure == expected_chunks[i]["structure"].strip()
 
             assert len(chunks) == len(
                 expected_chunks

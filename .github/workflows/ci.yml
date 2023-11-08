@@ -22,15 +22,15 @@ jobs:
       shell: bash
 
     - name: Install dependencies
-      working-directory: ./python
+      working-directory: python
       run: poetry install
 
     - name: Lint code
-      working-directory: ./python
+      working-directory: python
       run: make lint
 
     - name: Test code
-      working-directory: ./python
+      working-directory: python
       run: make test
 
     - name: Check PR status

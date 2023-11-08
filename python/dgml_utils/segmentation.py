@@ -7,6 +7,7 @@ from dgml_utils.config import (
     DEFAULT_SUBCHUNK_TABLES,
     DEFAULT_WHITESPACE_NORMALIZE_TEXT,
     DEFAULT_XML_HIERARCHY_LEVELS,
+    DEFAULT_MAX_TEXT_SIZE,
     STRUCTURE_KEY,
     TABLE_NAME,
 )
@@ -45,6 +46,7 @@ def get_leaf_structural_chunks(
     sub_chunk_tables=DEFAULT_SUBCHUNK_TABLES,
     include_xml_tags=DEFAULT_INCLUDE_XML_TAGS,
     xml_hierarchy_levels=DEFAULT_XML_HIERARCHY_LEVELS,
+    max_text_size=DEFAULT_MAX_TEXT_SIZE,
 ) -> List[Chunk]:
     """Returns all leaf structural nodes in the given element, combining small chunks with following structural nodes."""
     leaf_chunks: List[Chunk] = []
@@ -61,6 +63,7 @@ def get_leaf_structural_chunks(
                 node,
                 whitespace_normalize=whitespace_normalize_text,
                 xml_hierarchy_levels=xml_hierarchy_levels,
+                max_text_size=max_text_size,
             )
         elif table_node:
             node_text = xhtml_table_to_text(node, whitespace_normalize=whitespace_normalize_text)
@@ -128,6 +131,7 @@ def get_leaf_structural_chunks_str(
     sub_chunk_tables=DEFAULT_SUBCHUNK_TABLES,
     include_xml_tags=DEFAULT_INCLUDE_XML_TAGS,
     xml_hierarchy_levels=DEFAULT_XML_HIERARCHY_LEVELS,
+    max_text_size=DEFAULT_MAX_TEXT_SIZE,
 ) -> List[Chunk]:
     root = etree.fromstring(dgml)
     return get_leaf_structural_chunks(
@@ -137,4 +141,5 @@ def get_leaf_structural_chunks_str(
         sub_chunk_tables=sub_chunk_tables,
         include_xml_tags=include_xml_tags,
         xml_hierarchy_levels=xml_hierarchy_levels,
+        max_text_size=max_text_size,
     )

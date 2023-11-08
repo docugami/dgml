@@ -6,7 +6,7 @@ from dgml_utils.config import (
     DEFAULT_MIN_CHUNK_SIZE,
     DEFAULT_SUBCHUNK_TABLES,
     DEFAULT_WHITESPACE_NORMALIZE_TEXT,
-    DEFAULT_ANCESTOR_XML_TAGS,
+    DEFAULT_XML_HIERARCHY_LEVELS,
     STRUCTURE_KEY,
     TABLE_NAME,
 )
@@ -44,11 +44,38 @@ def get_leaf_structural_chunks(
     whitespace_normalize_text=DEFAULT_WHITESPACE_NORMALIZE_TEXT,
     sub_chunk_tables=DEFAULT_SUBCHUNK_TABLES,
     include_xml_tags=DEFAULT_INCLUDE_XML_TAGS,
-    ancestor_semantic_tags_count=DEFAULT_ANCESTOR_XML_TAGS,
+    xml_hierarchy_levels=DEFAULT_XML_HIERARCHY_LEVELS,
 ) -> List[Chunk]:
-    """Returns all leaf structural nodes in the given element, combining small chunks with following siblings."""
+    """Returns all leaf structural nodes in the given element, combining small chunks with following structural nodes."""
     leaf_chunks: List[Chunk] = []
     prepended_small_chunk: Optional[Chunk] = None
+
+    if not include_xml_tags and xml_hierarchy_levels > 0:
+        raise Exception(
+            f"Contradictory configuration: include_xml_tags is {include_xml_tags} while xml_hierarchy_levels is {xml_hierarchy_levels}. Hierarchy is only supported when including XML tags."
+        )
+
+    def build_chunk(node, table_node: bool, text_node: bool, xml_hierarchy_levels: int) -> Chunk:
+        if include_xml_tags:
+            node_text = simplified_xml(
+                node,
+                whitespace_normalize=whitespace_normalize_text,
+                xml_hierarchy_levels=xml_hierarchy_levels,
+            )
+        elif table_node:
+            node_text = xhtml_table_to_text(node, whitespace_normalize=whitespace_normalize_text)
+        elif text_node:
+            node_text = text_node_to_text(node, whitespace_normalize=whitespace_normalize_text)
+        else:
+            raise Exception("Cannot build chunk since it is not a node (table or text)")
+
+        return Chunk(
+            tag=clean_tag(node),
+            text=node_text,
+            xml=etree.tostring(node, encoding="unicode"),
+            structure=node.attrib.get(STRUCTURE_KEY) or "",
+            xpath=xpath(node),
+        )
 
     def traverse(node):
         nonlocal prepended_small_chunk  # Access the variable from the outer scope
@@ -58,21 +85,19 @@ def get_leaf_structural_chunks(
         is_structure_orphaned_node = is_descendant_of_structural(node) and not has_structural_children(node)
 
         if table_leaf_node or text_leaf_node or is_structure_orphaned_node:
-            node_text = ""
-            if include_xml_tags:
-                node_text = simplified_xml(node, whitespace_normalize=whitespace_normalize_text)
-            elif table_leaf_node:
-                node_text = xhtml_table_to_text(node, whitespace_normalize=whitespace_normalize_text)
-            elif text_leaf_node or is_structure_orphaned_node:
-                node_text = text_node_to_text(node, whitespace_normalize=whitespace_normalize_text)
-
-            chunk = Chunk(
-                tag=clean_tag(node),
-                text=node_text,
-                xml=etree.tostring(node, encoding="unicode"),
-                structure=node.attrib.get(STRUCTURE_KEY) or "",
-                xpath=xpath(node),
+            chunk = build_chunk(
+                node,
+                table_node=table_leaf_node,
+                text_node=text_leaf_node or is_structure_orphaned_node,
+                xml_hierarchy_levels=0,  # current node
             )
+            if xml_hierarchy_levels > 0:
+                chunk.parent = build_chunk(
+                    node,
+                    table_node=table_leaf_node,
+                    text_node=text_leaf_node or is_structure_orphaned_node,
+                    xml_hierarchy_levels=xml_hierarchy_levels,  # ancestor node
+                )
             if prepended_small_chunk:
                 chunk = prepended_small_chunk + chunk
                 prepended_small_chunk = None  # clear
@@ -102,7 +127,7 @@ def get_leaf_structural_chunks_str(
     whitespace_normalize_text=DEFAULT_WHITESPACE_NORMALIZE_TEXT,
     sub_chunk_tables=DEFAULT_SUBCHUNK_TABLES,
     include_xml_tags=DEFAULT_INCLUDE_XML_TAGS,
-    ancestor_semantic_tags_count=DEFAULT_ANCESTOR_XML_TAGS,
+    xml_hierarchy_levels=DEFAULT_XML_HIERARCHY_LEVELS,
 ) -> List[Chunk]:
     root = etree.fromstring(dgml)
     return get_leaf_structural_chunks(
@@ -111,5 +136,5 @@ def get_leaf_structural_chunks_str(
         whitespace_normalize_text=whitespace_normalize_text,
         sub_chunk_tables=sub_chunk_tables,
         include_xml_tags=include_xml_tags,
-        ancestor_semantic_tags_count=ancestor_semantic_tags_count,
+        xml_hierarchy_levels=xml_hierarchy_levels,
     )

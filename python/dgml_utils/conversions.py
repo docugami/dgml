@@ -23,11 +23,11 @@ def text_node_to_text(node, whitespace_normalize=DEFAULT_WHITESPACE_NORMALIZE_TE
     >>> root = etree.XML("<root> Hello  <child>World!</child></root>")
     >>> text_node_to_text(root)
     'Hello World!'
-    >>> root = etree.XML("<root>  Hello   \n\nWorld!  </root>")
-    >>> text_node_to_text(element)
-    'Hello World'
-    >>> text_node_to_text(element, whitespace_normalize=False)
-    '  Hello   \n\nWorld!  '
+    >>> root = etree.XML("<root>  Hello   \\n\\nWorld!  </root>")
+    >>> text_node_to_text(root)
+    'Hello World!'
+    >>> text_node_to_text(root, whitespace_normalize=False)
+    '  Hello   \\n\\nWorld!  '
     """
     node_text = " ".join(node.itertext())
     if whitespace_normalize:
@@ -99,12 +99,12 @@ def nth_ancestor(
     >>> ancestor = nth_ancestor(child, -1)
     >>> clean_tag(ancestor)
     'child'
-    >>> ancestor = nth_ancestor(child, 2)
-    >>> clean_tag(ancestor) if ancestor is not None else None
+    >>> ancestor = nth_ancestor(child, 2, skip_tags=['skip'])
+    >>> clean_tag(ancestor)
     'root'
     >>> orphan = etree.XML("<orphan>No parents</orphan>")
     >>> ancestor = nth_ancestor(orphan, 1)
-    >>> clean_tag(ancestor) if ancestor is not None else None
+    >>> clean_tag(ancestor)
     'orphan'
     """
     if n <= 0 or node is None:
@@ -166,9 +166,11 @@ def simplified_xml(
     :param max_ancestor_size: The maximum size of text allowed before stopping the ancestor search
     :return: Simplified XML string
 
+    >>> nsmap = {'ns': 'http://test.com'}
     >>> root = etree.XML('<root xmlns="http://test.com"><parent attr="ignore"><skip><child>Text</child></skip></parent></root>')
-    >>> print(simplified_xml(root.find('.//child'), skip_tags=['skip']))
-    <parent><child>Text</child></parent>
+    >>> child = root.find('.//ns:child', namespaces=nsmap)
+    >>> print(simplified_xml(child, skip_tags=['skip'], xml_hierarchy_levels=100))
+    <root><parent><child>Text</child></parent></root>
     """
     if node is None:
         return ""

@@ -26,7 +26,7 @@ line-length = 127
 ignore = ["E501"]
 
 [tool.pytest.ini_options]
-addopts = "--doctest-modules --ignore=data --ignore=model --ignore training"
+addopts = "--doctest-modules"
 norecursedirs = ".venv"
 
 [tool.pyright]

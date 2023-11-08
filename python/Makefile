@@ -7,4 +7,4 @@ lint:
 	poetry run npx pyright .
 
 test:
-	poetry run pytest tests
+	poetry run pytest

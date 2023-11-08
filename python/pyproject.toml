@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dgml-utils"
-version = "0.0.6"
+version = "0.0.7"
 description = "Python utilities to work with the Docugami Markup Language (DGML) format."
 authors = ["Taqi Jaffri <tjaffri@docugami.com>"]
 license = "MIT"

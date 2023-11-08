@@ -7,8 +7,8 @@ DEFAULT_TABLE_FORMAT_AS_TEXT = "grid"  # should be a valid format for the tabula
 DEFAULT_WHITESPACE_NORMALIZE_TEXT = True
 DEFAULT_INCLUDE_XML_TAGS = False
 DEFAULT_XML_HIERARCHY_LEVELS = 0
-DEFAULT_SKIP_XML_TAGS = ["chunk"]  # chunks that are skipped in the parent hiearchy and also not include inline
-MAX_PARENT_CHUNK_SIZE = 1024  # Stop walking up hierarchy at this max size when retrieving parent chunks
+DEFAULT_SKIP_XML_TAGS = ["chunk"]  # chunks that are skipped in the parent hierarchy and also not included inline in XML
+MAX_PARENT_CHUNK_SIZE = 1024  # Stop walking up hierarchy past this max size when retrieving parent chunks
 
 NAMESPACES = {
     "docset": "http://www.docugami.com/2021/dgml/TaqiTest20231103/NDA",

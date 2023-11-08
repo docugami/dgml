@@ -20,13 +20,13 @@ jobs:
         build
         --user
     - name: Build a binary wheel and a source tarball
-      working-directory: ./python
+      working-directory: python
       run: python3 -m build
     - name: Store the distribution packages
       uses: actions/upload-artifact@v3
       with:
         name: python-package-distributions
-        path: dist/
+        path: python/dist/
 
   publish-to-pypi:
     name: >-

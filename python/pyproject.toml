@@ -2,9 +2,11 @@
 name = "dgml-utils"
 version = "0.0.7"
 description = "Python utilities to work with the Docugami Markup Language (DGML) format."
-authors = ["Taqi Jaffri <tjaffri@docugami.com>"]
+authors = ["Docugami <contact@docugami.com>"]
 license = "MIT"
 readme = "README.md"
+repository = "https://github.com/docugami/dgml-utils"
+homepage = "https://docugami.com"
 packages = [{ include = "dgml_utils" }]
 
 [tool.poetry.dependencies]

@@ -1,6 +1,9 @@
 name: Publish Python 🐍 distribution 📦 to PyPI
 
-on: push
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -45,6 +48,6 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: python-package-distributions
-        path: python/dist/
+        path: python
     - name: Publish distribution 📦 to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1

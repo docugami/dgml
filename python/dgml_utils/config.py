@@ -8,7 +8,7 @@ DEFAULT_WHITESPACE_NORMALIZE_TEXT = True
 DEFAULT_INCLUDE_XML_TAGS = False
 DEFAULT_XML_HIERARCHY_LEVELS = 0
 DEFAULT_SKIP_XML_TAGS = ["chunk"]  # chunks that are skipped in the parent hierarchy and also not included inline in XML
-MAX_PARENT_CHUNK_SIZE = 1024  # Stop walking up hierarchy past this max size when retrieving parent chunks
+DEFAULT_MAX_TEXT_SIZE = 1024
 
 NAMESPACES = {
     "docset": "http://www.docugami.com/2021/dgml/TaqiTest20231103/NDA",

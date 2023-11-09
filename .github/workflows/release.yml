@@ -1,9 +1,10 @@
 name: Publish Python 🐍 distribution 📦 to PyPI
 
-on: push
+on:
+  push:
 
 jobs:
-  build:
+  build-distribution:
     name: Build distribution 📦
     runs-on: ubuntu-latest
 
@@ -27,12 +28,14 @@ jobs:
       with:
         name: python-package-distributions
         path: python/dist/
+    - name: Show Tree
+      run: gio tree
 
   publish-to-pypi:
     name: >-
       Publish Python 🐍 distribution 📦 to PyPI
     needs:
-    - build
+    - build-distribution
     runs-on: ubuntu-latest
     environment:
       name: pypi
@@ -41,10 +44,16 @@ jobs:
       id-token: write
 
     steps:
+    - name: Show Tree
+      run: gio tree
     - name: Download all the dists
       uses: actions/download-artifact@v3
       with:
         name: python-package-distributions
         path: python/dist/
+    - name: Show Tree
+      run: gio tree
     - name: Publish distribution 📦 to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        path: python/

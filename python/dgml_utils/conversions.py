@@ -115,14 +115,21 @@ def nth_ancestor(
         all_ancestors = [anc for anc in node.xpath("ancestor::*")]
         all_ancestors.reverse()  # start from parent up, not root down
         if all_ancestors:
-            filtered_ancestors = [anc for anc in all_ancestors if clean_tag(anc) not in skip_tags]
+            for anc in all_ancestors:
+                if clean_tag(anc) in skip_tags:
+                    continue
+                ancestor_text_length = len(simplified_xml(anc, whitespace_normalize, xml_hierarchy_levels=0))
+                if ancestor_text_length <= max_text_length:
+                    node = anc
+                    filtered_ancestors.append(anc)
+                else:
+                    break  # Stop walking ancestor chain if max text length is exceeded
 
             for i, ancestor in enumerate(filtered_ancestors):
-                if len(text_node_to_text(ancestor, whitespace_normalize)) > max_text_length or i + 1 == n:
+                if i + 1 == n:
                     return ancestor
 
-    # If no ancestors are found, return the node itself
-    return filtered_ancestors[-1] if filtered_ancestors else node
+    return node
 
 
 def simplified_element(node):
@@ -167,12 +174,24 @@ def simplified_xml(
     :return: Simplified XML string
 
     >>> nsmap = {'ns': 'http://test.com'}
-    >>> root = etree.XML('<root xmlns="http://test.com"><parent attr="ignore"><skip><child>Text</child></skip></parent></root>')
+    >>> root = etree.XML('<root xmlns="http://test.com"><parent><skip><child>Text</child><sibling attr="test">foo</sibling></skip></parent>Mixed text very long</root>')
     >>> child = root.find('.//ns:child', namespaces=nsmap)
+
+    # Test walking up hierarchy level without skipping or max text length
+    # >>> print(simplified_xml(child, xml_hierarchy_levels=1))
+    # <skip><child>Text</child><sibling>foo</sibling></skip>
+
+    Test walking up hierarchy level with skipping but no max text length
+    >>> print(simplified_xml(child, skip_tags=['skip'], xml_hierarchy_levels=1))
+    <parent><child>Text</child><sibling>foo</sibling></parent>Mixed text very long
+
+    Test walking up hierarchy level with skipping but stopping at the root
     >>> print(simplified_xml(child, skip_tags=['skip'], xml_hierarchy_levels=100))
-    <root><parent><child>Text</child></parent></root>
-    >>> print(simplified_xml(child, skip_tags=['skip'], xml_hierarchy_levels=100, max_text_length=9))
-    <root><pa
+    <root><parent><child>Text</child><sibling>foo</sibling></parent>Mixed text very long</root>
+
+    Test walking up hierarchy level with skipping but early stopping due to max text length
+    >>> print(simplified_xml(child, skip_tags=['skip'], xml_hierarchy_levels=100, max_text_length=40))
+    <child>Text</child>
     """
     if node is None:
         return ""
@@ -185,7 +204,6 @@ def simplified_xml(
         whitespace_normalize=whitespace_normalize,
     )
     simplified_node = simplified_element(node)
-
     xml = etree.tostring(simplified_node, encoding="unicode")
 
     # remove skip tags from output

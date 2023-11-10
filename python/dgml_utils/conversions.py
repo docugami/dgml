@@ -192,6 +192,10 @@ def simplified_xml(
     Test walking up hierarchy level with skipping but early stopping due to max text length
     >>> print(simplified_xml(child, skip_tags=['skip'], xml_hierarchy_levels=100, max_text_length=40))
     <child>Text</child>
+
+    Test forced truncation of current node if it is large
+    >>> print(simplified_xml(child, max_text_length=9))
+    <child>Te
     """
     if node is None:
         return ""

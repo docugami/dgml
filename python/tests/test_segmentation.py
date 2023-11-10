@@ -4,7 +4,7 @@ import pytest
 import yaml
 
 from dgml_utils.segmentation import (
-    DEFAULT_MIN_CHUNK_SIZE,
+    DEFAULT_MIN_CHUNK_LENGTH,
     DEFAULT_SUBCHUNK_TABLES,
     DEFAULT_INCLUDE_XML_TAGS,
     DEFAULT_XML_HIERARCHY_LEVELS,
@@ -16,7 +16,7 @@ from dgml_utils.segmentation import (
 class SegmentationTestData:
     input_file: Path
     output_file: Path
-    min_chunk_size: int = DEFAULT_MIN_CHUNK_SIZE
+    min_chunk_length: int = DEFAULT_MIN_CHUNK_LENGTH
     sub_chunk_tables: bool = DEFAULT_SUBCHUNK_TABLES
     include_xml_tags: bool = DEFAULT_INCLUDE_XML_TAGS
     xml_hierarchy_levels: int = DEFAULT_XML_HIERARCHY_LEVELS
@@ -37,7 +37,7 @@ SEGMENTATION_TEST_DATA: list[SegmentationTestData] = [
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "simple/simple.xml",
         output_file=TEST_DATA_DIR / "simple/simple.normalized-chunks_all.yaml",
-        min_chunk_size=0,  # want all the chunks, regardless of size
+        min_chunk_length=0,  # want all the chunks, regardless of length
         sub_chunk_tables=True,  # want all cells inside tables chunked out
     ),
     SegmentationTestData(
@@ -47,7 +47,7 @@ SEGMENTATION_TEST_DATA: list[SegmentationTestData] = [
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "article/Jane Doe.xml",
         output_file=TEST_DATA_DIR / "article/Jane Doe.normalized-chunks_all.yaml",
-        min_chunk_size=0,  # want all the chunks, regardless of size
+        min_chunk_length=0,  # want all the chunks, regardless of length
         sub_chunk_tables=True,  # want all cells inside tables chunked out
     ),
     SegmentationTestData(
@@ -67,7 +67,7 @@ def test_segmentation(test_data: SegmentationTestData):
         article_shaped_file_xml = input_file.read()
         chunks = get_leaf_structural_chunks_str(
             dgml=article_shaped_file_xml,
-            min_chunk_size=test_data.min_chunk_size,
+            min_chunk_length=test_data.min_chunk_length,
             sub_chunk_tables=test_data.sub_chunk_tables,
             include_xml_tags=test_data.include_xml_tags,
             xml_hierarchy_levels=test_data.xml_hierarchy_levels,

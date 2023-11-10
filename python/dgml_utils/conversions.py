@@ -6,7 +6,7 @@ from dgml_utils.config import (
     DEFAULT_SKIP_XML_TAGS,
     DEFAULT_TABLE_FORMAT_AS_TEXT,
     DEFAULT_WHITESPACE_NORMALIZE_TEXT,
-    DEFAULT_MAX_TEXT_SIZE,
+    DEFAULT_MAX_TEXT_LENGTH,
     NAMESPACES,
     TABLE_NAME,
 )
@@ -75,16 +75,16 @@ def nth_ancestor(
     node,
     n: int,
     skip_tags=DEFAULT_SKIP_XML_TAGS,
-    max_text_size=DEFAULT_MAX_TEXT_SIZE,
+    max_text_length=DEFAULT_MAX_TEXT_LENGTH,
     whitespace_normalize=DEFAULT_WHITESPACE_NORMALIZE_TEXT,
 ):
     """
-    Finds the nth ancestor of a given lxml node, skipping nodes with tags in skip_tags and considering text size limit.
+    Finds the nth ancestor of a given lxml node, skipping nodes with tags in skip_tags and considering text length limit.
 
     :param node: The lxml node from which to find the ancestor
     :param n: The number of ancestors to go up the XML tree. If n <= 0, the node itself is returned.
     :param skip_tags: Tags to skip when counting ancestors
-    :param max_text_size: The maximum size of text allowed before stopping the search
+    :param max_text_length: The maximum length of text allowed before stopping the search
     :param whitespace_normalize: Whether to normalize whitespace in text node processing
     :return: The nth ancestor lxml node or the node itself if n <= 0 or no ancestors are found
 
@@ -118,7 +118,7 @@ def nth_ancestor(
             filtered_ancestors = [anc for anc in all_ancestors if clean_tag(anc) not in skip_tags]
 
             for i, ancestor in enumerate(filtered_ancestors):
-                if len(text_node_to_text(ancestor, whitespace_normalize)) > max_text_size or i + 1 == n:
+                if len(text_node_to_text(ancestor, whitespace_normalize)) > max_text_length or i + 1 == n:
                     return ancestor
 
     # If no ancestors are found, return the node itself
@@ -153,7 +153,7 @@ def simplified_xml(
     whitespace_normalize=DEFAULT_WHITESPACE_NORMALIZE_TEXT,
     skip_tags=DEFAULT_SKIP_XML_TAGS,
     xml_hierarchy_levels=DEFAULT_XML_HIERARCHY_LEVELS,
-    max_text_size=DEFAULT_MAX_TEXT_SIZE,
+    max_text_length=DEFAULT_MAX_TEXT_LENGTH,
 ) -> str:
     """
     Renders the given node (or parent at specified hierarchy level) to simplified XML
@@ -163,7 +163,7 @@ def simplified_xml(
     :param whitespace_normalize: Whether to normalize whitespace in text node processing
     :param skip_tags: Tags to skip when counting ancestors
     :param xml_hierarchy_levels: The number of hierarchy levels to go up from the node
-    :param max_text_size: The maximum size of chunk returned (by text)
+    :param max_text_length: The maximum length of chunk returned (by text)
     :return: Simplified XML string
 
     >>> nsmap = {'ns': 'http://test.com'}
@@ -171,7 +171,7 @@ def simplified_xml(
     >>> child = root.find('.//ns:child', namespaces=nsmap)
     >>> print(simplified_xml(child, skip_tags=['skip'], xml_hierarchy_levels=100))
     <root><parent><child>Text</child></parent></root>
-    >>> print(simplified_xml(child, skip_tags=['skip'], xml_hierarchy_levels=100, max_text_size=9))
+    >>> print(simplified_xml(child, skip_tags=['skip'], xml_hierarchy_levels=100, max_text_length=9))
     <root><pa
     """
     if node is None:
@@ -181,7 +181,7 @@ def simplified_xml(
         node,
         n=xml_hierarchy_levels,
         skip_tags=skip_tags,
-        max_text_size=max_text_size,
+        max_text_length=max_text_length,
         whitespace_normalize=whitespace_normalize,
     )
     simplified_node = simplified_element(node)
@@ -194,4 +194,4 @@ def simplified_xml(
 
     if whitespace_normalize:
         xml = " ".join(xml.split()).strip()
-    return xml.strip()[:max_text_size].strip()
+    return xml.strip()[:max_text_length].strip()

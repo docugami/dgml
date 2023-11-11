@@ -27,18 +27,18 @@ class SegmentationTestData:
 TEST_DATA_DIR = Path(__file__).parent / "test_data"
 SEGMENTATION_TEST_DATA: list[SegmentationTestData] = [
     SegmentationTestData(
-        input_file=TEST_DATA_DIR / "simple/simple.xml",
-        output_file=TEST_DATA_DIR / "simple/simple.normalized-chunks.yaml",
+        input_file=TEST_DATA_DIR / "fake/fake.xml",
+        output_file=TEST_DATA_DIR / "fake/fake.normalized-chunks.yaml",
     ),
     SegmentationTestData(
-        input_file=TEST_DATA_DIR / "simple/simple.xml",
-        output_file=TEST_DATA_DIR / "simple/simple.normalized-chunks_xml.yaml",
+        input_file=TEST_DATA_DIR / "fake/fake.xml",
+        output_file=TEST_DATA_DIR / "fake/fake.normalized-chunks_xml.yaml",
         xml_mode=True,
         parent_hierarchy_levels=3,
     ),
     SegmentationTestData(
-        input_file=TEST_DATA_DIR / "simple/simple.xml",
-        output_file=TEST_DATA_DIR / "simple/simple.normalized-chunks_all.yaml",
+        input_file=TEST_DATA_DIR / "fake/fake.xml",
+        output_file=TEST_DATA_DIR / "fake/fake.normalized-chunks_all.yaml",
         min_text_length=0,  # want all the chunks separated out, regardless of length
         sub_chunk_tables=True,  # want all cells inside tables chunked out
     ),

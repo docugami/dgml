@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from pathlib import Path
+from typing import List, Optional
 import pytest
 import yaml
 
@@ -10,6 +11,7 @@ from dgml_utils.segmentation import (
     DEFAULT_XML_HIERARCHY_LEVELS,
     get_leaf_structural_chunks_str,
 )
+from dgml_utils.models import Chunk
 
 
 @dataclass
@@ -58,7 +60,37 @@ SEGMENTATION_TEST_DATA: list[SegmentationTestData] = [
         input_file=TEST_DATA_DIR / "tabular/20071210X01921.xml",
         output_file=TEST_DATA_DIR / "tabular/20071210X01921.normalized-chunks.yaml",
     ),
+    SegmentationTestData(
+        input_file=TEST_DATA_DIR / "arxiv/2307.09288.xml",
+        output_file=TEST_DATA_DIR / "arxiv/2307.09288.normalized-chunks.yaml",
+    ),
 ]
+
+
+def _debug_dump_yaml(chunks: List[Chunk], output_path: Optional[Path] = None):
+    """
+    Use this in the debugger to dump yaml to a path for inspection or bootstrapping test cases.
+    """
+    yaml_lines = []
+    for chunk in chunks:
+        if chunk.tag == "table":
+            yaml_lines.append("- text: |")
+            for row in chunk.text.splitlines():
+                yaml_lines.append(f"    {row}")
+        else:
+            text = chunk.text.replace('"', '\\"')  # Escape double quotes
+            yaml_lines.append(f'- text: "{text}"')
+
+        yaml_lines.append(f'  tag: "{chunk.tag}"')
+        yaml_lines.append(f'  structure: "{chunk.structure}"')
+
+    yaml = "\n".join(yaml_lines)
+
+    if output_path:
+        with open(output_path, "w") as file:
+            file.write(yaml)
+    else:
+        print(yaml)
 
 
 @pytest.mark.parametrize("test_data", SEGMENTATION_TEST_DATA)

@@ -2,8 +2,8 @@ from lxml import etree
 from tabulate import tabulate
 
 from dgml_utils.config import (
-    DEFAULT_XML_HIERARCHY_LEVELS,
-    DEFAULT_SKIP_XML_TAGS,
+    DEFAULT_PARENT_HIERARCHY_LEVELS,
+    DEFAULT_SKIP_TAGS,
     DEFAULT_TABLE_FORMAT_AS_TEXT,
     DEFAULT_WHITESPACE_NORMALIZE_TEXT,
     DEFAULT_MAX_TEXT_LENGTH,
@@ -74,7 +74,7 @@ def xhtml_table_to_text(
 def nth_ancestor(
     node,
     n: int,
-    skip_tags=DEFAULT_SKIP_XML_TAGS,
+    skip_tags=DEFAULT_SKIP_TAGS,
     max_text_length=DEFAULT_MAX_TEXT_LENGTH,
     whitespace_normalize=DEFAULT_WHITESPACE_NORMALIZE_TEXT,
 ):
@@ -118,7 +118,7 @@ def nth_ancestor(
             for anc in all_ancestors:
                 if clean_tag(anc) in skip_tags:
                     continue
-                ancestor_text_length = len(simplified_xml(anc, whitespace_normalize, xml_hierarchy_levels=0))
+                ancestor_text_length = len(simplified_xml(anc, whitespace_normalize, parent_hierarchy_levels=0))
                 if ancestor_text_length <= max_text_length:
                     node = anc
                     filtered_ancestors.append(anc)
@@ -132,34 +132,34 @@ def nth_ancestor(
     return node
 
 
-def simplified_element(node):
+def simplified_node(node):
     """
-    Recursive function to copy over elements to a new tree without namespaces and attributes.
+    Recursive function to copy over nodes to a new tree without namespaces and attributes.
 
     :param node: lxml node to simplify
-    :return: Simplified lxml element
+    :return: Simplified lxml node
 
     >>> root = etree.XML('<root xmlns="http://test.com" attr="value"><child>Text</child></root>')
-    >>> print(etree.tostring(simplified_element(root), encoding='unicode'))
+    >>> print(etree.tostring(simplified_node(root), encoding='unicode'))
     <root><child>Text</child></root>
     """
 
-    # Create a new element without namespace or attributes
+    # Create a new node without namespace or attributes
     stripped_el = etree.Element(etree.QName(node).localname)
     # Copy text and tail (if any)
     stripped_el.text = node.text
     stripped_el.tail = node.tail
     # Recursively apply this function to all children
     for child in node:
-        stripped_el.append(simplified_element(child))
+        stripped_el.append(simplified_node(child))
     return stripped_el
 
 
 def simplified_xml(
     node,
     whitespace_normalize=DEFAULT_WHITESPACE_NORMALIZE_TEXT,
-    skip_tags=DEFAULT_SKIP_XML_TAGS,
-    xml_hierarchy_levels=DEFAULT_XML_HIERARCHY_LEVELS,
+    skip_tags=DEFAULT_SKIP_TAGS,
+    parent_hierarchy_levels=DEFAULT_PARENT_HIERARCHY_LEVELS,
     max_text_length=DEFAULT_MAX_TEXT_LENGTH,
 ) -> str:
     """
@@ -169,7 +169,7 @@ def simplified_xml(
     :param node: The lxml node to simplify
     :param whitespace_normalize: Whether to normalize whitespace in text node processing
     :param skip_tags: Tags to skip when counting ancestors
-    :param xml_hierarchy_levels: The number of hierarchy levels to go up from the node
+    :param parent_hierarchy_levels: The number of hierarchy levels to go up from the node
     :param max_text_length: The maximum length of chunk returned (by text)
     :return: Simplified XML string
 
@@ -178,19 +178,19 @@ def simplified_xml(
     >>> child = root.find('.//ns:child', namespaces=nsmap)
 
     # Test walking up hierarchy level without skipping or max text length
-    # >>> print(simplified_xml(child, xml_hierarchy_levels=1))
+    # >>> print(simplified_xml(child, parent_hierarchy_levels=1))
     # <skip><child>Text</child><sibling>foo</sibling></skip>
 
     Test walking up hierarchy level with skipping but no max text length
-    >>> print(simplified_xml(child, skip_tags=['skip'], xml_hierarchy_levels=1))
+    >>> print(simplified_xml(child, skip_tags=['skip'], parent_hierarchy_levels=1))
     <parent><child>Text</child><sibling>foo</sibling></parent>Mixed text very long
 
     Test walking up hierarchy level with skipping but stopping at the root
-    >>> print(simplified_xml(child, skip_tags=['skip'], xml_hierarchy_levels=100))
+    >>> print(simplified_xml(child, skip_tags=['skip'], parent_hierarchy_levels=100))
     <root><parent><child>Text</child><sibling>foo</sibling></parent>Mixed text very long</root>
 
     Test walking up hierarchy level with skipping but early stopping due to max text length
-    >>> print(simplified_xml(child, skip_tags=['skip'], xml_hierarchy_levels=100, max_text_length=40))
+    >>> print(simplified_xml(child, skip_tags=['skip'], parent_hierarchy_levels=100, max_text_length=40))
     <child>Text</child>
 
     Test forced truncation of current node if it is large
@@ -202,18 +202,18 @@ def simplified_xml(
 
     node = nth_ancestor(
         node,
-        n=xml_hierarchy_levels,
+        n=parent_hierarchy_levels,
         skip_tags=skip_tags,
         max_text_length=max_text_length,
         whitespace_normalize=whitespace_normalize,
     )
-    simplified_node = simplified_element(node)
-    xml = etree.tostring(simplified_node, encoding="unicode")
+
+    simplified_xml = etree.tostring(simplified_node(node), encoding="unicode")
 
     # remove skip tags from output
     for skip_tag in skip_tags:
-        xml = xml.replace(f"<{skip_tag}>", "").replace(f"</{skip_tag}>", "")
+        simplified_xml = simplified_xml.replace(f"<{skip_tag}>", "").replace(f"</{skip_tag}>", "")
 
     if whitespace_normalize:
-        xml = " ".join(xml.split()).strip()
-    return xml.strip()[:max_text_length].strip()
+        simplified_xml = " ".join(simplified_xml.split()).strip()
+    return simplified_xml.strip()[:max_text_length].strip()

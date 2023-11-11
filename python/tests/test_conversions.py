@@ -43,7 +43,7 @@ def test_xhtml_table_to_text():
 
 
 def test_xhtml_table_to_text_raises_exception():
-    # Create an etree element that is not a table
+    # Create an etree node that is not a table
     non_table_node = etree.Element("{http://www.w3.org/1999/xhtml}div")
 
     # The function should raise an Exception when a non-table node is passed

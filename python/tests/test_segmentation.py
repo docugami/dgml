@@ -5,11 +5,11 @@ import pytest
 import yaml
 
 from dgml_utils.segmentation import (
-    DEFAULT_MIN_CHUNK_LENGTH,
+    DEFAULT_MIN_TEXT_LENGTH,
     DEFAULT_SUBCHUNK_TABLES,
-    DEFAULT_INCLUDE_XML_TAGS,
-    DEFAULT_XML_HIERARCHY_LEVELS,
-    get_leaf_structural_chunks_str,
+    DEFAULT_XML_MODE,
+    DEFAULT_PARENT_HIERARCHY_LEVELS,
+    get_chunks_str,
 )
 from dgml_utils.models import Chunk
 
@@ -18,10 +18,10 @@ from dgml_utils.models import Chunk
 class SegmentationTestData:
     input_file: Path
     output_file: Path
-    min_chunk_length: int = DEFAULT_MIN_CHUNK_LENGTH
+    min_text_length: int = DEFAULT_MIN_TEXT_LENGTH
     sub_chunk_tables: bool = DEFAULT_SUBCHUNK_TABLES
-    include_xml_tags: bool = DEFAULT_INCLUDE_XML_TAGS
-    xml_hierarchy_levels: int = DEFAULT_XML_HIERARCHY_LEVELS
+    xml_mode: bool = DEFAULT_XML_MODE
+    parent_hierarchy_levels: int = DEFAULT_PARENT_HIERARCHY_LEVELS
 
 
 TEST_DATA_DIR = Path(__file__).parent / "test_data"
@@ -33,13 +33,13 @@ SEGMENTATION_TEST_DATA: list[SegmentationTestData] = [
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "simple/simple.xml",
         output_file=TEST_DATA_DIR / "simple/simple.normalized-chunks_xml.yaml",
-        include_xml_tags=True,
-        xml_hierarchy_levels=3,
+        xml_mode=True,
+        parent_hierarchy_levels=3,
     ),
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "simple/simple.xml",
         output_file=TEST_DATA_DIR / "simple/simple.normalized-chunks_all.yaml",
-        min_chunk_length=0,  # want all the chunks, regardless of length
+        min_text_length=0,  # want all the chunks separated out, regardless of length
         sub_chunk_tables=True,  # want all cells inside tables chunked out
     ),
     SegmentationTestData(
@@ -49,7 +49,7 @@ SEGMENTATION_TEST_DATA: list[SegmentationTestData] = [
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "article/Jane Doe.xml",
         output_file=TEST_DATA_DIR / "article/Jane Doe.normalized-chunks_all.yaml",
-        min_chunk_length=0,  # want all the chunks, regardless of length
+        min_text_length=0,  # want all the chunks separated out, regardless of length
         sub_chunk_tables=True,  # want all cells inside tables chunked out
     ),
     SegmentationTestData(
@@ -97,12 +97,12 @@ def _debug_dump_yaml(chunks: List[Chunk], output_path: Optional[Path] = None):
 def test_segmentation(test_data: SegmentationTestData):
     with open(test_data.input_file, "r", encoding="utf-8") as input_file:
         article_shaped_file_xml = input_file.read()
-        chunks = get_leaf_structural_chunks_str(
+        chunks = get_chunks_str(
             dgml=article_shaped_file_xml,
-            min_chunk_length=test_data.min_chunk_length,
+            min_text_length=test_data.min_text_length,
             sub_chunk_tables=test_data.sub_chunk_tables,
-            include_xml_tags=test_data.include_xml_tags,
-            xml_hierarchy_levels=test_data.xml_hierarchy_levels,
+            xml_mode=test_data.xml_mode,
+            parent_hierarchy_levels=test_data.parent_hierarchy_levels,
         )
         assert chunks
 

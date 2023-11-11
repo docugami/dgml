@@ -28,7 +28,7 @@ TEST_DATA_DIR = Path(__file__).parent / "test_data"
 SEGMENTATION_TEST_DATA: list[SegmentationTestData] = [
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "fake/fake.xml",
-        output_file=TEST_DATA_DIR / "fake/fake.chunks.yaml",
+        output_file=TEST_DATA_DIR / "fake/fake.chunks_text.yaml",
     ),
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "fake/fake.xml",
@@ -38,31 +38,31 @@ SEGMENTATION_TEST_DATA: list[SegmentationTestData] = [
     ),
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "fake/fake.xml",
-        output_file=TEST_DATA_DIR / "fake/fake.chunks_all.yaml",
-        min_text_length=0,  # want all the chunks separated out, regardless of length
-        sub_chunk_tables=True,  # want all cells inside tables chunked out
+        output_file=TEST_DATA_DIR / "fake/fake.chunks_text_min0.yaml",
+        min_text_length=0,  # Want all the chunks separated out, regardless of length
+        sub_chunk_tables=True,  # Want all cells inside tables chunked out
     ),
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "article/Jane Doe.xml",
-        output_file=TEST_DATA_DIR / "article/Jane Doe.chunks.yaml",
+        output_file=TEST_DATA_DIR / "article/Jane Doe.chunks_text.yaml",
     ),
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "article/Jane Doe.xml",
-        output_file=TEST_DATA_DIR / "article/Jane Doe.chunks_all.yaml",
-        min_text_length=0,  # want all the chunks separated out, regardless of length
-        sub_chunk_tables=True,  # want all cells inside tables chunked out
+        output_file=TEST_DATA_DIR / "article/Jane Doe.chunks_text_min0.yaml",
+        min_text_length=0,  # Want all the chunks separated out, regardless of length
+        sub_chunk_tables=True,  # Want all cells inside tables chunked out
     ),
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "tabular/20071204X01896.xml",
-        output_file=TEST_DATA_DIR / "tabular/20071204X01896.chunks.yaml",
+        output_file=TEST_DATA_DIR / "tabular/20071204X01896.chunks_text.yaml",
     ),
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "tabular/20071210X01921.xml",
-        output_file=TEST_DATA_DIR / "tabular/20071210X01921.chunks.yaml",
+        output_file=TEST_DATA_DIR / "tabular/20071210X01921.chunks_text.yaml",
     ),
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "arxiv/2307.09288.xml",
-        output_file=TEST_DATA_DIR / "arxiv/2307.09288.chunks.yaml",
+        output_file=TEST_DATA_DIR / "arxiv/2307.09288.chunks_text.yaml",
     ),
 ]
 

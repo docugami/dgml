@@ -2,6 +2,10 @@ name: Publish Python 🐍 distribution 📦 to PyPI
 
 on:
   push:
+    branches:
+      - main
+    paths:
+      - python/pyproject.toml
 
 jobs:
   build-distribution:
@@ -28,8 +32,6 @@ jobs:
       with:
         name: python-package-distributions
         path: python/dist/
-    - name: Show Tree
-      run: gio tree
 
   publish-to-pypi:
     name: >-
@@ -44,12 +46,12 @@ jobs:
       id-token: write
 
     steps:
-    - name: Show Tree
-      run: gio tree
     - name: Download all the dists
       uses: actions/download-artifact@v3
       with:
         name: python-package-distributions
-        path: python/dist/
+        path: dist/
     - name: Publish distribution 📦 to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        path: python/

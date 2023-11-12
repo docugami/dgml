@@ -2,10 +2,12 @@ TABLE_NAME = "{http://www.w3.org/1999/xhtml}table"
 STRUCTURE_KEY = "structure"
 
 DEFAULT_MIN_TEXT_LENGTH = 8  # Default min string length threshold for determining small chunks
-DEFAULT_MAX_TEXT_LENGTH = 1024  # Default max string length cap on returned chunks
+DEFAULT_MAX_TEXT_LENGTH = 1024 * 8  # Default max string length cap on returned chunks
 
 DEFAULT_SUBCHUNK_TABLES = False
-DEFAULT_TABLE_FORMAT_AS_TEXT = "grid"  # should be a valid format for the tabulate library
+
+DEFAULT_TABLE_AS_TEXT_FORMAT = "grid"  # should be a valid format for the tabulate library
+DEFAULT_TABLE_AS_TEXT_CELL_MAX_WIDTH = 64
 
 DEFAULT_WHITESPACE_NORMALIZE_TEXT = True
 DEFAULT_XML_MODE = False

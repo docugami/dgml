@@ -1,10 +1,11 @@
+import textwrap
 from lxml import etree
 from tabulate import tabulate
 
 from dgml_utils.config import (
-    DEFAULT_PARENT_HIERARCHY_LEVELS,
     DEFAULT_SKIP_TAGS,
-    DEFAULT_TABLE_FORMAT_AS_TEXT,
+    DEFAULT_TABLE_AS_TEXT_FORMAT,
+    DEFAULT_TABLE_AS_TEXT_CELL_MAX_WIDTH,
     DEFAULT_WHITESPACE_NORMALIZE_TEXT,
     DEFAULT_MAX_TEXT_LENGTH,
     NAMESPACES,
@@ -54,7 +55,8 @@ def clean_tag(node) -> str:
 def xhtml_table_to_text(
     node,
     whitespace_normalize=DEFAULT_WHITESPACE_NORMALIZE_TEXT,
-    format=DEFAULT_TABLE_FORMAT_AS_TEXT,
+    format=DEFAULT_TABLE_AS_TEXT_FORMAT,
+    cell_max_width=DEFAULT_TABLE_AS_TEXT_CELL_MAX_WIDTH,
 ) -> str:
     """Converts HTML table to formatted text."""
     if node.tag != TABLE_NAME:
@@ -62,21 +64,23 @@ def xhtml_table_to_text(
 
     rows = []
     for tr in node.xpath(".//xhtml:tr", namespaces=NAMESPACES):
-        cells = [
-            text_node_to_text(td_node, whitespace_normalize=whitespace_normalize)
-            for td_node in tr.xpath(".//xhtml:td", namespaces=NAMESPACES)
-        ]
+        cells = []
+        for td_node in tr.xpath(".//xhtml:td", namespaces=NAMESPACES):
+            cell_text = text_node_to_text(td_node, whitespace_normalize=whitespace_normalize)
+            cell_text = "\n".join(textwrap.wrap(cell_text, cell_max_width))
+            cells.append(cell_text)
+
         rows.append(cells)
 
     return tabulate(rows, tablefmt=format)
 
 
-def nth_ancestor(
+def xml_nth_ancestor(
     node,
     n: int,
-    skip_tags=DEFAULT_SKIP_TAGS,
     max_text_length=DEFAULT_MAX_TEXT_LENGTH,
-    whitespace_normalize=DEFAULT_WHITESPACE_NORMALIZE_TEXT,
+    whitespace_normalize_text=DEFAULT_WHITESPACE_NORMALIZE_TEXT,
+    skip_tags=DEFAULT_SKIP_TAGS,
 ):
     """
     Finds the nth ancestor of a given lxml node, skipping nodes with tags in skip_tags and considering text length limit.
@@ -90,20 +94,20 @@ def nth_ancestor(
 
     >>> root = etree.XML("<root><parent><skip><child>Some text</child></skip></parent></root>")
     >>> child = root.find('.//child')
-    >>> ancestor = nth_ancestor(child, 1, skip_tags=['skip'])
+    >>> ancestor = xml_nth_ancestor(child, 1, skip_tags=['skip'])
     >>> clean_tag(ancestor)
     'parent'
-    >>> ancestor = nth_ancestor(child, 0)
+    >>> ancestor = xml_nth_ancestor(child, 0)
     >>> clean_tag(ancestor)
     'child'
-    >>> ancestor = nth_ancestor(child, -1)
+    >>> ancestor = xml_nth_ancestor(child, -1)
     >>> clean_tag(ancestor)
     'child'
-    >>> ancestor = nth_ancestor(child, 2, skip_tags=['skip'])
+    >>> ancestor = xml_nth_ancestor(child, 2, skip_tags=['skip'])
     >>> clean_tag(ancestor)
     'root'
     >>> orphan = etree.XML("<orphan>No parents</orphan>")
-    >>> ancestor = nth_ancestor(orphan, 1)
+    >>> ancestor = xml_nth_ancestor(orphan, 1)
     >>> clean_tag(ancestor)
     'orphan'
     """
@@ -118,7 +122,13 @@ def nth_ancestor(
             for anc in all_ancestors:
                 if clean_tag(anc) in skip_tags:
                     continue
-                ancestor_text_length = len(simplified_xml(anc, whitespace_normalize, parent_hierarchy_levels=0))
+                ancestor_text_length = len(
+                    simplified_xml(
+                        anc,
+                        whitespace_normalize_text=whitespace_normalize_text,
+                        skip_tags=skip_tags,
+                    )
+                )
                 if ancestor_text_length <= max_text_length:
                     node = anc
                     filtered_ancestors.append(anc)
@@ -157,56 +167,27 @@ def simplified_node(node):
 
 def simplified_xml(
     node,
-    whitespace_normalize=DEFAULT_WHITESPACE_NORMALIZE_TEXT,
+    whitespace_normalize_text=DEFAULT_WHITESPACE_NORMALIZE_TEXT,
     skip_tags=DEFAULT_SKIP_TAGS,
-    parent_hierarchy_levels=DEFAULT_PARENT_HIERARCHY_LEVELS,
-    max_text_length=DEFAULT_MAX_TEXT_LENGTH,
 ) -> str:
     """
-    Renders the given node (or parent at specified hierarchy level) to simplified XML
+    Renders the given node to simplified XML
     without attributes or namespaces.
 
     :param node: The lxml node to simplify
-    :param whitespace_normalize: Whether to normalize whitespace in text node processing
-    :param skip_tags: Tags to skip when counting ancestors
-    :param parent_hierarchy_levels: The number of hierarchy levels to go up from the node
     :param max_text_length: The maximum length of chunk returned (by text)
+    :param whitespace_normalize_text: Whether to normalize whitespace in text node processing
+    :param skip_tags: Tags to skip when counting ancestors
     :return: Simplified XML string
 
     >>> nsmap = {'ns': 'http://test.com'}
     >>> root = etree.XML('<root xmlns="http://test.com"><parent><skip><child>Text</child><sibling attr="test">foo</sibling></skip></parent>Mixed text very long</root>')
-    >>> child = root.find('.//ns:child', namespaces=nsmap)
-
-    # Test walking up hierarchy level without skipping or max text length
-    # >>> print(simplified_xml(child, parent_hierarchy_levels=1))
-    # <skip><child>Text</child><sibling>foo</sibling></skip>
-
-    Test walking up hierarchy level with skipping but no max text length
-    >>> print(simplified_xml(child, skip_tags=['skip'], parent_hierarchy_levels=1))
+    >>> parent = root.find('.//ns:parent', namespaces=nsmap)
+    >>> print(simplified_xml(parent, skip_tags=['skip']))
     <parent><child>Text</child><sibling>foo</sibling></parent>Mixed text very long
-
-    Test walking up hierarchy level with skipping but stopping at the root
-    >>> print(simplified_xml(child, skip_tags=['skip'], parent_hierarchy_levels=100))
-    <root><parent><child>Text</child><sibling>foo</sibling></parent>Mixed text very long</root>
-
-    Test walking up hierarchy level with skipping but early stopping due to max text length
-    >>> print(simplified_xml(child, skip_tags=['skip'], parent_hierarchy_levels=100, max_text_length=40))
-    <child>Text</child>
-
-    Test forced truncation of current node if it is large
-    >>> print(simplified_xml(child, max_text_length=9))
-    <child>Te
     """
     if node is None:
         return ""
-
-    node = nth_ancestor(
-        node,
-        n=parent_hierarchy_levels,
-        skip_tags=skip_tags,
-        max_text_length=max_text_length,
-        whitespace_normalize=whitespace_normalize,
-    )
 
     simplified_xml = etree.tostring(simplified_node(node), encoding="unicode")
 
@@ -214,6 +195,7 @@ def simplified_xml(
     for skip_tag in skip_tags:
         simplified_xml = simplified_xml.replace(f"<{skip_tag}>", "").replace(f"</{skip_tag}>", "")
 
-    if whitespace_normalize:
+    if whitespace_normalize_text:
         simplified_xml = " ".join(simplified_xml.split()).strip()
-    return simplified_xml.strip()[:max_text_length].strip()
+
+    return simplified_xml

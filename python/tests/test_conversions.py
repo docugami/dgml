@@ -27,7 +27,7 @@ def test_xhtml_table_to_text():
     # Parse the mock XHTML table string
     table_node = etree.fromstring(xhtml_data)
 
-    # Expected formatted table output using the 'grid' format (may need adjustment to match the actual expected output)
+    # Expected formatted table output using the 'grid' format
     expected_table = (
         "+---------+----------+\n"
         "| Item    | Quantity |\n"
@@ -38,7 +38,7 @@ def test_xhtml_table_to_text():
         "+---------+----------+"
     )
 
-    converted_table = xhtml_table_to_text(table_node, format="grid")
+    converted_table = xhtml_table_to_text(table_node)
     assert converted_table == expected_table
 
 
@@ -48,4 +48,4 @@ def test_xhtml_table_to_text_raises_exception():
 
     # The function should raise an Exception when a non-table node is passed
     with pytest.raises(Exception):
-        xhtml_table_to_text(non_table_node, format="grid")
+        xhtml_table_to_text(non_table_node)

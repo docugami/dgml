@@ -1,4 +1,6 @@
 - text: "National Transportation Safety Board Aviation Accident Factual Report"
+  tag: "chunk"
+  structure: "h1"
 - text: |
     +-------------------------+------------------------------------+-------------------+-------------+
     | Location:               | Jagel , Germany                    | Accident Number:  | DEN08WA037  |
@@ -11,12 +13,26 @@
     +-------------------------+------------------------------------+-------------------+-------------+
     | Flight Conducted Under: | Part 91 : General Aviation - Ferry |                   |             |
     +-------------------------+------------------------------------+-------------------+-------------+
+  tag: "table"
+  structure: "table"
 - text: "On November 28,, 2007 , at 1800 UTC , a Cirrus Design Corporation SR-20, N141CD, serial number 1032 , while on approach for landing at Jaleg, Schleswig-Holsteinschen , Germany, struck power lines and subsequently impacted terrain. The airplane was destroyed and the private pilot, the sole person on board the airplane, was fatally injured. Instrument meteorological conditions prevailed at the time of the accident. The cross-country ferry flight originated in the Netherlands and was en route to Sylt, Germany."
+  tag: "AccidentDescription"
+  structure: "p"
 - text: "This investigation is under the jurisdiction and control of the German government. Any further information may be obtained from:"
+  tag: "InvestigationAuthority"
+  structure: "p"
 - text: "German Federal Bureau of Aircraft Accidents Investigation Bundesstelle fur Flugenfallensuchung (BFU)"
+  tag: "AccidentInvestigationBureau"
+  structure: "p"
 - text: "Herman-Blenk Strasse 16 38108 Braunschweig"
+  tag: "chunk"
+  structure: "p"
 - text: "Germany This report is for informational purposes only and contains only information released by, or obtained from, the BFU of Germany ."
+  tag: "chunk Germany"
+  structure: "div div"
 - text: "Pilot Information"
+  tag: "chunk"
+  structure: "h1"
 - text: |
     +---------------------------+-----------------------------------+
     | Certificate:              | Age:                              |
@@ -35,7 +51,11 @@
     +---------------------------+-----------------------------------+
     | Flight Time:              |                                   |
     +---------------------------+-----------------------------------+
+  tag: "table"
+  structure: "table"
 - text: "Aircraft and Owner/Operator Information"
+  tag: "chunk"
+  structure: "h1"
 - text: |
     +-------------------------------+---------------------+--------------------------------+----------+
     | Aircraft Make :               | Cirrus Design Corp. | Registration:                  | N141CD   |
@@ -60,7 +80,11 @@
     +-------------------------------+---------------------+--------------------------------+----------+
     | Operator:                     |                     | Operating Certificate(s) Held: | None     |
     +-------------------------------+---------------------+--------------------------------+----------+
+  tag: "table"
+  structure: "table"
 - text: "Meteorological Information and Flight Plan"
+  tag: "chunk"
+  structure: "h1"
 - text: |
     +-----------------------------------+-----------------------+--------------------------------------+---------+
     | Conditions at Accident Site :     | Instrument Conditions | Condition of Light:                  |         |
@@ -87,7 +111,11 @@
     +-----------------------------------+-----------------------+--------------------------------------+---------+
     | Departure Time :                  |                       | Type of Airspace:                    |         |
     +-----------------------------------+-----------------------+--------------------------------------+---------+
+  tag: "table"
+  structure: "table"
 - text: "Airport Information"
+  tag: "chunk"
+  structure: "h1"
 - text: |
     +----------------------+----------------------------+
     | Airport:             | Runway Surface Type :      |
@@ -98,7 +126,11 @@
     +----------------------+----------------------------+
     | Runway Length/Width: | VFR Approach/Landing:      |
     +----------------------+----------------------------+
+  tag: "table"
+  structure: "table"
 - text: "Wreckage and Impact Information"
+  tag: "chunk"
+  structure: "h1"
 - text: |
     +----------------------+---------+----------------------+-------------+
     | Crew Injuries :      | 1 Fatal | Aircraft Damage :    | Substantial |
@@ -109,12 +141,23 @@
     +----------------------+---------+----------------------+-------------+
     | Total Injuries :     | 1 Fatal | Latitude, Longitude: |             |
     +----------------------+---------+----------------------+-------------+
+  tag: "table"
+  structure: "table"
 - text: "Administrative Information"
+  tag: "chunk"
+  structure: "div"
 - text: |
-    +------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-    | Investigator In Charge (IIC):      | David C Bowling                                                                                                                                                                                                                                                                                                                                  |
-    +------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-    | Additional Participating Persons : | Karsten Severin ; German BFU                                                                                                                                                                                                                                                                                                                     |
-    +------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-    | Investigation Docket :             | NTSB accident and incident dockets serve as permanent archival information for the NTSB ’s investigations. Dockets released prior to June 1, 2009 are publicly available from the NTSB’s Record Management Division at pubinq@ntsb.gov , or at 800 - 877 - 6799 . Dockets released after this date are available at http://dms.ntsb.gov/pubdms/. |
-    +------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    +------------------------------------+-----------------------------------------------------------------+
+    | Investigator In Charge (IIC):      | David C Bowling                                                 |
+    +------------------------------------+-----------------------------------------------------------------+
+    | Additional Participating Persons : | Karsten Severin ; German BFU                                    |
+    +------------------------------------+-----------------------------------------------------------------+
+    | Investigation Docket :             | NTSB accident and incident dockets serve as permanent archival  |
+    |                                    | information for the NTSB ’s investigations. Dockets released    |
+    |                                    | prior to June 1, 2009 are publicly available from the NTSB’s    |
+    |                                    | Record Management Division at pubinq@ntsb.gov , or at 800 - 877 |
+    |                                    | - 6799 . Dockets released after this date are available at      |
+    |                                    | http://dms.ntsb.gov/pubdms/.                                    |
+    +------------------------------------+-----------------------------------------------------------------+
+  tag: "table"
+  structure: "table"

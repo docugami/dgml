@@ -5,11 +5,11 @@ import pytest
 import yaml
 
 from dgml_utils.segmentation import (
-    DEFAULT_MIN_CHUNK_LENGTH,
+    DEFAULT_MIN_TEXT_LENGTH,
     DEFAULT_SUBCHUNK_TABLES,
-    DEFAULT_INCLUDE_XML_TAGS,
-    DEFAULT_XML_HIERARCHY_LEVELS,
-    get_leaf_structural_chunks_str,
+    DEFAULT_XML_MODE,
+    DEFAULT_PARENT_HIERARCHY_LEVELS,
+    get_chunks_str,
 )
 from dgml_utils.models import Chunk
 
@@ -18,51 +18,57 @@ from dgml_utils.models import Chunk
 class SegmentationTestData:
     input_file: Path
     output_file: Path
-    min_chunk_length: int = DEFAULT_MIN_CHUNK_LENGTH
+    min_text_length: int = DEFAULT_MIN_TEXT_LENGTH
     sub_chunk_tables: bool = DEFAULT_SUBCHUNK_TABLES
-    include_xml_tags: bool = DEFAULT_INCLUDE_XML_TAGS
-    xml_hierarchy_levels: int = DEFAULT_XML_HIERARCHY_LEVELS
+    xml_mode: bool = DEFAULT_XML_MODE
+    parent_hierarchy_levels: int = DEFAULT_PARENT_HIERARCHY_LEVELS
 
 
 TEST_DATA_DIR = Path(__file__).parent / "test_data"
 SEGMENTATION_TEST_DATA: list[SegmentationTestData] = [
     SegmentationTestData(
-        input_file=TEST_DATA_DIR / "simple/simple.xml",
-        output_file=TEST_DATA_DIR / "simple/simple.normalized-chunks.yaml",
+        input_file=TEST_DATA_DIR / "fake/fake.xml",
+        output_file=TEST_DATA_DIR / "fake/fake.chunks_text.yaml",
     ),
     SegmentationTestData(
-        input_file=TEST_DATA_DIR / "simple/simple.xml",
-        output_file=TEST_DATA_DIR / "simple/simple.normalized-chunks_xml.yaml",
-        include_xml_tags=True,
-        xml_hierarchy_levels=3,
+        input_file=TEST_DATA_DIR / "fake/fake.xml",
+        output_file=TEST_DATA_DIR / "fake/fake.chunks_text_p3.yaml",
+        xml_mode=False,
+        parent_hierarchy_levels=3,
     ),
     SegmentationTestData(
-        input_file=TEST_DATA_DIR / "simple/simple.xml",
-        output_file=TEST_DATA_DIR / "simple/simple.normalized-chunks_all.yaml",
-        min_chunk_length=0,  # want all the chunks, regardless of length
-        sub_chunk_tables=True,  # want all cells inside tables chunked out
+        input_file=TEST_DATA_DIR / "fake/fake.xml",
+        output_file=TEST_DATA_DIR / "fake/fake.chunks_xml_p3.yaml",
+        xml_mode=True,
+        parent_hierarchy_levels=3,
+    ),
+    SegmentationTestData(
+        input_file=TEST_DATA_DIR / "fake/fake.xml",
+        output_file=TEST_DATA_DIR / "fake/fake.chunks_text_min0.yaml",
+        min_text_length=0,  # Want all the chunks separated out, regardless of length
+        sub_chunk_tables=True,  # Want all cells inside tables chunked out
     ),
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "article/Jane Doe.xml",
-        output_file=TEST_DATA_DIR / "article/Jane Doe.normalized-chunks.yaml",
+        output_file=TEST_DATA_DIR / "article/Jane Doe.chunks_text.yaml",
     ),
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "article/Jane Doe.xml",
-        output_file=TEST_DATA_DIR / "article/Jane Doe.normalized-chunks_all.yaml",
-        min_chunk_length=0,  # want all the chunks, regardless of length
-        sub_chunk_tables=True,  # want all cells inside tables chunked out
+        output_file=TEST_DATA_DIR / "article/Jane Doe.chunks_text_min0.yaml",
+        min_text_length=0,  # Want all the chunks separated out, regardless of length
+        sub_chunk_tables=True,  # Want all cells inside tables chunked out
     ),
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "tabular/20071204X01896.xml",
-        output_file=TEST_DATA_DIR / "tabular/20071204X01896.normalized-chunks.yaml",
+        output_file=TEST_DATA_DIR / "tabular/20071204X01896.chunks_text.yaml",
     ),
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "tabular/20071210X01921.xml",
-        output_file=TEST_DATA_DIR / "tabular/20071210X01921.normalized-chunks.yaml",
+        output_file=TEST_DATA_DIR / "tabular/20071210X01921.chunks_text.yaml",
     ),
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "arxiv/2307.09288.xml",
-        output_file=TEST_DATA_DIR / "arxiv/2307.09288.normalized-chunks.yaml",
+        output_file=TEST_DATA_DIR / "arxiv/2307.09288.chunks_text.yaml",
     ),
 ]
 
@@ -81,6 +87,11 @@ def _debug_dump_yaml(chunks: List[Chunk], output_path: Optional[Path] = None):
             text = chunk.text.replace('"', '\\"')  # Escape double quotes
             yaml_lines.append(f'- text: "{text}"')
 
+        if chunk.parent:
+            yaml_lines.append("  parent_text: |")
+            for parent_chunk_line in chunk.parent.text.splitlines():
+                yaml_lines.append(f"      {parent_chunk_line}")
+
         yaml_lines.append(f'  tag: "{chunk.tag}"')
         yaml_lines.append(f'  structure: "{chunk.structure}"')
 
@@ -97,12 +108,12 @@ def _debug_dump_yaml(chunks: List[Chunk], output_path: Optional[Path] = None):
 def test_segmentation(test_data: SegmentationTestData):
     with open(test_data.input_file, "r", encoding="utf-8") as input_file:
         article_shaped_file_xml = input_file.read()
-        chunks = get_leaf_structural_chunks_str(
+        chunks = get_chunks_str(
             dgml=article_shaped_file_xml,
-            min_chunk_length=test_data.min_chunk_length,
+            min_text_length=test_data.min_text_length,
             sub_chunk_tables=test_data.sub_chunk_tables,
-            include_xml_tags=test_data.include_xml_tags,
-            xml_hierarchy_levels=test_data.xml_hierarchy_levels,
+            xml_mode=test_data.xml_mode,
+            parent_hierarchy_levels=test_data.parent_hierarchy_levels,
         )
         assert chunks
 
@@ -112,9 +123,9 @@ def test_segmentation(test_data: SegmentationTestData):
 
             for i in range(len(expected_chunks)):
                 assert chunks[i].text == expected_chunks[i]["text"].strip()
-                if "parent_3_text" in expected_chunks[i]:
+                if "parent_text" in expected_chunks[i]:
                     assert chunks[i].parent
-                    assert chunks[i].parent.text == expected_chunks[i]["parent_3_text"].strip()  # type: ignore
+                    assert chunks[i].parent.text == expected_chunks[i]["parent_text"].strip()  # type: ignore
                 if "xpath" in expected_chunks[i]:
                     assert chunks[i].xpath == expected_chunks[i]["xpath"].strip()
                 if "tag" in expected_chunks[i]:

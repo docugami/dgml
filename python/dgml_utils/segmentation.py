@@ -1,3 +1,4 @@
+from copy import deepcopy
 from lxml import etree
 from typing import List, Optional
 
@@ -154,8 +155,18 @@ def get_chunks(
 
     if not xml_mode and parent_hierarchy_levels > 0:
         # Set parents for text chunks using flat window of before/after chunks
-        ...
-
+        for i, current_chunk in enumerate(final_chunks):
+            parent_chunk_range_start = max(0, i - parent_hierarchy_levels)
+            parent_chunk_range_end = min(len(final_chunks), i + parent_hierarchy_levels + 1)
+            parent_chunks = final_chunks[parent_chunk_range_start:parent_chunk_range_end]
+            for pc in parent_chunks:
+                if not current_chunk.parent:
+                    current_chunk.parent = pc
+                else:
+                    parent_clone = deepcopy(current_chunk.parent)
+                    current_chunk.parent = parent_clone + pc
+                    # Instead of default text add behaviour, do a newline
+                    current_chunk.parent.text = parent_clone.text + "\n" + pc.text
     return final_chunks
 
 

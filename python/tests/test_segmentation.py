@@ -32,7 +32,13 @@ SEGMENTATION_TEST_DATA: list[SegmentationTestData] = [
     ),
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "fake/fake.xml",
-        output_file=TEST_DATA_DIR / "fake/fake.chunks_xml.yaml",
+        output_file=TEST_DATA_DIR / "fake/fake.chunks_text_p3.yaml",
+        xml_mode=False,
+        parent_hierarchy_levels=3,
+    ),
+    SegmentationTestData(
+        input_file=TEST_DATA_DIR / "fake/fake.xml",
+        output_file=TEST_DATA_DIR / "fake/fake.chunks_xml_p3.yaml",
         xml_mode=True,
         parent_hierarchy_levels=3,
     ),
@@ -81,6 +87,11 @@ def _debug_dump_yaml(chunks: List[Chunk], output_path: Optional[Path] = None):
             text = chunk.text.replace('"', '\\"')  # Escape double quotes
             yaml_lines.append(f'- text: "{text}"')
 
+        if chunk.parent:
+            yaml_lines.append("  parent_text: |")
+            for parent_chunk_line in chunk.parent.text.splitlines():
+                yaml_lines.append(f"      {parent_chunk_line}")
+
         yaml_lines.append(f'  tag: "{chunk.tag}"')
         yaml_lines.append(f'  structure: "{chunk.structure}"')
 
@@ -112,9 +123,9 @@ def test_segmentation(test_data: SegmentationTestData):
 
             for i in range(len(expected_chunks)):
                 assert chunks[i].text == expected_chunks[i]["text"].strip()
-                if "parent_3_text" in expected_chunks[i]:
+                if "parent_text" in expected_chunks[i]:
                     assert chunks[i].parent
-                    assert chunks[i].parent.text == expected_chunks[i]["parent_3_text"].strip()  # type: ignore
+                    assert chunks[i].parent.text == expected_chunks[i]["parent_text"].strip()  # type: ignore
                 if "xpath" in expected_chunks[i]:
                     assert chunks[i].xpath == expected_chunks[i]["xpath"].strip()
                 if "tag" in expected_chunks[i]:

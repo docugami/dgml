@@ -120,7 +120,7 @@ def xml_nth_ancestor(
         all_ancestors.reverse()  # start from parent up, not root down
         if all_ancestors:
             for anc in all_ancestors:
-                if clean_tag(anc) in skip_tags:
+                if skip_tags and clean_tag(anc) in skip_tags:
                     continue
                 ancestor_text_length = len(
                     simplified_xml(
@@ -192,8 +192,9 @@ def simplified_xml(
     simplified_xml = etree.tostring(simplified_node(node), encoding="unicode")
 
     # remove skip tags from output
-    for skip_tag in skip_tags:
-        simplified_xml = simplified_xml.replace(f"<{skip_tag}>", "").replace(f"</{skip_tag}>", "")
+    if skip_tags:
+        for skip_tag in skip_tags:
+            simplified_xml = simplified_xml.replace(f"<{skip_tag}>", "").replace(f"</{skip_tag}>", "")
 
     if whitespace_normalize_text:
         simplified_xml = " ".join(simplified_xml.split()).strip()

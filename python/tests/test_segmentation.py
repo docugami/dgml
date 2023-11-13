@@ -3,6 +3,7 @@ from pathlib import Path
 from typing import List, Optional
 import pytest
 import yaml
+from dgml_utils.config import DEFAULT_MAX_TEXT_LENGTH
 
 from dgml_utils.segmentation import (
     DEFAULT_MIN_TEXT_LENGTH,
@@ -19,6 +20,7 @@ class SegmentationTestData:
     input_file: Path
     output_file: Path
     min_text_length: int = DEFAULT_MIN_TEXT_LENGTH
+    max_text_length: int = DEFAULT_MAX_TEXT_LENGTH
     sub_chunk_tables: bool = DEFAULT_SUBCHUNK_TABLES
     xml_mode: bool = DEFAULT_XML_MODE
     parent_hierarchy_levels: int = DEFAULT_PARENT_HIERARCHY_LEVELS
@@ -39,6 +41,7 @@ SEGMENTATION_TEST_DATA: list[SegmentationTestData] = [
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "fake/fake.xml",
         output_file=TEST_DATA_DIR / "fake/fake.chunks_xml_p3.yaml",
+        max_text_length=232,  # size of the <ConfidentialityObligations> chunk
         xml_mode=True,
         parent_hierarchy_levels=3,
     ),
@@ -69,6 +72,17 @@ SEGMENTATION_TEST_DATA: list[SegmentationTestData] = [
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "arxiv/2307.09288.xml",
         output_file=TEST_DATA_DIR / "arxiv/2307.09288.chunks_text.yaml",
+    ),
+    SegmentationTestData(
+        input_file=TEST_DATA_DIR / "article/Shorebucks LLC_AZ.xml",
+        output_file=TEST_DATA_DIR / "article/Shorebucks LLC_AZ.chunks_text.yaml",
+    ),
+    SegmentationTestData(
+        input_file=TEST_DATA_DIR / "article/Shorebucks LLC_AZ.xml",
+        output_file=TEST_DATA_DIR / "article/Shorebucks LLC_AZ.chunks_text_xml_min32_p3.yaml",
+        min_text_length=32,
+        xml_mode=True,
+        parent_hierarchy_levels=3,
     ),
 ]
 
@@ -111,6 +125,7 @@ def test_segmentation(test_data: SegmentationTestData):
         chunks = get_chunks_str(
             dgml=article_shaped_file_xml,
             min_text_length=test_data.min_text_length,
+            max_text_length=test_data.max_text_length,
             sub_chunk_tables=test_data.sub_chunk_tables,
             xml_mode=test_data.xml_mode,
             parent_hierarchy_levels=test_data.parent_hierarchy_levels,

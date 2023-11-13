@@ -112,27 +112,44 @@ def get_chunks(
                 # For xml chunks, use tree hierarchy directly on the node
                 # For text chunks use flat window of before/after chunks
                 # (below once all chunks are calculated, so no parent set here.)
-                ancestor_node = xml_nth_ancestor(
+                semantic_ancestor_node = xml_nth_ancestor(
                     node,
                     n=parent_hierarchy_levels,
                     max_text_length=max_text_length,
                     whitespace_normalize_text=whitespace_normalize_text,
                 )
+                structural_ancestor_node = xml_nth_ancestor(
+                    node,
+                    n=parent_hierarchy_levels,
+                    max_text_length=max_text_length,
+                    whitespace_normalize_text=whitespace_normalize_text,
+                    skip_tags=None,  # don't skip anything
+                )
 
                 # We split the current chunk into sub-chunks if longer than max length,
                 # to avoid loss of text. However, if the ancestor is longer than max length
-                # what do we do? For now let's just pick the first ancestor but this could
-                # be lossy if the caller is only using ancestors.
-                ancestor_chunk = _build_chunks(
-                    ancestor_node,
+                # what do we do? For now let's just pick the first ancestor (larger of)
+                # semantic or non-semantic but this could be lossy.
+                semantic_ancestor_chunk = _build_chunks(
+                    semantic_ancestor_node,
                     xml_mode=xml_mode,
                     max_text_length=max_text_length,
                     whitespace_normalize_text=whitespace_normalize_text,
                 )[0]
+                structural_ancestor_chunk = _build_chunks(
+                    structural_ancestor_node,
+                    xml_mode=xml_mode,
+                    max_text_length=max_text_length,
+                    whitespace_normalize_text=whitespace_normalize_text,
+                )[0]
+                if len(semantic_ancestor_chunk.text) > len(structural_ancestor_chunk.text):
+                    # Prefer the semantic ancestor if it is larger (normal case)
+                    ancestor_chunk = semantic_ancestor_chunk
+                else:
+                    # If we can get more context with a structural ancestor, take that instead
+                    ancestor_chunk = structural_ancestor_chunk
 
             for chunk in sub_chunks:
-                chunk.parent = ancestor_chunk
-
                 if prepended_small_chunk and sub_chunks:
                     chunk = prepended_small_chunk + chunk
                     prepended_small_chunk = None  # clear
@@ -141,6 +158,17 @@ def get_chunks(
                     # Prepend small chunks or list item markers to the following chunk
                     prepended_small_chunk = chunk
                 else:
+                    if ancestor_chunk:
+                        # If an ancestor chunk is set, we always want it to be bigger than the current
+                        # chunk, yet sometimes due to prepended chunks, skip tags and length limits you
+                        # can get situations where the ancestor chunk found in the tree ends up being smaller
+                        # than the (perhaps concatenated and built up) current chunk. Fix that case here.
+                        if len(ancestor_chunk.text) > len(chunk.text):
+                            chunk.parent = ancestor_chunk
+                        else:
+                            # self-parent
+                            chunk.parent = chunk
+
                     final_chunks.append(chunk)
         else:
             # Continue deeper in the tree

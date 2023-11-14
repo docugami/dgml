@@ -1,0 +1,65 @@
+- text: |
+    Main Heading with <CompanyName>Acme Corp</CompanyName> as mixed content
+  parent_text: |
+    Main Heading with <CompanyName>Acme Corp</CompanyName> as mixed content
+  tag: "chunk"
+  structure: "h1"
+  xpath: "/dg:chunk/dg:chunk[1]"
+- text: |
+    Sub-Heading
+  parent_text: |
+    Sub-Heading Paragraph with sub-elements like <Date>Jan 1, 2023</Date> and <SignatoryName>John Doe</SignatoryName> as mixed content.
+  tag: "chunk"
+  structure: "h1"
+  xpath: "/dg:chunk/dg:chunk[2]/dg:chunk[1]"
+- text: |
+    Paragraph with sub-elements like <Date>Jan 1, 2023</Date> and <SignatoryName>John Doe</SignatoryName> as mixed content.
+  parent_text: |
+    Sub-Heading Paragraph with sub-elements like <Date>Jan 1, 2023</Date> and <SignatoryName>John Doe</SignatoryName> as mixed content.
+  tag: "chunk"
+  structure: "div"
+  xpath: "/dg:chunk/dg:chunk[2]/dg:chunk[2]"
+- text: |
+    These are some obligations:
+  parent_text: |
+    <ConfidentialityObligations> These are some obligations: <Obligations> <Obligation> 1. Item A </Obligation> <Obligation> 2. Item B </Obligation> <Obligation> 3. C </Obligation> </Obligations> </ConfidentialityObligations>
+  tag: "chunk"
+  structure: "div"
+  xpath: "/dg:chunk/docset:ConfidentialityObligations/dg:chunk"
+- text: |
+    1. Item A
+  parent_text: |
+    <ConfidentialityObligations> These are some obligations: <Obligations> <Obligation> 1. Item A </Obligation> <Obligation> 2. Item B </Obligation> <Obligation> 3. C </Obligation> </Obligations> </ConfidentialityObligations>
+  tag: "chunk"
+  structure: "lim div"
+  xpath: "/dg:chunk/docset:ConfidentialityObligations/docset:Obligations/docset:Obligation[1]/dg:chunk[1]"
+- text: |
+    2. Item B
+  parent_text: |
+    <ConfidentialityObligations> These are some obligations: <Obligations> <Obligation> 1. Item A </Obligation> <Obligation> 2. Item B </Obligation> <Obligation> 3. C </Obligation> </Obligations> </ConfidentialityObligations>
+  tag: "chunk"
+  structure: "lim div"
+  xpath: "/dg:chunk/docset:ConfidentialityObligations/docset:Obligations/docset:Obligation[2]/dg:chunk[1]"
+- text: |
+    3. C
+     <Footer>pg.1</Footer>
+  parent_text: |
+    3. C
+     <Footer>pg.1</Footer>
+  tag: "chunk Footer"
+  structure: "lim div div"
+  xpath: "/dg:chunk/docset:Footer"
+- text: |
+    <table> <tbody> <tr> <td> Fruit </td> <td>Color</td> <td>Taste</td> </tr> <tr> <td> <Fruit>Apple</Fruit> </td> <td> <Color>Red</Color> </td> <td> <Taste> <Fruit>Apples</Fruit> are mostly sweet, sometimes tart if not ripe. </Taste> <
+  parent_text: |
+    <table> <tbody> <tr> <td> Fruit </td> <td>Color</td> <td>Taste</td> </tr> <tr> <td> <Fruit>Apple</Fruit> </td> <td> <Color>Red</Color> </td> <td> <Taste> <Fruit>Apples</Fruit> are mostly sweet, sometimes tart if not ripe. </Taste> <
+  tag: "table"
+  structure: "table"
+  xpath: "/dg:chunk/docset:Appendix/xhtml:table"
+- text: |
+    /td> </tr> <tr> <td> <Fruit>Mango</Fruit> </td> <td> <Color>Yellow</Color> </td> <td> <Taste> Super sweet when ripe. </Taste> </td> </tr> </tbody> </table>
+  parent_text: |
+    <table> <tbody> <tr> <td> Fruit </td> <td>Color</td> <td>Taste</td> </tr> <tr> <td> <Fruit>Apple</Fruit> </td> <td> <Color>Red</Color> </td> <td> <Taste> <Fruit>Apples</Fruit> are mostly sweet, sometimes tart if not ripe. </Taste> <
+  tag: "table"
+  structure: "table"
+  xpath: "/dg:chunk/docset:Appendix/xhtml:table"

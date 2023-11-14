@@ -3,7 +3,8 @@ from lxml import etree
 from typing import List, Optional
 
 from dgml_utils.config import (
-    DEFAULT_XML_MODE,
+    DEFAULT_HIERARCHY_MODE,
+    DEFAULT_INCLUDE_XML_TAGS,
     DEFAULT_MIN_TEXT_LENGTH,
     DEFAULT_SUBCHUNK_TABLES,
     DEFAULT_WHITESPACE_NORMALIZE_TEXT,
@@ -11,6 +12,7 @@ from dgml_utils.config import (
     DEFAULT_MAX_TEXT_LENGTH,
     STRUCTURE_KEY,
     TABLE_NAME,
+    HierarchyMode,
 )
 from dgml_utils.conversions import (
     clean_tag,
@@ -51,8 +53,9 @@ def get_chunks(
     max_text_length=DEFAULT_MAX_TEXT_LENGTH,
     whitespace_normalize_text=DEFAULT_WHITESPACE_NORMALIZE_TEXT,
     sub_chunk_tables=DEFAULT_SUBCHUNK_TABLES,
-    xml_mode=DEFAULT_XML_MODE,
+    include_xml_tags=DEFAULT_INCLUDE_XML_TAGS,
     parent_hierarchy_levels=DEFAULT_PARENT_HIERARCHY_LEVELS,
+    hierarchy_mode=DEFAULT_HIERARCHY_MODE,
 ) -> List[Chunk]:
     """Returns all structural chunks in the given node, as xml chunks."""
     final_chunks: List[Chunk] = []
@@ -60,7 +63,7 @@ def get_chunks(
 
     def _build_chunks(
         node,
-        xml_mode=DEFAULT_XML_MODE,
+        include_xml_tags=DEFAULT_INCLUDE_XML_TAGS,
         max_text_length=DEFAULT_MAX_TEXT_LENGTH,
         whitespace_normalize_text=DEFAULT_WHITESPACE_NORMALIZE_TEXT,
     ) -> List[Chunk]:
@@ -68,7 +71,7 @@ def get_chunks(
         Builds chunks from the given node, splitting on the given max length to ensure
         all the returned chunks as less than the given max length.
         """
-        if xml_mode:
+        if include_xml_tags:
             node_text = simplified_xml(
                 node,
                 whitespace_normalize_text=whitespace_normalize_text,
@@ -103,15 +106,15 @@ def get_chunks(
         if is_table_leaf_node or is_text_leaf_node or is_structure_orphaned_node:
             sub_chunks: List[Chunk] = _build_chunks(
                 node,
-                xml_mode=xml_mode,
+                include_xml_tags=include_xml_tags,
                 max_text_length=max_text_length,
                 whitespace_normalize_text=whitespace_normalize_text,
             )
             ancestor_chunk = None
-            if xml_mode and parent_hierarchy_levels > 0:
-                # For xml chunks, use tree hierarchy directly on the node
-                # For text chunks use flat window of before/after chunks
-                # (below once all chunks are calculated, so no parent set here.)
+            if hierarchy_mode == HierarchyMode.Structure and parent_hierarchy_levels > 0:
+                # Try to use tree hierarchy directly from the node in structure hiearchy
+                # mode. For window hierarchy mode, we do this below once all chunks are
+                # calculated, so no parent set here.
                 semantic_ancestor_node = xml_nth_ancestor(
                     node,
                     n=parent_hierarchy_levels,
@@ -132,13 +135,13 @@ def get_chunks(
                 # semantic or non-semantic but this could be lossy.
                 semantic_ancestor_chunk = _build_chunks(
                     semantic_ancestor_node,
-                    xml_mode=xml_mode,
+                    include_xml_tags=include_xml_tags,
                     max_text_length=max_text_length,
                     whitespace_normalize_text=whitespace_normalize_text,
                 )[0]
                 structural_ancestor_chunk = _build_chunks(
                     structural_ancestor_node,
-                    xml_mode=xml_mode,
+                    include_xml_tags=include_xml_tags,
                     max_text_length=max_text_length,
                     whitespace_normalize_text=whitespace_normalize_text,
                 )[0]
@@ -150,15 +153,16 @@ def get_chunks(
                     ancestor_chunk = structural_ancestor_chunk
 
             for chunk in sub_chunks:
-                if prepended_chunk and sub_chunks:
+                if prepended_chunk:
                     chunk = prepended_chunk + chunk
                     prepended_chunk = None  # clear
 
                 if is_force_prepend_chunk(node):
                     # Prepend list item markers and other force prepend chunks to the following chunk
+                    # without any trailing whitespace
                     prepended_chunk = chunk
                 elif len(chunk.text) < min_text_length:
-                    # If chunk is less than min length, prepend but with a line break
+                    # If chunk is less than min length, prepend with a line break
                     chunk.text += "\n"
                     prepended_chunk = chunk
                 else:
@@ -185,7 +189,7 @@ def get_chunks(
     if prepended_chunk:
         final_chunks.append(prepended_chunk)
 
-    if not xml_mode and parent_hierarchy_levels > 0:
+    if hierarchy_mode == HierarchyMode.Window and parent_hierarchy_levels > 0:
         # Set parents for text chunks using flat window of before/after chunks
         for i, current_chunk in enumerate(final_chunks):
             parent_chunk_range_start = max(0, i - parent_hierarchy_levels)
@@ -197,7 +201,7 @@ def get_chunks(
                 else:
                     parent_clone = deepcopy(current_chunk.parent)
                     current_chunk.parent = parent_clone + pc
-                    # Instead of default text add behaviour, do a newline
+                    # Instead of default text add behaviour, add a newline
                     current_chunk.parent.text = parent_clone.text + "\n" + pc.text
     return final_chunks
 
@@ -208,8 +212,9 @@ def get_chunks_str(
     max_text_length=DEFAULT_MAX_TEXT_LENGTH,
     whitespace_normalize_text=DEFAULT_WHITESPACE_NORMALIZE_TEXT,
     sub_chunk_tables=DEFAULT_SUBCHUNK_TABLES,
-    xml_mode=DEFAULT_XML_MODE,
+    include_xml_tags=DEFAULT_INCLUDE_XML_TAGS,
     parent_hierarchy_levels=DEFAULT_PARENT_HIERARCHY_LEVELS,
+    hierarchy_mode=DEFAULT_HIERARCHY_MODE,
 ) -> List[Chunk]:
     root = etree.fromstring(dgml)
 
@@ -219,6 +224,7 @@ def get_chunks_str(
         max_text_length=max_text_length,
         whitespace_normalize_text=whitespace_normalize_text,
         sub_chunk_tables=sub_chunk_tables,
-        xml_mode=xml_mode,
+        include_xml_tags=include_xml_tags,
         parent_hierarchy_levels=parent_hierarchy_levels,
+        hierarchy_mode=hierarchy_mode,
     )

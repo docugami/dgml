@@ -1,3 +1,6 @@
+from enum import Enum
+
+
 TABLE_NAME = "{http://www.w3.org/1999/xhtml}table"
 STRUCTURE_KEY = "structure"
 
@@ -10,10 +13,18 @@ DEFAULT_TABLE_AS_TEXT_FORMAT = "grid"  # should be a valid format for the tabula
 DEFAULT_TABLE_AS_TEXT_CELL_MAX_WIDTH = 64
 
 DEFAULT_WHITESPACE_NORMALIZE_TEXT = True
-DEFAULT_XML_MODE = False
+DEFAULT_INCLUDE_XML_TAGS = False
 
 DEFAULT_PARENT_HIERARCHY_LEVELS = 0
 DEFAULT_SKIP_TAGS = ["chunk"]  # chunks that are skipped in the parent hierarchy and also not included inline in XML
+
+
+class HierarchyMode(Enum):
+    Structure = 1
+    Window = 2
+
+
+DEFAULT_HIERARCHY_MODE = HierarchyMode.Window
 
 NAMESPACES = {
     "docset": "http://www.docugami.com/2021/dgml/TaqiTest20231103/NDA",

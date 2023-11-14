@@ -3,12 +3,12 @@ from pathlib import Path
 from typing import List, Optional
 import pytest
 import yaml
-from dgml_utils.config import DEFAULT_MAX_TEXT_LENGTH
 
+from dgml_utils.config import DEFAULT_HIERARCHY_MODE, DEFAULT_MAX_TEXT_LENGTH, HierarchyMode
 from dgml_utils.segmentation import (
     DEFAULT_MIN_TEXT_LENGTH,
     DEFAULT_SUBCHUNK_TABLES,
-    DEFAULT_XML_MODE,
+    DEFAULT_INCLUDE_XML_TAGS,
     DEFAULT_PARENT_HIERARCHY_LEVELS,
     get_chunks_str,
 )
@@ -22,7 +22,8 @@ class SegmentationTestData:
     min_text_length: int = DEFAULT_MIN_TEXT_LENGTH
     max_text_length: int = DEFAULT_MAX_TEXT_LENGTH
     sub_chunk_tables: bool = DEFAULT_SUBCHUNK_TABLES
-    xml_mode: bool = DEFAULT_XML_MODE
+    include_xml_tags: bool = DEFAULT_INCLUDE_XML_TAGS
+    hierarchy_mode: HierarchyMode = DEFAULT_HIERARCHY_MODE
     parent_hierarchy_levels: int = DEFAULT_PARENT_HIERARCHY_LEVELS
 
 
@@ -35,15 +36,22 @@ SEGMENTATION_TEST_DATA: list[SegmentationTestData] = [
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "fake/fake.xml",
         output_file=TEST_DATA_DIR / "fake/fake.chunks_text_p3.yaml",
-        xml_mode=False,
         parent_hierarchy_levels=3,
     ),
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "fake/fake.xml",
         output_file=TEST_DATA_DIR / "fake/fake.chunks_xml_p3.yaml",
         max_text_length=232,  # size of the <ConfidentialityObligations> chunk
-        xml_mode=True,
+        include_xml_tags=True,
         parent_hierarchy_levels=3,
+    ),
+    SegmentationTestData(
+        input_file=TEST_DATA_DIR / "fake/fake.xml",
+        output_file=TEST_DATA_DIR / "fake/fake.chunks_xml_p3_structural.yaml",
+        max_text_length=232,  # size of the <ConfidentialityObligations> chunk
+        include_xml_tags=True,
+        parent_hierarchy_levels=3,
+        hierarchy_mode=HierarchyMode.Structure,
     ),
     SegmentationTestData(
         input_file=TEST_DATA_DIR / "fake/fake.xml",
@@ -81,8 +89,9 @@ SEGMENTATION_TEST_DATA: list[SegmentationTestData] = [
         input_file=TEST_DATA_DIR / "article/Shorebucks LLC_AZ.xml",
         output_file=TEST_DATA_DIR / "article/Shorebucks LLC_AZ.chunks_text_xml_min32_p3.yaml",
         min_text_length=32,
-        xml_mode=True,
+        include_xml_tags=True,
         parent_hierarchy_levels=3,
+        hierarchy_mode=HierarchyMode.Structure,
     ),
 ]
 
@@ -127,10 +136,14 @@ def test_segmentation(test_data: SegmentationTestData):
             min_text_length=test_data.min_text_length,
             max_text_length=test_data.max_text_length,
             sub_chunk_tables=test_data.sub_chunk_tables,
-            xml_mode=test_data.xml_mode,
+            include_xml_tags=test_data.include_xml_tags,
             parent_hierarchy_levels=test_data.parent_hierarchy_levels,
+            hierarchy_mode=test_data.hierarchy_mode,
         )
         assert chunks
+
+        # Uncomment to generate test data (manually inspect for correctness)
+        # _debug_dump_yaml(chunks, test_data.output_file)
 
         with open(test_data.output_file, "r", encoding="utf-8") as output_file:
             yaml_content = yaml.safe_load(output_file)

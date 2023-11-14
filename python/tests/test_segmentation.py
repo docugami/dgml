@@ -93,21 +93,21 @@ def _debug_dump_yaml(chunks: List[Chunk], output_path: Optional[Path] = None):
     """
     yaml_lines = []
     for chunk in chunks:
-        if chunk.tag == "table":
+        text = chunk.text
+        lines = text.splitlines()
+        if lines:
             yaml_lines.append("- text: |")
-            for row in chunk.text.splitlines():
-                yaml_lines.append(f"    {row}")
-        else:
-            text = chunk.text.replace('"', '\\"')  # Escape double quotes
-            yaml_lines.append(f'- text: "{text}"')
+            for line in lines:
+                yaml_lines.append(f"    {line}")
 
         if chunk.parent:
             yaml_lines.append("  parent_text: |")
             for parent_chunk_line in chunk.parent.text.splitlines():
-                yaml_lines.append(f"      {parent_chunk_line}")
+                yaml_lines.append(f"    {parent_chunk_line}")
 
         yaml_lines.append(f'  tag: "{chunk.tag}"')
         yaml_lines.append(f'  structure: "{chunk.structure}"')
+        yaml_lines.append(f'  xpath: "{chunk.xpath}"')
 
     yaml = "\n".join(yaml_lines)
 

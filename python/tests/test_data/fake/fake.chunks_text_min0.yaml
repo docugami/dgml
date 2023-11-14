@@ -1,51 +1,85 @@
-- text: "Main Heading with Acme Corp as mixed content"
+- text: |
+    Main Heading with Acme Corp as mixed content
   tag: "chunk"
   structure: "h1"
-- text: "Sub-Heading"
+  xpath: "/dg:chunk/dg:chunk[1]"
+- text: |
+    Sub-Heading
   tag: "chunk"
   structure: "h1"
-- text: "Paragraph with sub-elements like Jan 1, 2023 and John Doe as mixed content."
+  xpath: "/dg:chunk/dg:chunk[2]/dg:chunk[1]"
+- text: |
+    Paragraph with sub-elements like Jan 1, 2023 and John Doe as mixed content.
   tag: "chunk"
   structure: "div"
-- text: "These are some obligations:"
+  xpath: "/dg:chunk/dg:chunk[2]/dg:chunk[2]"
+- text: |
+    These are some obligations:
   tag: "chunk"
   structure: "div"
-- text: "1. Item A"
+  xpath: "/dg:chunk/docset:ConfidentialityObligations/dg:chunk"
+- text: |
+    1. Item A
   tag: "chunk"
   structure: "lim div"
-- text: "2. Item B"
+  xpath: "/dg:chunk/docset:ConfidentialityObligations/docset:Obligations/docset:Obligation[1]/dg:chunk[1]"
+- text: |
+    2. Item B
   tag: "chunk"
   structure: "lim div"
-- text: "3. C"
+  xpath: "/dg:chunk/docset:ConfidentialityObligations/docset:Obligations/docset:Obligation[2]/dg:chunk[1]"
+- text: |
+    3. C
   tag: "chunk"
   structure: "lim div"
-- text: "pg.1"
+  xpath: "/dg:chunk/docset:ConfidentialityObligations/docset:Obligations/docset:Obligation[3]/dg:chunk[1]"
+- text: |
+    pg.1
   tag: "Footer"
   structure: "div"
-- text: "Fruit"
+  xpath: "/dg:chunk/docset:Footer"
+- text: |
+    Fruit
   tag: "td"
   structure: "td"
-- text: "Color"
+  xpath: "/dg:chunk/docset:Appendix/xhtml:table/xhtml:tbody/xhtml:tr[1]/xhtml:td[1]"
+- text: |
+    Color
   tag: "td"
   structure: "td"
-- text: "Taste"
+  xpath: "/dg:chunk/docset:Appendix/xhtml:table/xhtml:tbody/xhtml:tr[1]/xhtml:td[2]"
+- text: |
+    Taste
   tag: "td"
   structure: "td"
-- text: "Apple"
+  xpath: "/dg:chunk/docset:Appendix/xhtml:table/xhtml:tbody/xhtml:tr[1]/xhtml:td[3]"
+- text: |
+    Apple
   tag: "td"
   structure: "td"
-- text: "Red"
+  xpath: "/dg:chunk/docset:Appendix/xhtml:table/xhtml:tbody/xhtml:tr[2]/xhtml:td[1]"
+- text: |
+    Red
   tag: "td"
   structure: "td"
-- text: "Apples are mostly sweet, sometimes tart if not ripe."
+  xpath: "/dg:chunk/docset:Appendix/xhtml:table/xhtml:tbody/xhtml:tr[2]/xhtml:td[2]"
+- text: |
+    Apples are mostly sweet, sometimes tart if not ripe.
   tag: "chunk"
   structure: "p"
-- text: "Mango"
+  xpath: "/dg:chunk/docset:Appendix/xhtml:table/xhtml:tbody/xhtml:tr[2]/xhtml:td[3]/docset:Taste/dg:chunk"
+- text: |
+    Mango
   tag: "td"
   structure: "td"
-- text: "Yellow"
+  xpath: "/dg:chunk/docset:Appendix/xhtml:table/xhtml:tbody/xhtml:tr[3]/xhtml:td[1]"
+- text: |
+    Yellow
   tag: "td"
   structure: "td"
-- text: "Super sweet when ripe."
+  xpath: "/dg:chunk/docset:Appendix/xhtml:table/xhtml:tbody/xhtml:tr[3]/xhtml:td[2]"
+- text: |
+    Super sweet when ripe.
   tag: "chunk"
   structure: "p"
+  xpath: "/dg:chunk/docset:Appendix/xhtml:table/xhtml:tbody/xhtml:tr[3]/xhtml:td[3]/docset:Taste/dg:chunk"

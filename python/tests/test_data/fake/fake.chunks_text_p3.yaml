@@ -1,89 +1,108 @@
-- text: "Main Heading with Acme Corp as mixed content"
+- text: |
+    Main Heading with Acme Corp as mixed content
   parent_text: |
-      Main Heading with Acme Corp as mixed content
-      Sub-Heading
-      Paragraph with sub-elements like Jan 1, 2023 and John Doe as mixed content.
-      These are some obligations:
+    Main Heading with Acme Corp as mixed content
+    Sub-Heading
+    Paragraph with sub-elements like Jan 1, 2023 and John Doe as mixed content.
+    These are some obligations:
   tag: "chunk"
   structure: "h1"
-- text: "Sub-Heading"
+  xpath: "/dg:chunk/dg:chunk[1]"
+- text: |
+    Sub-Heading
   parent_text: |
-      Main Heading with Acme Corp as mixed content
-      Sub-Heading
-      Paragraph with sub-elements like Jan 1, 2023 and John Doe as mixed content.
-      These are some obligations:
-      1. Item A
+    Main Heading with Acme Corp as mixed content
+    Sub-Heading
+    Paragraph with sub-elements like Jan 1, 2023 and John Doe as mixed content.
+    These are some obligations:
+    1. Item A
   tag: "chunk"
   structure: "h1"
-- text: "Paragraph with sub-elements like Jan 1, 2023 and John Doe as mixed content."
+  xpath: "/dg:chunk/dg:chunk[2]/dg:chunk[1]"
+- text: |
+    Paragraph with sub-elements like Jan 1, 2023 and John Doe as mixed content.
   parent_text: |
-      Main Heading with Acme Corp as mixed content
-      Sub-Heading
-      Paragraph with sub-elements like Jan 1, 2023 and John Doe as mixed content.
-      These are some obligations:
-      1. Item A
-      2. Item B
+    Main Heading with Acme Corp as mixed content
+    Sub-Heading
+    Paragraph with sub-elements like Jan 1, 2023 and John Doe as mixed content.
+    These are some obligations:
+    1. Item A
+    2. Item B
   tag: "chunk"
   structure: "div"
-- text: "These are some obligations:"
+  xpath: "/dg:chunk/dg:chunk[2]/dg:chunk[2]"
+- text: |
+    These are some obligations:
   parent_text: |
-      Main Heading with Acme Corp as mixed content
-      Sub-Heading
-      Paragraph with sub-elements like Jan 1, 2023 and John Doe as mixed content.
-      These are some obligations:
-      1. Item A
-      2. Item B
-      3. C pg.1
+    Main Heading with Acme Corp as mixed content
+    Sub-Heading
+    Paragraph with sub-elements like Jan 1, 2023 and John Doe as mixed content.
+    These are some obligations:
+    1. Item A
+    2. Item B
+    3. C
+     pg.1
   tag: "chunk"
   structure: "div"
-- text: "1. Item A"
+  xpath: "/dg:chunk/docset:ConfidentialityObligations/dg:chunk"
+- text: |
+    1. Item A
   parent_text: |
-      Sub-Heading
-      Paragraph with sub-elements like Jan 1, 2023 and John Doe as mixed content.
-      These are some obligations:
-      1. Item A
-      2. Item B
-      3. C pg.1
-      +-------+--------+------------------------------------------------------+
-      | Fruit | Color  | Taste                                                |
-      +-------+--------+------------------------------------------------------+
-      | Apple | Red    | Apples are mostly sweet, sometimes tart if not ripe. |
-      +-------+--------+------------------------------------------------------+
-      | Mango | Yellow | Super sweet when ripe.                               |
-      +-------+--------+------------------------------------------------------+
+    Sub-Heading
+    Paragraph with sub-elements like Jan 1, 2023 and John Doe as mixed content.
+    These are some obligations:
+    1. Item A
+    2. Item B
+    3. C
+     pg.1
+    +-------+--------+------------------------------------------------------+
+    | Fruit | Color  | Taste                                                |
+    +-------+--------+------------------------------------------------------+
+    | Apple | Red    | Apples are mostly sweet, sometimes tart if not ripe. |
+    +-------+--------+------------------------------------------------------+
+    | Mango | Yellow | Super sweet when ripe.                               |
+    +-------+--------+------------------------------------------------------+
   tag: "chunk"
   structure: "lim div"
-- text: "2. Item B"
+  xpath: "/dg:chunk/docset:ConfidentialityObligations/docset:Obligations/docset:Obligation[1]/dg:chunk[1]"
+- text: |
+    2. Item B
   parent_text: |
-      Paragraph with sub-elements like Jan 1, 2023 and John Doe as mixed content.
-      These are some obligations:
-      1. Item A
-      2. Item B
-      3. C pg.1
-      +-------+--------+------------------------------------------------------+
-      | Fruit | Color  | Taste                                                |
-      +-------+--------+------------------------------------------------------+
-      | Apple | Red    | Apples are mostly sweet, sometimes tart if not ripe. |
-      +-------+--------+------------------------------------------------------+
-      | Mango | Yellow | Super sweet when ripe.                               |
-      +-------+--------+------------------------------------------------------+
+    Paragraph with sub-elements like Jan 1, 2023 and John Doe as mixed content.
+    These are some obligations:
+    1. Item A
+    2. Item B
+    3. C
+     pg.1
+    +-------+--------+------------------------------------------------------+
+    | Fruit | Color  | Taste                                                |
+    +-------+--------+------------------------------------------------------+
+    | Apple | Red    | Apples are mostly sweet, sometimes tart if not ripe. |
+    +-------+--------+------------------------------------------------------+
+    | Mango | Yellow | Super sweet when ripe.                               |
+    +-------+--------+------------------------------------------------------+
   tag: "chunk"
   structure: "lim div"
-- text: "3. C pg.1"
+  xpath: "/dg:chunk/docset:ConfidentialityObligations/docset:Obligations/docset:Obligation[2]/dg:chunk[1]"
+- text: |
+    3. C
+     pg.1
   parent_text: |
-      These are some obligations:
-      1. Item A
-      2. Item B
-      3. C pg.1
-      +-------+--------+------------------------------------------------------+
-      | Fruit | Color  | Taste                                                |
-      +-------+--------+------------------------------------------------------+
-      | Apple | Red    | Apples are mostly sweet, sometimes tart if not ripe. |
-      +-------+--------+------------------------------------------------------+
-      | Mango | Yellow | Super sweet when ripe.                               |
-      +-------+--------+------------------------------------------------------+
+    These are some obligations:
+    1. Item A
+    2. Item B
+    3. C
+     pg.1
+    +-------+--------+------------------------------------------------------+
+    | Fruit | Color  | Taste                                                |
+    +-------+--------+------------------------------------------------------+
+    | Apple | Red    | Apples are mostly sweet, sometimes tart if not ripe. |
+    +-------+--------+------------------------------------------------------+
+    | Mango | Yellow | Super sweet when ripe.                               |
+    +-------+--------+------------------------------------------------------+
   tag: "chunk Footer"
   structure: "lim div div"
+  xpath: "/dg:chunk/docset:Footer"
 - text: |
     +-------+--------+------------------------------------------------------+
     | Fruit | Color  | Taste                                                |
@@ -93,15 +112,17 @@
     | Mango | Yellow | Super sweet when ripe.                               |
     +-------+--------+------------------------------------------------------+
   parent_text: |
-      1. Item A
-      2. Item B
-      3. C pg.1
-      +-------+--------+------------------------------------------------------+
-      | Fruit | Color  | Taste                                                |
-      +-------+--------+------------------------------------------------------+
-      | Apple | Red    | Apples are mostly sweet, sometimes tart if not ripe. |
-      +-------+--------+------------------------------------------------------+
-      | Mango | Yellow | Super sweet when ripe.                               |
-      +-------+--------+------------------------------------------------------+
+    1. Item A
+    2. Item B
+    3. C
+     pg.1
+    +-------+--------+------------------------------------------------------+
+    | Fruit | Color  | Taste                                                |
+    +-------+--------+------------------------------------------------------+
+    | Apple | Red    | Apples are mostly sweet, sometimes tart if not ripe. |
+    +-------+--------+------------------------------------------------------+
+    | Mango | Yellow | Super sweet when ripe.                               |
+    +-------+--------+------------------------------------------------------+
   tag: "table"
   structure: "table"
+  xpath: "/dg:chunk/docset:Appendix/xhtml:table"

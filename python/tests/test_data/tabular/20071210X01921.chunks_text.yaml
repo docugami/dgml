@@ -1,6 +1,8 @@
-- text: "National Transportation Safety Board Aviation Accident Final Report"
+- text: |
+    National Transportation Safety Board Aviation Accident Final Report
   tag: "chunk"
   structure: "h1"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/dg:chunk"
 - text: |
     +-------------------------+---------------------------------------+-------------------+-------------+
     | Location:               | Yelm , WA                             | Accident Number:  | SEA08CA039  |
@@ -15,48 +17,77 @@
     +-------------------------+---------------------------------------+-------------------+-------------+
   tag: "table"
   structure: "table"
-- text: "Analysis"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/docset:AviationAccidentFinalReport/xhtml:table"
+- text: |
+    Analysis
   tag: "chunk"
   structure: "h1"
-- text: "While landing on a gravel river bar in a tailwheel-equipped airplane, the pilot failed to maintain directional control during the landing roll, resulting in the aircraft impacting a log located adjacent to the intended landing area which resulted in substantial damage to the fuselage. A post-accident inspection of the aircraft revealed no mechanical anomalies."
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/docset:Analysis-section/dg:chunk"
+- text: |
+    While landing on a gravel river bar in a tailwheel-equipped airplane, the pilot failed to maintain directional control during the landing roll, resulting in the aircraft impacting a log located adjacent to the intended landing area which resulted in substantial damage to the fuselage. A post-accident inspection of the aircraft revealed no mechanical anomalies.
   tag: "Analysis"
   structure: "div"
-- text: "Probable Cause and Findings"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/docset:Analysis-section/docset:Analysis"
+- text: |
+    Probable Cause and Findings
   tag: "chunk"
   structure: "h1"
-- text: "The National Transportation Safety Board determines the probable cause(s) of this accident to be: The pilot's failure to maintain directional control of the tailwheel-equipped airplane during landing roll. Contributing factors were the rough/uneven terrain and log."
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/docset:ProbableCauseAndFindings-section/dg:chunk"
+- text: |
+    The National Transportation Safety Board determines the probable cause(s) of this accident to be: The pilot's failure to maintain directional control of the tailwheel-equipped airplane during landing roll. Contributing factors were the rough/uneven terrain and log.
   tag: "ProbableCauseAndFindings"
   structure: "div"
-- text: "Findings"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/docset:ProbableCauseAndFindings-section/docset:ProbableCauseAndFindings"
+- text: |
+    Findings
   tag: "chunk"
   structure: "h1"
-- text: "Occurrence # 1 : ON GROUND/WATER COLLISION WITH OBJECT"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[1]"
+- text: |
+    Occurrence # 1 : ON GROUND/WATER COLLISION WITH OBJECT
   tag: "chunk"
   structure: "h1"
-- text: "Phase of Operation: LANDING - ROLL"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[2]"
+- text: |
+    Phase of Operation: LANDING - ROLL
   tag: "chunk"
   structure: "h1"
-- text: "Findings"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[3]"
+- text: |
+    Findings
   tag: "chunk"
   structure: "h1"
-- text: "1 . (C) DIRECTIONAL CONTROL - NOT MAINTAINED - PILOT IN COMMAND"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[4]/dg:chunk[1]"
+- text: |
+    1 . (C) DIRECTIONAL CONTROL - NOT MAINTAINED - PILOT IN COMMAND
   tag: "chunk"
   structure: "h1"
-- text: "2. ( F) TERRAIN CONDITION - ROUGH/UNEVEN"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[4]/dg:chunk[2]/dg:chunk"
+- text: |
+    2. ( F) TERRAIN CONDITION - ROUGH/UNEVEN
   tag: "chunk"
   structure: "lim"
-- text: "3. ( F) OBJECT - OTHER"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[4]/dg:chunk[2]/docset:TerrainCondition/dg:chunk[1]/dg:chunk[1]"
+- text: |
+    3. ( F) OBJECT - OTHER
   tag: "chunk"
   structure: "lim"
-- text: "4. TERRAIN CONDITION - SAND BAR"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[4]/dg:chunk[2]/docset:TerrainCondition/dg:chunk[2]/dg:chunk[1]"
+- text: |
+    4. TERRAIN CONDITION - SAND BAR
   tag: "chunk"
   structure: "lim"
-- text: "Factual Information"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[4]/dg:chunk[2]/docset:TerrainCondition/dg:chunk[3]/dg:chunk[1]"
+- text: |
+    Factual Information
   tag: "chunk"
   structure: "h1"
-- text: "Pilot Information"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[5]"
+- text: |
+    Pilot Information
   tag: "chunk"
   structure: "h1"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[6]/dg:chunk"
 - text: |
     +---------------------------+-----------------------------------------------------------------+-----------------------------------+----------------------------+
     | Certificate:              | Private                                                         | Age:                              | 37 , Male                  |
@@ -80,9 +111,12 @@
     +---------------------------+-----------------------------------------------------------------+-----------------------------------+----------------------------+
   tag: "table"
   structure: "table"
-- text: "Aircraft and Owner/Operator Information"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[6]/docset:FactualInformation/xhtml:table"
+- text: |
+    Aircraft and Owner/Operator Information
   tag: "chunk"
   structure: "h1"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[7]/dg:chunk"
 - text: |
     +-------------------------------+--------------------------+--------------------------------+-----------------+
     | Aircraft Make :               | Piper                    | Registration:                  | N3250B          |
@@ -109,9 +143,12 @@
     +-------------------------------+--------------------------+--------------------------------+-----------------+
   tag: "table"
   structure: "table"
-- text: "Meteorological Information and Flight Plan"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[7]/docset:FactualInformation/xhtml:table"
+- text: |
+    Meteorological Information and Flight Plan
   tag: "chunk"
   structure: "h1"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[8]/dg:chunk"
 - text: |
     +-----------------------------------+----------------------------------+--------------------------------------+----------+
     | Conditions at Accident Site :     | Visual Conditions                | Condition of Light:                  | Day      |
@@ -140,9 +177,12 @@
     +-----------------------------------+----------------------------------+--------------------------------------+----------+
   tag: "table"
   structure: "table"
-- text: "Wreckage and Impact Information"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[8]/docset:MeteorologicalInformationAndFlightPlan/xhtml:table"
+- text: |
+    Wreckage and Impact Information
   tag: "chunk"
   structure: "h1"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[9]/dg:chunk"
 - text: |
     +----------------------+--------+----------------------+-------------------------+
     | Crew Injuries :      | 1 None | Aircraft Damage :    | Substantial             |
@@ -155,9 +195,12 @@
     +----------------------+--------+----------------------+-------------------------+
   tag: "table"
   structure: "table"
-- text: "Administrative Information"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[9]/docset:MeteorologicalInformationAndFlightPlan/xhtml:table"
+- text: |
+    Administrative Information
   tag: "chunk"
   structure: "h1"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[10]/dg:chunk[1]"
 - text: |
     +------------------------------------+------------------------------------------------------------------+---------------+------------+
     | Investigator In Charge (IIC):      | Joshua D Cawthra                                                 | Report Date : | 12/20/2007 |
@@ -176,9 +219,14 @@
     +------------------------------------+------------------------------------------------------------------+---------------+------------+
   tag: "table"
   structure: "table"
-- text: "The National Transportation Safety Board (NTSB ), established in 1967 , is an independent federal agency mandated by Congress through the Independent Safety Board Act of 1974 to investigate transportation accidents, determine the probable causes of the accidents, issue safety recommendations, study transportation safety issues, and evaluate the safety effectiveness of government agencies involved in transportation. The NTSB makes public its actions and decisions through accident reports, safety studies, special investigation reports, safety recommendations, and statistical reviews."
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[10]/dg:chunk[2]/docset:MeteorologicalInformationAndFlightPlan/xhtml:table"
+- text: |
+    The National Transportation Safety Board (NTSB ), established in 1967 , is an independent federal agency mandated by Congress through the Independent Safety Board Act of 1974 to investigate transportation accidents, determine the probable causes of the accidents, issue safety recommendations, study transportation safety issues, and evaluate the safety effectiveness of government agencies involved in transportation. The NTSB makes public its actions and decisions through accident reports, safety studies, special investigation reports, safety recommendations, and statistical reviews.
   tag: "NTSBMission"
   structure: "p"
-- text: "The Independent Safety Board Act , as codified at 49 U.S.C. Section 1154(b), precludes the admission into evidence or use of any part of an NTSB report related to an incident or accident in a civil action for damages resulting from a matter mentioned in the report. A factual report that may be admissible under 49 U.S.C. § 1154(b) is available here."
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[10]/dg:chunk[2]/dg:chunk/docset:NTSBMission"
+- text: |
+    The Independent Safety Board Act , as codified at 49 U.S.C. Section 1154(b), precludes the admission into evidence or use of any part of an NTSB report related to an incident or accident in a civil action for damages resulting from a matter mentioned in the report. A factual report that may be admissible under 49 U.S.C. § 1154(b) is available here.
   tag: "NTSBReportAdmissibility"
   structure: "p"
+  xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[10]/dg:chunk[2]/dg:chunk/docset:NTSBReportAdmissibility"

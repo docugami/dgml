@@ -56,7 +56,7 @@ def get_chunks(
 ) -> List[Chunk]:
     """Returns all structural chunks in the given node, as xml chunks."""
     final_chunks: List[Chunk] = []
-    prepended_small_chunk: Optional[Chunk] = None
+    prepended_chunk: Optional[Chunk] = None
 
     def _build_chunks(
         node,
@@ -94,7 +94,7 @@ def get_chunks(
         return chunks
 
     def _traverse(node):
-        nonlocal prepended_small_chunk  # Access the variable from the outer scope
+        nonlocal prepended_chunk  # Access the variable from the outer scope
 
         is_table_leaf_node = node.tag == TABLE_NAME and not sub_chunk_tables
         is_text_leaf_node = is_structural(node) and not has_structural_children(node)
@@ -150,13 +150,17 @@ def get_chunks(
                     ancestor_chunk = structural_ancestor_chunk
 
             for chunk in sub_chunks:
-                if prepended_small_chunk and sub_chunks:
-                    chunk = prepended_small_chunk + chunk
-                    prepended_small_chunk = None  # clear
+                if prepended_chunk and sub_chunks:
+                    chunk = prepended_chunk + chunk
+                    prepended_chunk = None  # clear
 
-                if len(chunk.text) < min_text_length or is_force_prepend_chunk(node):
-                    # Prepend small chunks or list item markers to the following chunk
-                    prepended_small_chunk = chunk
+                if is_force_prepend_chunk(node):
+                    # Prepend list item markers and other force prepend chunks to the following chunk
+                    prepended_chunk = chunk
+                elif len(chunk.text) < min_text_length:
+                    # If chunk is less than min length, prepend but with a line break
+                    chunk.text += "\n"
+                    prepended_chunk = chunk
                 else:
                     if ancestor_chunk:
                         # If an ancestor chunk is set, we always want it to be bigger than the current
@@ -178,8 +182,8 @@ def get_chunks(
     _traverse(node)
 
     # Append any remaining prepended_small_chunk that wasn't followed by a large chunk
-    if prepended_small_chunk:
-        final_chunks.append(prepended_small_chunk)
+    if prepended_chunk:
+        final_chunks.append(prepended_chunk)
 
     if not xml_mode and parent_hierarchy_levels > 0:
         # Set parents for text chunks using flat window of before/after chunks

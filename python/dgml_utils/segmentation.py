@@ -112,7 +112,7 @@ def get_chunks(
             )
             ancestor_chunk = None
             if hierarchy_mode == HierarchyMode.Structure and parent_hierarchy_levels > 0:
-                # Try to use tree hierarchy directly from the node in structure hiearchy
+                # Try to use tree hierarchy directly from the node in structure hierarchy
                 # mode. For window hierarchy mode, we do this below once all chunks are
                 # calculated, so no parent set here.
                 semantic_ancestor_node = xml_nth_ancestor(

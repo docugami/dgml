@@ -93,7 +93,7 @@ def get_chunks(
                     xml=etree.tostring(node, encoding="unicode"),
                     structure=node.attrib.get(STRUCTURE_KEY) or "",
                     xpath=xpath(node),
-                    bbox=BoundingBox.from_style(node.attrib.get(STYLE_KEY))
+                    bbox=BoundingBox.from_style(node.attrib.get(STYLE_KEY)),
                 )
             )
         return chunks

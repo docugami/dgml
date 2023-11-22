@@ -117,6 +117,8 @@ def _debug_dump_yaml(chunks: List[Chunk], output_path: Optional[Path] = None):
         yaml_lines.append(f'  tag: "{chunk.tag}"')
         yaml_lines.append(f'  structure: "{chunk.structure}"')
         yaml_lines.append(f'  xpath: "{chunk.xpath}"')
+        if chunk.bbox:
+            yaml_lines.append(f'  bbox: "{chunk.bbox}"')
 
     yaml = "\n".join(yaml_lines)
 

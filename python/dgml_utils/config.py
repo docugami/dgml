@@ -3,6 +3,7 @@ from enum import Enum
 
 TABLE_NAME = "{http://www.w3.org/1999/xhtml}table"
 STRUCTURE_KEY = "structure"
+STYLE_KEY = "style"
 
 DEFAULT_MIN_TEXT_LENGTH = 8  # Default min string length threshold for determining small chunks
 DEFAULT_MAX_TEXT_LENGTH = 1024 * 8  # Default max string length cap on returned chunks

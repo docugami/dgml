@@ -18,6 +18,7 @@
   tag: "table"
   structure: "table"
   xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/docset:AviationAccidentFinalReport/xhtml:table"
+  bbox: "201.0 592.6 2347.5 1013.4 1"
 - text: |
     Analysis
   tag: "chunk"
@@ -68,16 +69,19 @@
   tag: "chunk"
   structure: "lim"
   xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[4]/dg:chunk[2]/docset:TerrainCondition/dg:chunk[1]/dg:chunk[1]"
+  bbox: "225.0 2325.0 258.3 2366.7 1"
 - text: |
     3. ( F) OBJECT - OTHER
   tag: "chunk"
   structure: "lim"
   xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[4]/dg:chunk[2]/docset:TerrainCondition/dg:chunk[2]/dg:chunk[1]"
+  bbox: "225.0 2375.0 258.3 2416.7 1"
 - text: |
     4. TERRAIN CONDITION - SAND BAR
   tag: "chunk"
   structure: "lim"
   xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[4]/dg:chunk[2]/docset:TerrainCondition/dg:chunk[3]/dg:chunk[1]"
+  bbox: "225.0 2425.0 258.3 2466.7 1"
 - text: |
     Factual Information
   tag: "chunk"
@@ -112,6 +116,7 @@
   tag: "table"
   structure: "table"
   xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[6]/docset:FactualInformation/xhtml:table"
+  bbox: "202.5 531.8 2346.5 1253.8 2"
 - text: |
     Aircraft and Owner/Operator Information
   tag: "chunk"
@@ -144,6 +149,7 @@
   tag: "table"
   structure: "table"
   xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[7]/docset:FactualInformation/xhtml:table"
+  bbox: "202.5 1363.5 2346.5 2170.5 2"
 - text: |
     Meteorological Information and Flight Plan
   tag: "chunk"
@@ -178,6 +184,7 @@
   tag: "table"
   structure: "table"
   xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[8]/docset:MeteorologicalInformationAndFlightPlan/xhtml:table"
+  bbox: "202.5 366.7 2346.5 1285.7 3"
 - text: |
     Wreckage and Impact Information
   tag: "chunk"
@@ -196,6 +203,7 @@
   tag: "table"
   structure: "table"
   xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[9]/docset:MeteorologicalInformationAndFlightPlan/xhtml:table"
+  bbox: "202.5 1428.8 2346.5 1712.8 3"
 - text: |
     Administrative Information
   tag: "chunk"
@@ -220,6 +228,7 @@
   tag: "table"
   structure: "table"
   xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFinalReport/dg:chunk/dg:chunk[10]/dg:chunk[2]/docset:MeteorologicalInformationAndFlightPlan/xhtml:table"
+  bbox: "202.5 1852.3 2346.5 2383.3 3"
 - text: |
     The National Transportation Safety Board (NTSB ), established in 1967 , is an independent federal agency mandated by Congress through the Independent Safety Board Act of 1974 to investigate transportation accidents, determine the probable causes of the accidents, issue safety recommendations, study transportation safety issues, and evaluate the safety effectiveness of government agencies involved in transportation. The NTSB makes public its actions and decisions through accident reports, safety studies, special investigation reports, safety recommendations, and statistical reviews.
   tag: "NTSBMission"

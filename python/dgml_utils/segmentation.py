@@ -11,6 +11,7 @@ from dgml_utils.config import (
     DEFAULT_PARENT_HIERARCHY_LEVELS,
     DEFAULT_MAX_TEXT_LENGTH,
     STRUCTURE_KEY,
+    STYLE_KEY,
     TABLE_NAME,
     HierarchyMode,
 )
@@ -22,7 +23,7 @@ from dgml_utils.conversions import (
     xml_nth_ancestor,
 )
 from dgml_utils.locators import xpath
-from dgml_utils.models import Chunk
+from dgml_utils.models import BoundingBox, Chunk
 
 
 def is_descendant_of_structural(node) -> bool:
@@ -92,6 +93,7 @@ def get_chunks(
                     xml=etree.tostring(node, encoding="unicode"),
                     structure=node.attrib.get(STRUCTURE_KEY) or "",
                     xpath=xpath(node),
+                    bbox=BoundingBox.from_style(node.attrib.get(STYLE_KEY))
                 )
             )
         return chunks

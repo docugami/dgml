@@ -38,6 +38,7 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/dg:chunk[1]/docset:ReceivingParty-section/docset:ReceivingParty/dg:chunk[2]/dg:chunk[2]/docset:ConfidentialityObligations/dg:chunk[1]/dg:chunk"
+  bbox: "300.0 936.0 348.0 981.0 1"
 - text: |
     For purposes of this Agreement, " Confidential Information " shall include all information or material that has or could have commercial value or other utility in the business in which Disclosing Party is engaged. If Confidential Information is in written form, the Disclosing Party shall label or stamp the materials with the word "Confidential" or some similar warning. If Confidential Information is transmitted orally, the Disclosing Party shall promptly provide writing indicating that such oral communication constituted Confidential Information .
   tag: "DefinitionofConfidentialInformation"
@@ -48,6 +49,7 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/dg:chunk[1]/docset:ReceivingParty-section/docset:ReceivingParty/dg:chunk[2]/dg:chunk[2]/docset:ConfidentialityObligations/dg:chunk[2]/dg:chunk"
+  bbox: "300.0 1428.0 348.0 1476.0 1"
 - text: |
     Recipient's obligations under this Agreement do not extend to information that is: (a) publicly known at the time of disclosure or subsequently becomes publicly known through no fault of the Recipient; (b) discovered or created by the Recipient before disclosure by Disclosing Party ; (c) learned by the Recipient through legitimate means other than from the Disclosing Party or Disclosing Party's representatives; or (d) is disclosed by Recipient with Disclosing Party's prior written approval.
   tag: "ExclusionsFromConfidentialInformation"
@@ -58,6 +60,7 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/dg:chunk[1]/docset:ReceivingParty-section/docset:ReceivingParty/dg:chunk[2]/dg:chunk[2]/docset:ConfidentialityObligations/dg:chunk[3]/dg:chunk"
+  bbox: "300.0 1866.0 348.0 1911.0 1"
 - text: |
     Recipient shall hold and maintain the Confidential Information in strictest confidence for the sole and exclusive benefit of the Disclosing Party . Recipient shall carefully restrict access to Confidential Information to employees, contractors, and third parties as is reasonably required and shall require those persons to sign nondisclosure restrictions at least as protective as those in this Agreement.
   tag: "ObligationsofReceivingParty"
@@ -68,6 +71,7 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/dg:chunk[1]/docset:ReceivingParty-section/docset:ReceivingParty/dg:chunk[2]/dg:chunk[2]/docset:ConfidentialityObligations/dg:chunk[4]/dg:chunk"
+  bbox: "300.0 2244.0 348.0 2292.0 1"
 - text: |
     The nondisclosure provisions of this Agreement shall survive the termination of this Agreement and Recipient's duty to hold Confidential Information in confidence shall remain in effect until the Confidential Information no longer qualifies as a trade secret or until Disclosing Party sends Recipient written notice releasing Recipient from this Agreement, whichever occurs first.
   tag: "TimePeriods"
@@ -78,6 +82,7 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/dg:chunk[1]/docset:ReceivingParty-section/docset:ReceivingParty/dg:chunk[2]/dg:chunk[2]/docset:ConfidentialityObligations/dg:chunk[5]/dg:chunk"
+  bbox: "300.0 2565.0 348.0 2613.0 1"
 - text: |
     Nothing contained in this Agreement shall be deemed to constitute either party a partner, joint venture, or employee of the other party for any purpose.
   tag: "Relationships"
@@ -88,6 +93,7 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/dg:chunk[1]/docset:ReceivingParty-section/docset:ReceivingParty/dg:chunk[2]/dg:chunk[2]/docset:ConfidentialityObligations/dg:chunk[6]/dg:chunk"
+  bbox: "300.0 2772.0 348.0 2817.0 1"
 - text: |
     If a court finds any provision of this Agreement invalid or unenforceable, the remainder of this Agreement shall be interpreted so as best to effect the intent of the parties.
   tag: "Severability"
@@ -98,6 +104,7 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/dg:chunk[1]/docset:ReceivingParty-section/docset:ReceivingParty/dg:chunk[2]/dg:chunk[2]/docset:ConfidentialityObligations/dg:chunk[7]/dg:chunk"
+  bbox: "300.0 309.0 348.0 354.0 2"
 - text: |
     This Agreement expresses the complete understanding of the parties with respect to the subject matter and supersedes all prior proposals, agreements, representations, and understandings. This Agreement may not be amended except in writing signed by both parties.
   tag: "Integration"
@@ -108,6 +115,7 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/dg:chunk[1]/docset:ReceivingParty-section/docset:ReceivingParty/dg:chunk[2]/dg:chunk[2]/docset:ConfidentialityObligations/dg:chunk[8]/dg:chunk"
+  bbox: "300.0 573.0 348.0 618.0 2"
 - text: |
     The failure to exercise any right provided in this Agreement shall not be a waiver of prior or subsequent rights.
   tag: "Waiver"
@@ -118,6 +126,7 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/dg:chunk[1]/docset:ReceivingParty-section/docset:ReceivingParty/dg:chunk[2]/dg:chunk[2]/docset:ConfidentialityObligations/dg:chunk[9]/dg:chunk"
+  bbox: "300.0 720.0 348.0 768.0 2"
 - text: |
     Employee is provided notice that an individual shall not be held criminally or civilly liable under any federal or state trade secret law for the disclosure of a trade secret that is made (i) in confidence to a federal, state, or local government official, either directly or indirectly, or to an attorney; and (ii) solely for the purpose of reporting or investigating a suspected violation of law.
   tag: "NoticeofImmunity"
@@ -128,6 +137,7 @@
   tag: "chunk"
   structure: "lim"
   xpath: "/dg:chunk/dg:chunk[1]/docset:ReceivingParty-section/docset:ReceivingParty/dg:chunk[2]/dg:chunk[2]/docset:ConfidentialityObligations/dg:chunk[10]/dg:chunk[1]"
+  bbox: "300.0 1041.0 381.0 1086.0 2"
 - text: |
     The following table outlines individuals who are authorized to receive Confidential Information , their role, and the purpose of disclosure:
   tag: "AuthorizedRecipients"
@@ -146,6 +156,7 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/dg:chunk[1]/docset:ReceivingParty-section/docset:ReceivingParty/dg:chunk[2]/dg:chunk[2]/dg:chunk/docset:TableofAuthorizedDisclosures/xhtml:table"
+  bbox: "300.0 1272.0 2340.0 1644.0 2"
 - text: |
     IN WITNESS WHEREOF ,
   tag: "chunk"

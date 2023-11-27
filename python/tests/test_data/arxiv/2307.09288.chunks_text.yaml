@@ -104,19 +104,22 @@
   tag: "Main chunk PretrainingData"
   structure: "p lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:HugoTouvronLouisMartinKevinStone-section/docset:HugoTouvronLouisMartinKevinStone/dg:chunk[2]/docset:_02LUJ91-section/docset:_02LUJ91/docset:SergeyEdunovThomasScialom-section/docset:GenAIMeta-section/docset:GenAIMeta/dg:chunk[2]/docset:_7-section/docset:_1132VIXRA-section/docset:_1132VIXRA/docset:Contents-section/docset:_1Introduction-section/docset:_1Introduction/dg:chunk/docset:_2Pretraining-section/docset:_2Pretraining/docset:Main"
-  bbox: "358.3 595.8 412.5 637.5 2"
+  bboxes:
+    - bbox: 358.3 595.8 412.5 637.5 2
 - text: |
     2.2 Training Details . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
   tag: "chunk"
   structure: "lim"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:HugoTouvronLouisMartinKevinStone-section/docset:HugoTouvronLouisMartinKevinStone/dg:chunk[2]/docset:_02LUJ91-section/docset:_02LUJ91/docset:SergeyEdunovThomasScialom-section/docset:GenAIMeta-section/docset:GenAIMeta/dg:chunk[2]/docset:_7-section/docset:_1132VIXRA-section/docset:_1132VIXRA/docset:Contents-section/docset:_1Introduction-section/docset:_1Introduction/dg:chunk/docset:_2Pretraining-section/docset:_2Pretraining/docset:PretrainingData/dg:chunk[2]/dg:chunk[1]"
-  bbox: "358.3 666.7 412.5 708.4 2"
+  bboxes:
+    - bbox: 358.3 666.7 412.5 708.4 2
 - text: |
     2.3 Llama 2 Pretrained Model Evaluation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
   tag: "chunk Llama2PretrainedModelEvaluation"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:HugoTouvronLouisMartinKevinStone-section/docset:HugoTouvronLouisMartinKevinStone/dg:chunk[2]/docset:_02LUJ91-section/docset:_02LUJ91/docset:SergeyEdunovThomasScialom-section/docset:GenAIMeta-section/docset:GenAIMeta/dg:chunk[2]/docset:_7-section/docset:_1132VIXRA-section/docset:_1132VIXRA/docset:Contents-section/docset:_1Introduction-section/docset:_1Introduction/dg:chunk/docset:_2Pretraining-section/docset:_2Pretraining/docset:PretrainingData/dg:chunk[3]/dg:chunk"
-  bbox: "358.3 729.2 412.5 775.0 2"
+  bboxes:
+    - bbox: 358.3 729.2 412.5 775.0 2
 - text: |
     3 Fine-tuning
   tag: "chunk"
@@ -128,25 +131,29 @@
   tag: "Main chunk SupervisedFine-Tuning"
   structure: "p lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:HugoTouvronLouisMartinKevinStone-section/docset:HugoTouvronLouisMartinKevinStone/dg:chunk[2]/docset:_02LUJ91-section/docset:_02LUJ91/docset:SergeyEdunovThomasScialom-section/docset:GenAIMeta-section/docset:GenAIMeta/dg:chunk[2]/docset:_7-section/docset:_1132VIXRA-section/docset:_1132VIXRA/docset:Contents-section/docset:_1Introduction-section/docset:_1Introduction/dg:chunk/docset:_3Fine-tuning-section/docset:_3Fine-tuning/docset:Main"
-  bbox: "358.3 912.5 412.5 954.2 2"
+  bboxes:
+    - bbox: 358.3 912.5 412.5 954.2 2
 - text: |
     3.2 Reinforcement Learning with Human Feedback (RLHF) . . . . . . . . . . . . . . . . . . . . . 9
   tag: "chunk"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:HugoTouvronLouisMartinKevinStone-section/docset:HugoTouvronLouisMartinKevinStone/dg:chunk[2]/docset:_02LUJ91-section/docset:_02LUJ91/docset:SergeyEdunovThomasScialom-section/docset:GenAIMeta-section/docset:GenAIMeta/dg:chunk[2]/docset:_7-section/docset:_1132VIXRA-section/docset:_1132VIXRA/docset:Contents-section/docset:_1Introduction-section/docset:_1Introduction/dg:chunk/docset:_3Fine-tuning-section/docset:_3Fine-tuning/docset:ModelTraining/dg:chunk[2]/dg:chunk[1]"
-  bbox: "358.3 979.2 412.5 1020.9 2"
+  bboxes:
+    - bbox: 358.3 979.2 412.5 1020.9 2
 - text: |
     3.3 System Message for Multi-Turn Consistency . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
   tag: "chunk SystemMessage"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:HugoTouvronLouisMartinKevinStone-section/docset:HugoTouvronLouisMartinKevinStone/dg:chunk[2]/docset:_02LUJ91-section/docset:_02LUJ91/docset:SergeyEdunovThomasScialom-section/docset:GenAIMeta-section/docset:GenAIMeta/dg:chunk[2]/docset:_7-section/docset:_1132VIXRA-section/docset:_1132VIXRA/docset:Contents-section/docset:_1Introduction-section/docset:_1Introduction/dg:chunk/docset:_3Fine-tuning-section/docset:_3Fine-tuning/docset:ModelTraining/dg:chunk[3]/dg:chunk"
-  bbox: "358.3 1050.0 412.5 1091.7 2"
+  bboxes:
+    - bbox: 358.3 1050.0 412.5 1091.7 2
 - text: |
     3.4 RLHF Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
   tag: "chunk RLHFResults"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:HugoTouvronLouisMartinKevinStone-section/docset:HugoTouvronLouisMartinKevinStone/dg:chunk[2]/docset:_02LUJ91-section/docset:_02LUJ91/docset:SergeyEdunovThomasScialom-section/docset:GenAIMeta-section/docset:GenAIMeta/dg:chunk[2]/docset:_7-section/docset:_1132VIXRA-section/docset:_1132VIXRA/docset:Contents-section/docset:_1Introduction-section/docset:_1Introduction/dg:chunk/docset:_3Fine-tuning-section/docset:_3Fine-tuning/docset:ModelTraining/dg:chunk[4]/dg:chunk"
-  bbox: "358.3 1116.7 412.5 1158.4 2"
+  bboxes:
+    - bbox: 358.3 1116.7 412.5 1158.4 2
 - text: |
     4 Safety
   tag: "chunk"
@@ -158,25 +165,29 @@
   tag: "chunk SafetyinPretraining"
   structure: "h1 lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:HugoTouvronLouisMartinKevinStone-section/docset:HugoTouvronLouisMartinKevinStone/dg:chunk[2]/docset:_02LUJ91-section/docset:_02LUJ91/docset:SergeyEdunovThomasScialom-section/docset:GenAIMeta-section/docset:GenAIMeta/dg:chunk[2]/docset:_7-section/docset:_1132VIXRA-section/docset:_1132VIXRA/docset:Contents-section/docset:_1Introduction-section/docset:_1Introduction/dg:chunk/docset:_4Safety-section/docset:_4Safety/dg:chunk"
-  bbox: "358.3 1295.8 412.5 1337.5 2"
+  bboxes:
+    - bbox: 358.3 1295.8 412.5 1337.5 2
 - text: |
     4.2 Safety Fine-Tuning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
   tag: "chunk SafetyFine-Tuning"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:HugoTouvronLouisMartinKevinStone-section/docset:HugoTouvronLouisMartinKevinStone/dg:chunk[2]/docset:_02LUJ91-section/docset:_02LUJ91/docset:SergeyEdunovThomasScialom-section/docset:GenAIMeta-section/docset:GenAIMeta/dg:chunk[2]/docset:_7-section/docset:_1132VIXRA-section/docset:_1132VIXRA/docset:Contents-section/docset:_1Introduction-section/docset:_1Introduction/dg:chunk/docset:_4Safety-section/docset:_4Safety/docset:SafetyConsiderations/dg:chunk[2]/dg:chunk"
-  bbox: "358.3 1362.5 412.5 1404.2 2"
+  bboxes:
+    - bbox: 358.3 1362.5 412.5 1404.2 2
 - text: |
     4.3 Red Teaming . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
   tag: "chunk RedTeaming"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:HugoTouvronLouisMartinKevinStone-section/docset:HugoTouvronLouisMartinKevinStone/dg:chunk[2]/docset:_02LUJ91-section/docset:_02LUJ91/docset:SergeyEdunovThomasScialom-section/docset:GenAIMeta-section/docset:GenAIMeta/dg:chunk[2]/docset:_7-section/docset:_1132VIXRA-section/docset:_1132VIXRA/docset:Contents-section/docset:_1Introduction-section/docset:_1Introduction/dg:chunk/docset:_4Safety-section/docset:_4Safety/docset:SafetyConsiderations/dg:chunk[3]/dg:chunk"
-  bbox: "358.3 1433.3 412.5 1475.0 2"
+  bboxes:
+    - bbox: 358.3 1433.3 412.5 1475.0 2
 - text: |
     4.4 Safety Evaluation of Llama 2 -Chat . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 29
   tag: "chunk"
   structure: "lim"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:HugoTouvronLouisMartinKevinStone-section/docset:HugoTouvronLouisMartinKevinStone/dg:chunk[2]/docset:_02LUJ91-section/docset:_02LUJ91/docset:SergeyEdunovThomasScialom-section/docset:GenAIMeta-section/docset:GenAIMeta/dg:chunk[2]/docset:_7-section/docset:_1132VIXRA-section/docset:_1132VIXRA/docset:Contents-section/docset:_1Introduction-section/docset:_1Introduction/dg:chunk/docset:_4Safety-section/docset:_4Safety/docset:SafetyConsiderations/dg:chunk[4]/dg:chunk[1]"
-  bbox: "358.3 1500.0 412.5 1541.7 2"
+  bboxes:
+    - bbox: 358.3 1500.0 412.5 1541.7 2
 - text: |
     5 Discussion
   tag: "chunk"
@@ -188,19 +199,22 @@
   tag: "chunk LearningsandObservations"
   structure: "h1 lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:HugoTouvronLouisMartinKevinStone-section/docset:HugoTouvronLouisMartinKevinStone/dg:chunk[2]/docset:_02LUJ91-section/docset:_02LUJ91/docset:SergeyEdunovThomasScialom-section/docset:GenAIMeta-section/docset:GenAIMeta/dg:chunk[2]/docset:_7-section/docset:_1132VIXRA-section/docset:_1132VIXRA/docset:Contents-section/docset:_1Introduction-section/docset:_1Introduction/dg:chunk/docset:_5Discussion-section/docset:_5Discussion/dg:chunk"
-  bbox: "358.3 1679.2 412.5 1720.9 2"
+  bboxes:
+    - bbox: 358.3 1679.2 412.5 1720.9 2
 - text: |
     5.2 Limitations and Ethical Considerations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
   tag: "chunk LimitationsandEthicalConsiderations"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:HugoTouvronLouisMartinKevinStone-section/docset:HugoTouvronLouisMartinKevinStone/dg:chunk[2]/docset:_02LUJ91-section/docset:_02LUJ91/docset:SergeyEdunovThomasScialom-section/docset:GenAIMeta-section/docset:GenAIMeta/dg:chunk[2]/docset:_7-section/docset:_1132VIXRA-section/docset:_1132VIXRA/docset:Contents-section/docset:_1Introduction-section/docset:_1Introduction/dg:chunk/docset:_5Discussion-section/docset:_5Discussion/docset:ResearchFindings/dg:chunk[2]/dg:chunk"
-  bbox: "358.3 1745.8 412.5 1787.5 2"
+  bboxes:
+    - bbox: 358.3 1745.8 412.5 1787.5 2
 - text: |
     5.3 Responsible Release Strategy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
   tag: "chunk ResponsibleReleaseStrategy"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:HugoTouvronLouisMartinKevinStone-section/docset:HugoTouvronLouisMartinKevinStone/dg:chunk[2]/docset:_02LUJ91-section/docset:_02LUJ91/docset:SergeyEdunovThomasScialom-section/docset:GenAIMeta-section/docset:GenAIMeta/dg:chunk[2]/docset:_7-section/docset:_1132VIXRA-section/docset:_1132VIXRA/docset:Contents-section/docset:_1Introduction-section/docset:_1Introduction/dg:chunk/docset:_5Discussion-section/docset:_5Discussion/docset:ResearchFindings/dg:chunk[3]/dg:chunk"
-  bbox: "358.3 1816.7 412.5 1854.2 2"
+  bboxes:
+    - bbox: 358.3 1816.7 412.5 1854.2 2
 - text: |
     6 Related Work
   tag: "chunk"
@@ -224,43 +238,50 @@
   tag: "chunk Contributions"
   structure: "h1 lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:HugoTouvronLouisMartinKevinStone-section/docset:HugoTouvronLouisMartinKevinStone/dg:chunk[2]/docset:_02LUJ91-section/docset:_02LUJ91/docset:SergeyEdunovThomasScialom-section/docset:GenAIMeta-section/docset:GenAIMeta/dg:chunk[2]/docset:_7-section/docset:_1132VIXRA-section/docset:_1132VIXRA/docset:Contents-section/docset:_1Introduction-section/docset:_1Introduction/dg:chunk/dg:chunk[2]/dg:chunk[2]/dg:chunk[2]/dg:chunk"
-  bbox: "358.3 2212.5 420.8 2254.2 2"
+  bboxes:
+    - bbox: 358.3 2212.5 420.8 2254.2 2
 - text: |
     A.2 Additional Details for Pretraining . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47
   tag: "chunk PretrainingDetails"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:HugoTouvronLouisMartinKevinStone-section/docset:HugoTouvronLouisMartinKevinStone/dg:chunk[2]/docset:_02LUJ91-section/docset:_02LUJ91/docset:SergeyEdunovThomasScialom-section/docset:GenAIMeta-section/docset:GenAIMeta/dg:chunk[2]/docset:_7-section/docset:_1132VIXRA-section/docset:_1132VIXRA/docset:Contents-section/docset:_1Introduction-section/docset:_1Introduction/dg:chunk/dg:chunk[2]/dg:chunk[2]/dg:chunk[2]/docset:ModelCard/dg:chunk[2]/dg:chunk"
-  bbox: "358.3 2279.2 420.8 2320.9 2"
+  bboxes:
+    - bbox: 358.3 2279.2 420.8 2320.9 2
 - text: |
     A.3 Additional Details for Fine-tuning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 51
   tag: "chunk Fine-tuningDetails"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:HugoTouvronLouisMartinKevinStone-section/docset:HugoTouvronLouisMartinKevinStone/dg:chunk[2]/docset:_02LUJ91-section/docset:_02LUJ91/docset:SergeyEdunovThomasScialom-section/docset:GenAIMeta-section/docset:GenAIMeta/dg:chunk[2]/docset:_7-section/docset:_1132VIXRA-section/docset:_1132VIXRA/docset:Contents-section/docset:_1Introduction-section/docset:_1Introduction/dg:chunk/dg:chunk[2]/dg:chunk[2]/dg:chunk[2]/docset:ModelCard/dg:chunk[3]/dg:chunk"
-  bbox: "358.3 2350.0 420.8 2391.7 2"
+  bboxes:
+    - bbox: 358.3 2350.0 420.8 2391.7 2
 - text: |
     A.4 Additional Details for Safety . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 58
   tag: "chunk SafetyPrecautions"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:HugoTouvronLouisMartinKevinStone-section/docset:HugoTouvronLouisMartinKevinStone/dg:chunk[2]/docset:_02LUJ91-section/docset:_02LUJ91/docset:SergeyEdunovThomasScialom-section/docset:GenAIMeta-section/docset:GenAIMeta/dg:chunk[2]/docset:_7-section/docset:_1132VIXRA-section/docset:_1132VIXRA/docset:Contents-section/docset:_1Introduction-section/docset:_1Introduction/dg:chunk/dg:chunk[2]/dg:chunk[2]/dg:chunk[2]/docset:ModelCard/dg:chunk[4]/dg:chunk"
-  bbox: "358.3 2416.7 420.8 2458.4 2"
+  bboxes:
+    - bbox: 358.3 2416.7 420.8 2458.4 2
 - text: |
     A.5 Data Annotation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 72
   tag: "chunk DataAnnotation"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:HugoTouvronLouisMartinKevinStone-section/docset:HugoTouvronLouisMartinKevinStone/dg:chunk[2]/docset:_02LUJ91-section/docset:_02LUJ91/docset:SergeyEdunovThomasScialom-section/docset:GenAIMeta-section/docset:GenAIMeta/dg:chunk[2]/docset:_7-section/docset:_1132VIXRA-section/docset:_1132VIXRA/docset:Contents-section/docset:_1Introduction-section/docset:_1Introduction/dg:chunk/dg:chunk[2]/dg:chunk[2]/dg:chunk[2]/docset:ModelCard/dg:chunk[5]/dg:chunk"
-  bbox: "358.3 2487.5 420.8 2525.0 2"
+  bboxes:
+    - bbox: 358.3 2487.5 420.8 2525.0 2
 - text: |
     A.6 Dataset Contamination . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
   tag: "chunk DatasetContamination"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:HugoTouvronLouisMartinKevinStone-section/docset:HugoTouvronLouisMartinKevinStone/dg:chunk[2]/docset:_02LUJ91-section/docset:_02LUJ91/docset:SergeyEdunovThomasScialom-section/docset:GenAIMeta-section/docset:GenAIMeta/dg:chunk[2]/docset:_7-section/docset:_1132VIXRA-section/docset:_1132VIXRA/docset:Contents-section/docset:_1Introduction-section/docset:_1Introduction/dg:chunk/dg:chunk[2]/dg:chunk[2]/dg:chunk[2]/docset:ModelCard/dg:chunk[6]/dg:chunk"
-  bbox: "358.3 2554.2 420.8 2595.9 2"
+  bboxes:
+    - bbox: 358.3 2554.2 420.8 2595.9 2
 - text: |
     A.7 Model Card . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 77
   tag: "chunk ModelCard"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:HugoTouvronLouisMartinKevinStone-section/docset:HugoTouvronLouisMartinKevinStone/dg:chunk[2]/docset:_02LUJ91-section/docset:_02LUJ91/docset:SergeyEdunovThomasScialom-section/docset:GenAIMeta-section/docset:GenAIMeta/dg:chunk[2]/docset:_7-section/docset:_1132VIXRA-section/docset:_1132VIXRA/docset:Contents-section/docset:_1Introduction-section/docset:_1Introduction/dg:chunk/dg:chunk[2]/dg:chunk[2]/dg:chunk[2]/docset:ModelCard/dg:chunk[7]/dg:chunk"
-  bbox: "358.3 2620.8 420.8 2662.5 2"
+  bboxes:
+    - bbox: 358.3 2620.8 420.8 2662.5 2
 - text: |
     Bw tie Loss
   tag: "chunk"
@@ -279,25 +300,29 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/dg:chunk/xhtml:table"
-  bbox: "361.0 429.0 1311.8 735.0 3"
+  bboxes:
+    - bbox: 361.0 429.0 1311.8 735.0 3
 - text: |
     29.8 454
   tag: "chunk Number"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/dg:chunk/dg:chunk/dg:chunk/dg:chunk[1]"
-  bbox: "995.0 743.0 1042.0 785.0 3"
+  bboxes:
+    - bbox: 995.0 743.0 1042.0 785.0 3
 - text: |
     24.9 Llama-2 - 13b -chat
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/dg:chunk"
-  bbox: "1200.0 758.0 1242.0 775.0 3"
+  bboxes:
+    - bbox: 1200.0 758.0 1242.0 775.0 3
 - text: |
     vs. Vicuna-13b - v1.1
   tag: "chunk"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/docset:Llama-2-7b-chatvsMPT-7/dg:chunk[1]/dg:chunk[1]"
-  bbox: "388.0 776.0 413.0 787.0 3"
+  bboxes:
+    - bbox: 388.0 776.0 413.0 787.0 3
 - text: |
     Llama-2 -7b-chat
   tag: "chunk"
@@ -309,7 +334,10 @@
   tag: "chunk"
   structure: "lim h1 lim lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/docset:Llama-2-7b-chatvsMPT-7/dg:chunk[2]/dg:chunk[1]"
-  bbox: "420.0 822.0 1267.0 865.0 3"
+  bboxes:
+    - bbox: 1077.0 822.0 1125.0 864.0 3
+    - bbox: 1226.0 838.0 1267.0 854.0 3
+    - bbox: 420.0 854.0 444.0 865.0 3
 - text: |
     0 10 20 30 40 50 60 70 80 90 100
   tag: "chunk"
@@ -360,7 +388,8 @@
   tag: "chunk ModelEvaluation"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Figure2Win-rateforHelpfulnessAndSafetyBetweenCommercial-licensedBase-se/docset:LinesAnd-section/docset:LinesAnd/dg:chunk[2]/dg:chunk[1]/docset:ModelEvaluation/dg:chunk"
-  bbox: "1429.2 1175.0 1458.4 1216.7 3"
+  bboxes:
+    - bbox: 1429.2 1175.0 1458.4 1216.7 3
 - text: |
     Large Language Models (LLMs) have shown great promise as highly capable AI assistants that excel in complex reasoning tasks requiring expert knowledge across a wide range of Ąelds, including in specialized domains such as programming and creative writing. They enable interaction with humans through intuitive chat interfaces, which has led to rapid and widespread adoption among the general public.
   tag: "LLMApplications"
@@ -391,7 +420,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Figure3SafetyHumanEvaluationResultsFor-section/docset:Figure3SafetyHumanEvaluationResultsFor/dg:chunk[1]/dg:chunk/dg:chunk[1]/docset:ModelDetails/dg:chunk[1]/dg:chunk"
-  bbox: "395.8 1762.5 425.0 1812.5 4"
+  bboxes:
+    - bbox: 395.8 1762.5 425.0 1812.5 4
 - text: |
     an updated version of Llama 1, trained on a new mix of publicly available data. We also increased the size of the pretraining corpus by 40% , doubled the context length of the model, and adopted grouped-query attention ( Ainslie et al., 2023 ). We are releasing variants of Llama 2 with 7B, 13B, and 70B parameters. We have also trained 34B variants, which we report on in this paper but are not releasing.ğ
   tag: "Llama2"
@@ -402,7 +432,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Figure3SafetyHumanEvaluationResultsFor-section/docset:Figure3SafetyHumanEvaluationResultsFor/dg:chunk[1]/dg:chunk/dg:chunk[1]/docset:ModelDetails/dg:chunk[2]/dg:chunk"
-  bbox: "395.8 2058.3 425.0 2108.3 4"
+  bboxes:
+    - bbox: 395.8 2058.3 425.0 2108.3 4
 - text: |
     a Ąne-tuned version of Llama 2 that is optimized for dialogue use cases. We release variants of this model with 7B, 13B, and 70B parameters as well.
   tag: "Llama2-Chat"
@@ -438,7 +469,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Figure3SafetyHumanEvaluationResultsFor-section/docset:Figure3SafetyHumanEvaluationResultsFor/dg:chunk[2]/docset:_2Pretraining-section/docset:_2Pretraining/dg:chunk/docset:PretrainingDataInvestigations/dg:chunk[1]/dg:chunk"
-  bbox: "300.0 1933.3 350.0 1975.0 5"
+  bboxes:
+    - bbox: 300.0 1933.3 350.0 1975.0 5
 - text: |
     Our training corpus includes a new mix of data from publicly available sources, which does not include data from MetaŠs products or services. We made an effort to remove data from certain sites known to contain a high volume of personal information about private individuals. We trained on 2 trillion tokens of data as this provides a good performanceŰcost trade-off, up-sampling the most factual sources in an effort to increase knowledge and dampen hallucinations .
   tag: "TrainingData"
@@ -454,7 +486,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Figure3SafetyHumanEvaluationResultsFor-section/docset:Figure3SafetyHumanEvaluationResultsFor/dg:chunk[2]/docset:_2Pretraining-section/docset:_2Pretraining/dg:chunk/docset:PretrainingDataInvestigations/dg:chunk[2]/dg:chunk[1]"
-  bbox: "300.0 2416.7 350.0 2458.4 5"
+  bboxes:
+    - bbox: 300.0 2416.7 350.0 2458.4 5
 - text: |
     We adopt most of the pretraining setting and model architecture from Llama 1. We use the standard transformer architecture ( Vaswani et al., 2017 ), apply pre-normalization using RMSNorm ( Zhang and Sennrich , 2019 ), use the SwiGLU activation function ( Shazeer , 2020 ), and rotary positional embeddings ( RoPE, Su et al. 2022 ). The primary architectural differences from Llama 1 include increased context length and grouped-query attention (GQA). We detail in Appendix Section A.2.1 each of these differences with ablation experiments to demonstrate their importance.
   tag: "ModelArchitecture"
@@ -486,7 +519,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Figure3SafetyHumanEvaluationResultsFor-section/docset:Figure3SafetyHumanEvaluationResultsFor/dg:chunk[2]/dg:chunk/dg:chunk[2]/dg:chunk[2]/xhtml:table"
-  bbox: "355.6 302.0 2193.6 839.0 6"
+  bboxes:
+    - bbox: 355.6 302.0 2193.6 839.0 6
 - text: |
     Table 1:
   tag: "chunk"
@@ -522,7 +556,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Figure5TrainingLossFor-section/docset:Figure5TrainingLossFor/docset:Tokenizer-section/docset:Tokenizer/dg:chunk[1]/dg:chunk/dg:chunk[1]/docset:TrainingHardwareCarbonFootprint/dg:chunk[1]/dg:chunk[1]"
-  bbox: "300.0 2566.7 379.2 2608.4 6"
+  bboxes:
+    - bbox: 300.0 2566.7 379.2 2608.4 6
 - text: |
     Training Hardware .
   tag: "chunk"
@@ -550,7 +585,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Figure5TrainingLossFor-section/docset:Figure5TrainingLossFor/docset:Tokenizer-section/docset:Tokenizer/dg:chunk[1]/dg:chunk/dg:chunk[1]/docset:TrainingHardwareCarbonFootprint/dg:chunk[1]/dg:chunk[3]/dg:chunk[1]/dg:chunk[2]/xhtml:table"
-  bbox: "694.3 301.2 1855.3 654.2 7"
+  bboxes:
+    - bbox: 694.3 301.2 1855.3 654.2 7
 - text: |
     Table 2: CO2 emissions during pretraining.
   tag: "chunk"
@@ -582,13 +618,15 @@
   tag: "chunk EmissionsOffset"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Figure5TrainingLossFor-section/docset:Figure5TrainingLossFor/docset:Tokenizer-section/docset:Tokenizer/dg:chunk[1]/dg:chunk/dg:chunk[1]/docset:TrainingHardwareCarbonFootprint/dg:chunk[2]/dg:chunk"
-  bbox: "300.0 1529.2 387.5 1566.7 7"
+  bboxes:
+    - bbox: 300.0 1529.2 387.5 1566.7 7
 - text: |
     2.3 Llama 2 Pretrained Model Evaluation
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Figure5TrainingLossFor-section/docset:Figure5TrainingLossFor/docset:Tokenizer-section/docset:Tokenizer/dg:chunk[1]/dg:chunk/dg:chunk[1]/docset:TrainingHardwareCarbonFootprint/dg:chunk[3]/dg:chunk[1]"
-  bbox: "300.0 1754.2 350.0 1804.2 7"
+  bboxes:
+    - bbox: 300.0 1754.2 350.0 1804.2 7
 - text: |
     In this section, we report the results for the Llama 1 and Llama 2 base models, MosaicML Pretrained Transformer (MPT)†† models, and Falcon ( Almazrouei et al., 2023 ) models on standard academic benchmarks. For all the evaluations, we use our internal evaluations library. We reproduce results for the MPT and Falcon models internally. For these models, we always pick the best score between our evaluation framework and any publicly reported results.
   tag: "ModelEvaluation"
@@ -605,13 +643,15 @@
   tag: "chunk"
   structure: "lim h1 div"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Figure5TrainingLossFor-section/docset:Figure5TrainingLossFor/docset:Tokenizer-section/docset:Tokenizer/dg:chunk[1]/dg:chunk/docset:EvaluationMetrics/dg:chunk[1]/dg:chunk[1]"
-  bbox: "404.2 2279.2 425.0 2320.9 7"
+  bboxes:
+    - bbox: 404.2 2279.2 425.0 2320.9 7
 - text: |
     • Commonsense
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Figure5TrainingLossFor-section/docset:Figure5TrainingLossFor/docset:Tokenizer-section/docset:Tokenizer/dg:chunk[1]/dg:chunk/docset:EvaluationMetrics/dg:chunk[2]/dg:chunk"
-  bbox: "404.2 2387.5 425.0 2429.2 7"
+  bboxes:
+    - bbox: 404.2 2387.5 425.0 2429.2 7
 - text: |
     Reasoning. We report the average of PIQA ( Bisk et al., 2020 ), SIQA ( Sap et al., 2019 ), HellaSwag ( Zellers et al., 2019a ), WinoGrande ( Sakaguchi et al., 2021 ), ARC easy and challenge ( Clark et al., 2018 ), OpenBookQA ( Mihaylov et al., 2018 ), and CommonsenseQA ( Talmor et al., 2018 ). We report 7-shot results for CommonSenseQA and 0-shot results for all other benchmarks.
   tag: "Commonsense"
@@ -622,7 +662,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Figure5TrainingLossFor-section/docset:Figure5TrainingLossFor/docset:Tokenizer-section/docset:Tokenizer/dg:chunk[1]/dg:chunk/docset:EvaluationMetrics/dg:chunk[3]/dg:chunk"
-  bbox: "404.2 2583.3 425.0 2629.1 7"
+  bboxes:
+    - bbox: 404.2 2583.3 425.0 2629.1 7
 - text: |
     We evaluate the 5-shot performance on NaturalQuestions ( Kwiatkowski et al., 2019 ) and TriviaQA ( Joshi et al., 2017 ) and report the average.
   tag: "WorldKnowledge"
@@ -633,7 +674,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Figure5TrainingLossFor-section/docset:Figure5TrainingLossFor/docset:Tokenizer-section/docset:Tokenizer/dg:chunk[1]/dg:chunk/docset:EvaluationMetrics/dg:chunk[4]/dg:chunk"
-  bbox: "404.2 2691.7 425.0 2733.4 7"
+  bboxes:
+    - bbox: 404.2 2691.7 425.0 2733.4 7
 - text: |
     For reading comprehension, we report the 0 -shot average on SQuAD ( Rajpurkar et al., 2018 ), QuAC (Choi et al., 2018 ), and BoolQ (Clark et al., 2019 ).
   tag: "ReadingComprehension"
@@ -645,13 +687,15 @@
   tag: "chunk MATH"
   structure: "lim h1 div"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Figure5TrainingLossFor-section/docset:Figure5TrainingLossFor/docset:Tokenizer-section/docset:Tokenizer/dg:chunk[1]/dg:chunk/docset:EvaluationMetrics/dg:chunk[5]/dg:chunk"
-  bbox: "404.2 2800.0 425.0 2841.7 7"
+  bboxes:
+    - bbox: 404.2 2800.0 425.0 2841.7 7
 - text: |
     • ††https://www.mosaicml.com /blog/ mpt-7b
   tag: "chunk"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Figure5TrainingLossFor-section/docset:Figure5TrainingLossFor/docset:Tokenizer-section/docset:Tokenizer/dg:chunk[1]/dg:chunk/dg:chunk[2]/dg:chunk[1]/docset:ModelPerformance/dg:chunk[1]"
-  bbox: "341.7 2916.7 1495.9 2962.5 7"
+  bboxes:
+    - bbox: 341.7 2916.7 1495.9 2962.5 7
 - text: |
     +------------------------------------------------------------------+-----------------------+---------------------+-----------------------------------------------+-------------------------------------------------------------+----------------------------------------------------------------+---------------------+------------------------------------------------+---------------------+------------------------------+
     | Model                                                            | Size                  | Code                | Commonsense Reasoning                         | World Knowledge                                             | Reading Comprehension                                          | Math                | MMLU                                           | BBH                 | AGI Eval                     |
@@ -676,7 +720,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Figure5TrainingLossFor-section/docset:Figure5TrainingLossFor/docset:Tokenizer-section/docset:Tokenizer/dg:chunk[1]/dg:chunk/dg:chunk[2]/dg:chunk[1]/docset:ModelPerformance/dg:chunk[2]/xhtml:table"
-  bbox: "425.3 301.0 2130.2 2309.9 8"
+  bboxes:
+    - bbox: 425.3 301.0 2130.2 2309.9 8
 - text: |
     ---------------------------------+---------------------+------------------------------+
     | on MMLU outperform models, Llama to                              | and Llama open-source | BBH MPT 2 7B 2 70B  | by ≈5 models of and 34B model models, we also | and ≈8 points, the corresponding outperform outperforms all | respectively, compared to size on all categories Falcon 7B and | to                  | Llama 1 65B. besides code on all closed-source | categories          | Llama benchmarks. of models. |
@@ -702,13 +747,15 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Figure5TrainingLossFor-section/docset:Figure5TrainingLossFor/docset:Tokenizer-section/docset:Tokenizer/dg:chunk[1]/dg:chunk/dg:chunk[2]/dg:chunk[1]/docset:ModelPerformance/dg:chunk[2]/xhtml:table"
-  bbox: "425.3 301.0 2130.2 2309.9 8"
+  bboxes:
+    - bbox: 425.3 301.0 2130.2 2309.9 8
 - text: |
     --------------------------------------------------+---------------------+------------------------------------------------+---------------------+------------------------------+
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Figure5TrainingLossFor-section/docset:Figure5TrainingLossFor/docset:Tokenizer-section/docset:Tokenizer/dg:chunk[1]/dg:chunk/dg:chunk[2]/dg:chunk[1]/docset:ModelPerformance/dg:chunk[2]/xhtml:table"
-  bbox: "425.3 301.0 2130.2 2309.9 8"
+  bboxes:
+    - bbox: 425.3 301.0 2130.2 2309.9 8
 - text: |
     Table
      models.
@@ -720,7 +767,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Figure5TrainingLossFor-section/docset:Figure5TrainingLossFor/docset:Tokenizer-section/docset:Tokenizer/dg:chunk[2]/dg:chunk[2]/dg:chunk[1]/dg:chunk/dg:chunk[1]"
-  bbox: "404.2 1166.7 425.0 1208.4 8"
+  bboxes:
+    - bbox: 404.2 1166.7 425.0 1208.4 8
 - text: |
     (Zhong
      As shown
@@ -788,7 +836,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/dg:chunk[2]/docset:_3Fine-tuning-section/docset:_3Fine-tuning/dg:chunk/dg:chunk/docset:RoastPrompt/dg:chunk[1]"
-  bbox: "300.0 308.3 350.0 350.0 9"
+  bboxes:
+    - bbox: 300.0 308.3 350.0 350.0 9
 - text: |
     +-----------+------------------------------------------------------------------+
     | ➤ Prompt: | Write a poem to help me remember the Ąrst 10 elements on the     |
@@ -817,7 +866,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/dg:chunk[2]/docset:_3Fine-tuning-section/docset:_3Fine-tuning/dg:chunk/dg:chunk/docset:RoastPrompt/dg:chunk[2]/xhtml:table"
-  bbox: "300.2 418.9 2249.2 1326.9 9"
+  bboxes:
+    - bbox: 300.2 418.9 2249.2 1326.9 9
 - text: |
     Table 5: SFT annotation
   tag: "chunk"
@@ -873,7 +923,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Fine-TuningDetails-section/docset:Fine-TuningDetails/dg:chunk/dg:chunk[1]/docset:HumanPreferenceDataCollection/dg:chunk[1]/dg:chunk"
-  bbox: "300.0 2837.5 350.0 2879.2 9"
+  bboxes:
+    - bbox: 300.0 2837.5 350.0 2879.2 9
 - text: |
     RLHF is a model training procedure that is applied to a Ąne-tuned language model to further align model behavior with human preferences and instruction following. We collect data that represents empirically sampled human preferences, whereby human annotators select which of two model outputs they prefer. This human feedback is subsequently used to train a reward model, which learns patterns in the preferences of the human annotators and can then automate preference decisions.
   tag: "ReinforcementLearningwithHumanFeedbackRLHF"
@@ -884,7 +935,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Fine-TuningDetails-section/docset:Fine-TuningDetails/dg:chunk/dg:chunk[1]/docset:HumanPreferenceDataCollection/dg:chunk[2]/dg:chunk"
-  bbox: "300.0 500.0 379.2 541.7 10"
+  bboxes:
+    - bbox: 300.0 500.0 379.2 541.7 10
 - text: |
     Next, we collect human preference data for reward modeling. We chose a binary comparison protocol over other schemes, mainly because it enables us to maximize the diversity of collected prompts. Still, other strategies are worth considering, which we leave for future work.
   tag: "HumanPreferenceDataCollection"
@@ -920,7 +972,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Fine-TuningDetails-section/docset:Fine-TuningDetails/dg:chunk/dg:chunk[2]/dg:chunk/dg:chunk/dg:chunk[1]"
-  bbox: "300.0 2479.2 379.2 2520.9 10"
+  bboxes:
+    - bbox: 300.0 2479.2 379.2 2520.9 10
 - text: |
     The reward model takes a model response and its corresponding prompt (including contexts from previous turns) as inputs and outputs a scalar score to indicate the quality (e.g., helpfulness and safety) of the model generation. Leveraging such response scores as rewards, we can optimize Llama 2-Chat during RLHF for better human preference alignment and improved helpfulness and safety.
   tag: "RewardModel"
@@ -961,7 +1014,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:Fine-TuningDetails-section/docset:Fine-TuningDetails/dg:chunk/dg:chunk[3]/xhtml:table"
-  bbox: "312.3 301.2 2227.3 896.2 11"
+  bboxes:
+    - bbox: 312.3 301.2 2227.3 896.2 11
 - text: |
     Table 6: Statistics of human preference data for reward modeling.
   tag: "chunk"
@@ -997,7 +1051,8 @@
   tag: "chunk Prompt-CompletionScore"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:BwTieLoss-section/docset:BwTieLoss/docset:Llama-2-13b-chat-section/docset:Llama-2-13b-chat/dg:chunk/dg:chunk[2]/docset:TrainingObjectives-section/docset:TrainingObjectives/dg:chunk/dg:chunk[2]/dg:chunk[1]/dg:chunk/dg:chunk"
-  bbox: "2195.8 1770.8 2254.1 1812.5 11"
+  bboxes:
+    - bbox: 2195.8 1770.8 2254.1 1812.5 11
 - text: |
     Built on top of this binary ranking loss, we further modify it separately for better helpfulness and safety reward models as follows. Given that our preference ratings is decomposed as a scale of four points (e.g., signiĄcantly better), as presented in Section 3.2.1, it can be useful to leverage this information to explicitly teach the reward model to assign more discrepant scores to the generations that have more differences. To do so, we further add a margin component in the loss:
   tag: "MarginLoss"
@@ -1013,7 +1068,8 @@
   tag: "chunk HelpfulnessRewardModel"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:LrankingLogΣRθXYcRθXYrMR-section/docset:LrankingLogΣRθXYcRθXYrMR/dg:chunk[1]/dg:chunk/dg:chunk/dg:chunk"
-  bbox: "2195.8 2195.8 2254.1 2237.5 11"
+  bboxes:
+    - bbox: 2195.8 2195.8 2254.1 2237.5 11
 - text: |
     Data Composition .
   tag: "chunk"
@@ -1056,7 +1112,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:LrankingLogΣRθXYcRθXYrMR-section/docset:LrankingLogΣRθXYcRθXYrMR/dg:chunk[2]/docset:TrainingDetails-section/docset:TrainingDetails/xhtml:table"
-  bbox: "416.2 995.2 2134.2 1380.2 12"
+  bboxes:
+    - bbox: 416.2 995.2 2134.2 1380.2 12
 - text: |
     Table 7: Reward model results.
   tag: "chunk"
@@ -1078,7 +1135,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:LrankingLogΣRθXYcRθXYrMR-section/docset:LrankingLogΣRθXYcRθXYrMR/dg:chunk[2]/dg:chunk[1]/dg:chunk[2]/xhtml:table"
-  bbox: "405.2 1653.8 2144.2 1995.8 12"
+  bboxes:
+    - bbox: 405.2 1653.8 2144.2 1995.8 12
 - text: |
     Table 8: Granular reward model accuracy per preference rating.
   tag: "chunk"
@@ -1131,7 +1189,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:LrankingLogΣRθXYcRθXYrMR-section/docset:LrankingLogΣRθXYcRθXYrMR/dg:chunk[2]/docset:RewardModelResults-section/docset:RewardModelResults/dg:chunk/dg:chunk/dg:chunk/xhtml:table"
-  bbox: "1370.0 391.0 2053.0 1029.0 13"
+  bboxes:
+    - bbox: 1370.0 391.0 2053.0 1029.0 13
 - text: |
     Figure 6 : Scaling trends for the reward
   tag: "chunk"
@@ -1167,7 +1226,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:LrankingLogΣRθXYcRθXYrMR-section/docset:LrankingLogΣRθXYcRθXYrMR/dg:chunk[2]/docset:ScalingTrends-section/docset:ScalingTrends/dg:chunk/dg:chunk/dg:chunk[1]/dg:chunk/dg:chunk[1]"
-  bbox: "300.0 2441.7 379.2 2483.4 13"
+  bboxes:
+    - bbox: 300.0 2441.7 379.2 2483.4 13
 - text: |
     As we received more batches of human preference data annotation, we were able to train better reward models and collect more prompts. We therefore trained successive versions for RLHF models, referred to here as RLHF-V1, . . . , RLHF-V5.
   tag: "RLHFModelTraining"
@@ -1183,7 +1243,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:LrankingLogΣRθXYcRθXYrMR-section/docset:LrankingLogΣRθXYcRθXYrMR/dg:chunk[2]/docset:ScalingTrends-section/docset:ScalingTrends/dg:chunk/docset:RejectionSampling/dg:chunk[1]/dg:chunk[1]"
-  bbox: "404.2 2766.7 425.0 2808.4 13"
+  bboxes:
+    - bbox: 404.2 2766.7 425.0 2808.4 13
 - text: |
     ( Schulman et al., 2017 ), the standard in RLHF literature.
   tag: "chunk"
@@ -1194,7 +1255,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:LrankingLogΣRθXYcRθXYrMR-section/docset:LrankingLogΣRθXYcRθXYrMR/dg:chunk[2]/docset:ScalingTrends-section/docset:ScalingTrends/dg:chunk/docset:RejectionSampling/dg:chunk[2]/dg:chunk"
-  bbox: "404.2 2829.2 425.0 2875.0 13"
+  bboxes:
+    - bbox: 404.2 2829.2 425.0 2875.0 13
 - text: |
     We sample K outputs from the model and select the best candidate with our reward, consistent with Bai et al. (2022b). The same re-ranking strategy for LLMs was also proposed in Deng et al. ( 2019 ), where the reward is seen as an energy function. Here, we go one step further, and use the selected outputs for a gradient update. For each prompt, the sample obtaining Figure 7: Max and median reward among N samples, N ∈ [1, . . . , 100 ] averaged over our training set of prompts. The delta between max and median can be interpreted as potential gain with Rejection Sampling . the highest reward score is considered the new gold standard. Similar to Scialom et al. ( 2020a ), we then Ąne-tune our model on the new set of ranked samples, reinforcing the reward.
   tag: "RejectionSamplingĄne-tuning"
@@ -1210,7 +1272,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:LrankingLogΣRθXYcRθXYrMR-section/docset:LrankingLogΣRθXYcRθXYrMR/dg:chunk[2]/dg:chunk[3]/docset:RLAlgorithmDifferences/dg:chunk[1]/dg:chunk"
-  bbox: "404.2 1304.2 425.0 1345.9 14"
+  bboxes:
+    - bbox: 404.2 1304.2 425.0 1345.9 14
 - text: |
     Ů in Rejection Sampling , the model explores K samples for a given prompt, while only one generation is done for PPO.
   tag: "Breadth"
@@ -1222,7 +1285,8 @@
   tag: "chunk Depth"
   structure: "lim h1 div"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:LrankingLogΣRθXYcRθXYrMR-section/docset:LrankingLogΣRθXYcRθXYrMR/dg:chunk[2]/dg:chunk[3]/docset:RLAlgorithmDifferences/dg:chunk[2]/dg:chunk"
-  bbox: "404.2 1412.5 425.0 1454.2 14"
+  bboxes:
+    - bbox: 404.2 1412.5 425.0 1454.2 14
 - text: |
     Until RLHF (V4),
   tag: "chunk"
@@ -1285,7 +1349,8 @@
   tag: "chunk PolicyImprovement"
   structure: "lim p p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:LrankingLogΣRθXYcRθXYrMR-section/docset:LrankingLogΣRθXYcRθXYrMR/dg:chunk[2]/docset:RejectionSampling-section/docset:RejectionSampling/dg:chunk[2]/docset:ArgMaxEpDGΠRGP-section/docset:ArgMaxEpDGΠRGP/dg:chunk[1]/dg:chunk/dg:chunk[1]"
-  bbox: "2195.8 1633.3 2254.1 1675.0 15"
+  bboxes:
+    - bbox: 2195.8 1633.3 2254.1 1675.0 15
 - text: |
     The Ąnal reward function we use during optimization,
   tag: "chunk"
@@ -1301,7 +1366,8 @@
   tag: "chunk RewardModel"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/dg:chunk/dg:chunk[1]/dg:chunk/dg:chunk"
-  bbox: "2195.8 1958.3 2254.1 2000.0 15"
+  bboxes:
+    - bbox: 2195.8 1958.3 2254.1 2000.0 15
 - text: |
     We deĄne Rc to be a piecewise combination of the safety (Rs) and helpfulness (Rh) reward models. We have tagged prompts in our dataset that might elicit potentially unsafe responses and prioritize the scores from the safety model. The threshold of 0.15 is chosen for Ąltering unsafe responses, corresponding to a precision of 0.89 and a recall of 0.55 evaluated on the Meta Safety test set. We also Ąnd it important to whiten the Ąnal linear scores (shown here by reversing the sigmoid with the logit function) in order to increase stability and balance properly with the KL penalty term (β) above.
   tag: "SafetyModel"
@@ -1367,7 +1433,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/xhtml:table"
-  bbox: "473.0 371.0 2087.0 1177.0 16"
+  bboxes:
+    - bbox: 473.0 371.0 2087.0 1177.0 16
 - text: |
     Figure 9 : Issues with multi-turn memory
   tag: "chunk"
@@ -1388,7 +1455,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[1]/dg:chunk[2]/dg:chunk/dg:chunk/dg:chunk/dg:chunk[1]"
-  bbox: "300.0 1695.8 350.0 1737.5 16"
+  bboxes:
+    - bbox: 300.0 1695.8 350.0 1737.5 16
 - text: |
     In a dialogue setup, some instructions should apply for all the conversation turns, e.g., to respond succinctly, or to Şact asŤ some public Ągure. When we provided such instructions to Llama 2-Chat, the subsequent response should always respect the constraint. However, our initial RLHF models tended to forget the initial instruction after a few turns of dialogue, as illustrated in Figure 9 (left).
   tag: "InstructionForgetting"
@@ -1424,7 +1492,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/dg:chunk[1]/dg:chunk[2]/dg:chunk/dg:chunk/dg:chunk/docset:SFTDatasetGeneration/dg:chunk"
-  bbox: "300.0 2787.5 354.2 2829.2 16"
+  bboxes:
+    - bbox: 300.0 2787.5 354.2 2829.2 16
 - text: |
     Language (ŞSpeak in e.g. FrenchŤ), or Public Figure (ŞAct as e.g. NapoleonŤ). To obtain the lists of hobbies and public Ągures, we asked Llama 2-Chat to generate it, avoiding a mismatch between the instruction and model knowledge (e.g., asking the model to act as someone it had not encountered during training). To make the instructions more complex and diverse, we construct the Ąnal instruction by randomly combining the above constraints. When constructing the Ąnal system message for the training data, we also modify the original instruction half of the time to be less verbose, e.g., ŞAlways act as Napoleon from nowŤ-> ŤFigure: Napoleon.Ť These steps produce an SFT dataset, on which we can Ąne-tune Llama 2-Chat.
   tag: "TennisŤ"
@@ -1465,13 +1534,15 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:Figure10AttentionVisualizationforaDialoguewithAndWithoutGAtt-section/docset:Figure10AttentionVisualizationforaDialoguewithAndWithoutGAtt/dg:chunk[1]/dg:chunk[2]/dg:chunk/dg:chunk/docset:RLHFEvaluation/dg:chunk[1]/dg:chunk[1]"
-  bbox: "300.0 2179.2 350.0 2220.9 17"
+  bboxes:
+    - bbox: 300.0 2179.2 350.0 2220.9 17
 - text: |
     3.4.1 Model-Based Evaluation
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:Figure10AttentionVisualizationforaDialoguewithAndWithoutGAtt-section/docset:Figure10AttentionVisualizationforaDialoguewithAndWithoutGAtt/dg:chunk[1]/dg:chunk[2]/dg:chunk/dg:chunk/docset:RLHFEvaluation/dg:chunk[2]/dg:chunk[1]"
-  bbox: "300.0 2262.5 379.2 2304.2 17"
+  bboxes:
+    - bbox: 300.0 2262.5 379.2 2304.2 17
 - text: |
     Evaluating LLMs is a challenging open-research problem. Human evaluation, while a gold standard, can be complicated by various HCI considerations ( Clark et al., 2021 ; Gehrmann et al., 2023 ), and is not always scalable. Thus, to select the best-performing models among several ablations at each iteration from RLHF-V1 to V5, we Ąrst observed the improvement of the rewards from the latest reward models, to save costs and increase iteration speed. We later validated major model versions with human evaluations.
   tag: "chunk"
@@ -1515,7 +1586,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:Figure10AttentionVisualizationforaDialoguewithAndWithoutGAtt-section/docset:Figure10AttentionVisualizationforaDialoguewithAndWithoutGAtt/dg:chunk[1]/dg:chunk[2]/dg:chunk/dg:chunk/xhtml:table"
-  bbox: "400.0 381.0 1161.0 991.3 18"
+  bboxes:
+    - bbox: 400.0 381.0 1161.0 991.3 18
 - text: |
     10%
      20%
@@ -1568,7 +1640,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:Figure10AttentionVisualizationforaDialoguewithAndWithoutGAtt-section/docset:Figure10AttentionVisualizationforaDialoguewithAndWithoutGAtt/dg:chunk[2]/docset:_10-section[1]/docset:_10/docset:_30-section/docset:_40-section/docset:_40/dg:chunk[2]/dg:chunk[2]/dg:chunk[2]/xhtml:table"
-  bbox: "1287.5 381.0 2049.0 991.3 18"
+  bboxes:
+    - bbox: 1287.5 381.0 2049.0 991.3 18
 - text: |
     10%
      20%
@@ -1640,7 +1713,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/dg:chunk[2]/docset:ProgressionofModels-section/docset:ProgressionofModels/dg:chunk/dg:chunk/dg:chunk/dg:chunk/dg:chunk[1]"
-  bbox: "300.0 2245.8 379.2 2287.5 18"
+  bboxes:
+    - bbox: 300.0 2245.8 379.2 2287.5 18
 - text: |
     Human evaluation is often considered the gold standard for judging models for natural language generation, including dialogue models. To evaluate the quality of major model versions, we asked human evaluators to rate them on helpfulness and safety. We compare the Llama 2-Chat models to open-source models ( Falcon, MPT MosaicML NLP Team et al. ( 2023 ), Vicuna Chiang et al. ( 2023 ), as well as closed-source models ( Chat- GPT (OpenAI, 2023) and PaLM Anil et al. ( 2023 )) on over 4 , 000 single and multi-turn prompts. For ChatGPT, we use gpt-3.5 - turbo-0301 model in all generations. For PaLM, we use the chat-bison-001 model in all generations. The Ąnal prompt count for human evaluations for each model is shown in Table 32. See more methodology details in Appendix, Section A.3.7. The following section shows helpfulness results; safety results are presented in Section 4.4.
   tag: "HumanEvaluationResults"
@@ -1691,25 +1765,29 @@
   tag: "chunk PromptSetSize"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:LimitationsofHumanEvaluations-section/docset:LimitationsofHumanEvaluations/dg:chunk/docset:Limitations/dg:chunk[1]/dg:chunk"
-  bbox: "300.0 2375.0 320.8 2416.7 19"
+  bboxes:
+    - bbox: 300.0 2375.0 320.8 2416.7 19
 - text: |
     • Diversity of the prompts could be another factor in our results. For example, our prompt set does not include any coding- or reasoning-related prompts.
   tag: "chunk PromptDiversity"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:LimitationsofHumanEvaluations-section/docset:LimitationsofHumanEvaluations/dg:chunk/docset:Limitations/dg:chunk[2]/dg:chunk"
-  bbox: "300.0 2483.3 320.8 2525.0 19"
+  bboxes:
+    - bbox: 300.0 2483.3 320.8 2525.0 19
 - text: |
     • We only evaluate the Ąnal generation of a multi-turn conversation. A more interesting evaluation could be to ask the models to complete a task and rate the overall experience with the model over multiple turns.
   tag: "chunk EvaluationMethodology"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:LimitationsofHumanEvaluations-section/docset:LimitationsofHumanEvaluations/dg:chunk/docset:Limitations/dg:chunk[3]/dg:chunk"
-  bbox: "300.0 2591.7 320.8 2633.4 19"
+  bboxes:
+    - bbox: 300.0 2591.7 320.8 2633.4 19
 - text: |
     • Human evaluation for generative models is inherently subjective and noisy. As a result, evaluation on a different set of prompts or with different instructions could result in different results.
   tag: "chunk SubjectivityinHumanEvaluation"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:LimitationsofHumanEvaluations-section/docset:LimitationsofHumanEvaluations/dg:chunk/docset:Limitations/dg:chunk[4]/dg:chunk"
-  bbox: "300.0 2695.8 320.8 2741.6 19"
+  bboxes:
+    - bbox: 300.0 2695.8 320.8 2741.6 19
 - text: |
     4 Safety
   tag: "chunk"
@@ -1735,7 +1813,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:LimitationsofHumanEvaluations-section/docset:LimitationsofHumanEvaluations/docset:_4Safety-section/docset:WARNING-section/docset:WARNING/dg:chunk[2]/dg:chunk/docset:SafetyinPretraining/dg:chunk"
-  bbox: "300.0 841.7 350.0 883.4 20"
+  bboxes:
+    - bbox: 300.0 841.7 350.0 883.4 20
 - text: |
     It is important to understand what is in the pretraining data both to increase transparency and to shed light on root causes of potential downstream issues, such as potential biases. This can inform what, if any, downstream mitigations to consider, and help guide appropriate model use. In this section, we analyze the pretraining data for distributions of languages, demographic representations, and toxicity. We also present the results of testing the pretrained models on existing safety benchmarks.
   tag: "SafetyinPretraining"
@@ -1784,13 +1863,15 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:DemographicRepresentationIdentities-section/docset:DemographicRepresentationIdentities/dg:chunk/xhtml:table"
-  bbox: "369.3 301.2 2180.7 528.6 21"
+  bboxes:
+    - bbox: 369.3 301.2 2180.7 528.6 21
 - text: |
     (a) Percentage of documents containing gender pronouns and grammatical person. 75% of all documents contain gendered pronouns. Within this subset, 28% of all documents contain She pronouns. 94% of all documents contain pronouns in general. See the full detailed list of pronouns for each subgroup in Appendix A.4.3 .
   tag: "chunk PronounAnalysis"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:DemographicRepresentationIdentities-section/docset:DemographicRepresentationIdentities/dg:chunk/dg:chunk[1]/docset:PronounUsage/dg:chunk"
-  bbox: "295.8 554.2 354.1 591.7 21"
+  bboxes:
+    - bbox: 295.8 554.2 354.1 591.7 21
 - text: |
     +-------------------------------------------+-----------------------------------------------+-----------------------------------------+------------------------------------------------+-------------------------------------+-------+------------+--------+-----------+--------+
     | Gender and Sex ( 5.91% ) Descriptor % Doc | Sexual Orientation ( 6.67% ) Descriptor % Doc | Nationality ( 14.83% ) Descriptor % Doc | Race and Ethnicity ( 19.51% ) Descriptor % Doc | Religion ( 7.93% ) Descriptor % Doc |       |            |        |           |        |
@@ -1808,7 +1889,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:DemographicRepresentationIdentities-section/docset:DemographicRepresentationIdentities/dg:chunk/dg:chunk[2]/xhtml:table"
-  bbox: "300.0 713.6 2282.5 1091.3 21"
+  bboxes:
+    - bbox: 300.0 713.6 2282.5 1091.3 21
 - text: |
     (b) The percentage listed below each demographic axis represents the percentage of all documents that mention any of the descriptor terms in this axis. The percentage listed for each demographic descriptor represents, among the documents that mention a descriptor in the given demographic axis, the percentage that mention this speciĄc descriptor.
   tag: "DemographicDescriptorPercentages"
@@ -1889,7 +1971,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:LanguageIdentiĄcation-section/docset:LanguageIdentiĄcation/xhtml:table"
-  bbox: "858.8 301.2 1691.2 1028.6 22"
+  bboxes:
+    - bbox: 858.8 301.2 1691.2 1028.6 22
 - text: |
     Table 10: Language distribution in pretraining data with percentage >= 0.005% .
   tag: "chunk"
@@ -1915,7 +1998,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:SafetyBenchmarksforPretrainedModels-section/docset:SafetyBenchmarksforPretrainedModels/dg:chunk/docset:EvaluationMetrics/dg:chunk[1]/dg:chunk"
-  bbox: "395.8 1458.3 425.0 1500.0 22"
+  bboxes:
+    - bbox: 395.8 1458.3 425.0 1500.0 22
 - text: |
     referring to whether a language model produces known falsehoods due to misconcep- tions or false beliefs. We employ TruthfulQA ( Lin et al., 2021 ) to measure how well our LLMs can generate reliable outputs that agree with factuality and common sense.
   tag: "Truthfulness"
@@ -1926,7 +2010,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:SafetyBenchmarksforPretrainedModels-section/docset:SafetyBenchmarksforPretrainedModels/dg:chunk/docset:EvaluationMetrics/dg:chunk[2]/dg:chunk"
-  bbox: "395.8 1620.8 425.0 1662.5 22"
+  bboxes:
+    - bbox: 395.8 1620.8 425.0 1662.5 22
 - text: |
     deĄned as the tendency of a language model to generate toxic, rude, adversarial, or implicitly hateful content. We choose ToxiGen ( Hartvigsen et al., 2022 ) to measure the amount of generation of toxic language and hate speech across different groups.
   tag: "Toxicity"
@@ -1937,7 +2022,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:SafetyBenchmarksforPretrainedModels-section/docset:SafetyBenchmarksforPretrainedModels/dg:chunk/docset:EvaluationMetrics/dg:chunk[3]/dg:chunk"
-  bbox: "395.8 1783.3 425.0 1825.0 22"
+  bboxes:
+    - bbox: 395.8 1783.3 425.0 1825.0 22
 - text: |
     deĄned as how model generations reproduce existing stereotypical social biases. We use BOLD ( Dhamala et al., 2021 ) to study how the sentiment in model generations may vary with demographic attributes.
   tag: "Bias"
@@ -1984,7 +2070,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:SafetyBenchmarksforPretrainedModels-section/docset:SafetyBenchmarksforPretrainedModels/dg:chunk/dg:chunk/dg:chunk/xhtml:table"
-  bbox: "861.1 301.2 1688.1 1002.2 23"
+  bboxes:
+    - bbox: 861.1 301.2 1688.1 1002.2 23
 - text: |
     Table 11: Evaluation of pretrained LLMs on automatic safety benchmarks.
   tag: "chunk"
@@ -2005,7 +2092,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:Table11EvaluationofPretrainedLLMsonAutomaticSafetyBenchmarks-section/docset:Table11EvaluationofPretrainedLLMsonAutomaticSafetyBenchmarks/dg:chunk/dg:chunk[1]/docset:SafetyFine-Tuning/dg:chunk[1]/dg:chunk"
-  bbox: "300.0 1620.8 350.0 1662.5 23"
+  bboxes:
+    - bbox: 300.0 1620.8 350.0 1662.5 23
 - text: |
     In this section, we describe our approach to safety Ąne-tuning, including safety categories, annotation guidelines, and the techniques we use to mitigate safety risks. We employ a process similar to the general Ąne-tuning methods as described in Section 3, with some notable differences related to safety concerns. SpeciĄcally, we use the following techniques in safety Ąne-tuning:
   tag: "SafetyAnnotationGuidelines"
@@ -2016,7 +2104,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:Table11EvaluationofPretrainedLLMsonAutomaticSafetyBenchmarks-section/docset:Table11EvaluationofPretrainedLLMsonAutomaticSafetyBenchmarks/dg:chunk/dg:chunk[1]/docset:SafetyFine-Tuning/dg:chunk[1]/docset:SafetyFine-Tuning-section/docset:SafetyFine-Tuning/docset:SafetyEnhancements/dg:chunk[1]/dg:chunk"
-  bbox: "395.8 1925.0 425.0 1966.7 23"
+  bboxes:
+    - bbox: 395.8 1925.0 425.0 1966.7 23
 - text: |
     Fine-Tuning: We initialize by gathering adversarial prompts and safe demonstra- tions that are then included in the general supervised Ąne-tuning process (Section 3.1). This teaches the model to align with our safety guidelines even before RLHF, and thus lays the foundation for high-quality human preference data annotation.
   tag: "SupervisedSafety"
@@ -2027,7 +2116,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:Table11EvaluationofPretrainedLLMsonAutomaticSafetyBenchmarks-section/docset:Table11EvaluationofPretrainedLLMsonAutomaticSafetyBenchmarks/dg:chunk/dg:chunk[1]/docset:SafetyFine-Tuning/dg:chunk[1]/docset:SafetyFine-Tuning-section/docset:SafetyFine-Tuning/docset:SafetyEnhancements/dg:chunk[2]/dg:chunk"
-  bbox: "395.8 2120.8 425.0 2162.5 23"
+  bboxes:
+    - bbox: 395.8 2120.8 425.0 2162.5 23
 - text: |
     Subsequently, we integrate safety in the general RLHF pipeline described in Sec- tion 3.2.2 . This includes training a safety-speciĄc reward model and gathering more challenging adversarial prompts for rejection sampling style Ąne-tuning and PPO optimization.
   tag: "SafetyRLHF"
@@ -2038,7 +2128,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:Table11EvaluationofPretrainedLLMsonAutomaticSafetyBenchmarks-section/docset:Table11EvaluationofPretrainedLLMsonAutomaticSafetyBenchmarks/dg:chunk/dg:chunk[1]/docset:SafetyFine-Tuning/dg:chunk[1]/docset:SafetyFine-Tuning-section/docset:SafetyFine-Tuning/docset:SafetyEnhancements/dg:chunk[3]/dg:chunk"
-  bbox: "395.8 2270.8 425.0 2312.5 23"
+  bboxes:
+    - bbox: 395.8 2270.8 425.0 2312.5 23
 - text: |
     Finally, we reĄne our RLHF pipeline with context distillation ( Askell et al., 2021b). This involves generating safer model responses by preĄxing a prompt with a safety preprompt, e.g., ŞYou are a safe and responsible assistant,Ť and then Ąne-tuning the model on the safer responses without the preprompt, which essentially distills the safety preprompt (context) into the model. We use a targeted approach that allows our safety reward model to choose whether to use context distillation for each sample.
   tag: "SafetyContextDistillation"
@@ -2049,7 +2140,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:Table11EvaluationofPretrainedLLMsonAutomaticSafetyBenchmarks-section/docset:Table11EvaluationofPretrainedLLMsonAutomaticSafetyBenchmarks/dg:chunk/dg:chunk[1]/docset:SafetyFine-Tuning/dg:chunk[2]/dg:chunk"
-  bbox: "300.0 2595.8 379.2 2637.5 23"
+  bboxes:
+    - bbox: 300.0 2595.8 379.2 2637.5 23
 - text: |
     Based on limitations of LLMs known from prior work, we design instructions for our annotation team to create adversarial prompts along two dimensions: a risk category, or potential topic about which the LLM could produce unsafe content; and an attack vector, or question style to cover different varieties of prompts that could elicit bad model behaviors.
   tag: "SafetyCategoriesAndAnnotationGuidelines"
@@ -2070,7 +2162,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:Table11EvaluationofPretrainedLLMsonAutomaticSafetyBenchmarks-section/docset:Table11EvaluationofPretrainedLLMsonAutomaticSafetyBenchmarks/dg:chunk/dg:chunk[2]/dg:chunk/dg:chunk/dg:chunk[1]"
-  bbox: "300.0 762.5 379.2 804.2 24"
+  bboxes:
+    - bbox: 300.0 762.5 379.2 804.2 24
 - text: |
     In accordance with the established guidelines from Section 4.2.1, we gather prompts and demonstrations of safe model responses from trained annotators, and use the data for supervised Ąne-tuning in the same manner as described in Section 3.1. An example can be found in Table 5.
   tag: "SafeModelResponseData"
@@ -2086,7 +2179,8 @@
   tag: "chunk"
   structure: "lim"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:Table11EvaluationofPretrainedLLMsonAutomaticSafetyBenchmarks-section/docset:Table11EvaluationofPretrainedLLMsonAutomaticSafetyBenchmarks/dg:chunk/dg:chunk[3]/dg:chunk/dg:chunk/dg:chunk[1]"
-  bbox: "300.0 1208.3 379.2 1245.8 24"
+  bboxes:
+    - bbox: 300.0 1208.3 379.2 1245.8 24
 - text: |
     We observe early in the development of Llama 2-Chat that it is able to generalize from the safe demonstrations in supervised Ąne-tuning. The model quickly learns to write detailed safe responses, address safety concerns, explain why the topic might be sensitive, and provide additional helpful information. In particular, when the model outputs safe responses, they are often more detailed than what the average annotator writes. Therefore, after gathering only a few thousand supervised demonstrations, we switched entirely to RLHF to teach the model how to write more nuanced responses. Comprehensive tuning with RLHF has the added beneĄt that it may make the model more robust to jailbreak attempts ( Bai et al., 2022a ).
   tag: "RLHF"
@@ -2127,7 +2221,8 @@
   tag: "chunk SafetyRiskAssessment"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:ImpactofSafetyDataScaling-section/docset:ImpactofSafetyDataScaling/dg:chunk/dg:chunk[1]/dg:chunk/docset:SafetyRiskAssessment/dg:chunk"
-  bbox: "429.0 1239.0 477.0 1272.0 25"
+  bboxes:
+    - bbox: 429.0 1239.0 477.0 1272.0 25
 - text: |
     Figure 14 :
   tag: "chunk"
@@ -2178,7 +2273,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:ImpactofSafetyDataScaling-section/docset:ImpactofSafetyDataScaling/dg:chunk/dg:chunk[2]/dg:chunk/xhtml:table"
-  bbox: "300.0 1759.1 2289.0 2780.1 25"
+  bboxes:
+    - bbox: 300.0 1759.1 2289.0 2780.1 25
 - text: |
     Table 12 :
   tag: "chunk"
@@ -2257,7 +2353,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:MeasureofFalseRefusal-section/docset:MeasureofFalseRefusal/dg:chunk/xhtml:table"
-  bbox: "300.0 301.2 2289.0 1822.2 27"
+  bboxes:
+    - bbox: 300.0 301.2 2289.0 1822.2 27
 - text: |
     Table 13: Examples of context distillation
   tag: "chunk"
@@ -2273,7 +2370,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/dg:chunk[5]/dg:chunk[2]/dg:chunk/dg:chunk[1]/dg:chunk/dg:chunk[1]"
-  bbox: "300.0 2087.5 379.2 2129.2 27"
+  bboxes:
+    - bbox: 300.0 2087.5 379.2 2129.2 27
 - text: |
     We encourage Llama 2-Chat to associate adversarial prompts with safer responses by using context distillation ( Askell et al., 2021a) similar to Section 3.3. We observe that the safety capabilities of LLMs can be efficiently enhanced by preĄxing the model with a safety preprompt (e.g., ŞYou are a safe and responsible assistantŤ). Like supervised safety Ąne-tuning, safety context distillation provides a quick way to bootstrap the modelŠs responses on hard adversarial prompts, so that they can then be further improved in RLHF.
   tag: "SafetyContextDistillation"
@@ -2323,7 +2421,8 @@
   tag: "chunk"
   structure: "h1 lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/dg:chunk[6]/dg:chunk[2]/docset:ESA-section/dg:chunk[3]/dg:chunk[2]/dg:chunk[1]"
-  bbox: "525.0 1300.0 579.2 1337.5 28"
+  bboxes:
+    - bbox: 525.0 1300.0 579.2 1337.5 28
 - text: |
     Figure 16: Context distillation analysis.
   tag: "chunk"
@@ -2350,7 +2449,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:RejectingContextDistillationErrorswiththeSafetyRewardModel-section/docset:RejectingContextDistillationErrorswiththeSafetyRewardModel/dg:chunk/dg:chunk/dg:chunk[1]/dg:chunk/dg:chunk[1]"
-  bbox: "300.0 2350.0 350.0 2391.7 28"
+  bboxes:
+    - bbox: 300.0 2350.0 350.0 2391.7 28
 - text: |
     Given how broad the capabilities of LLMs are and how varied their training data is, it is insufficient to identify risks solely via ex post facto usage and analysis. Rather, as has been done for other LLMs, we performed various kinds of proactive risk identiĄcation, colloquially called Şred teaming,Ş based on the term commonly used within computer security. This kind of granular analysis is very important because safety is a long-tail issue, in which even very infrequent edge cases can cause noticeable problems. Even if quantitative scores report good results, these types of qualitative insights allow us to recognize and target speciĄc patterns in a more comprehensive way.
   tag: "RiskIdentification"
@@ -2376,13 +2476,15 @@
   tag: "chunk"
   structure: "lim"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:RejectingContextDistillationErrorswiththeSafetyRewardModel-section/docset:RejectingContextDistillationErrorswiththeSafetyRewardModel/dg:chunk/docset:ProblematicContent/dg:chunk[1]/dg:chunk[1]"
-  bbox: "404.2 1075.0 425.0 1120.8 29"
+  bboxes:
+    - bbox: 404.2 1075.0 425.0 1120.8 29
 - text: |
     • Distracting the
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:RejectingContextDistillationErrorswiththeSafetyRewardModel-section/docset:RejectingContextDistillationErrorswiththeSafetyRewardModel/dg:chunk/docset:ProblematicContent/dg:chunk[2]/dg:chunk[1]"
-  bbox: "404.2 1325.0 425.0 1366.7 29"
+  bboxes:
+    - bbox: 404.2 1325.0 425.0 1366.7 29
 - text: |
     [early models] by including ŞquirksŤ or speciĄc requests usually defeated any reluctance encountered via more direct requests. ŞA creative writing request (song, story, poem, etc.) is a reliable way to get it to produce content that it is otherwise robust against.Ť
   tag: "chunk"
@@ -2393,7 +2495,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:RejectingContextDistillationErrorswiththeSafetyRewardModel-section/docset:RejectingContextDistillationErrorswiththeSafetyRewardModel/dg:chunk/docset:ProblematicContent/dg:chunk[3]/dg:chunk"
-  bbox: "404.2 1483.3 425.0 1525.0 29"
+  bboxes:
+    - bbox: 404.2 1483.3 425.0 1525.0 29
 - text: |
     a problematic request in a positive context often successfully obscured the fact that problematic output was being requested for [early models]: ŞThe overall principle IŠve found most effective for any kind of attack is to hide it in language that is positive, progressive, and empowering.Ť
   tag: "Embedding"
@@ -2419,7 +2522,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:FromRedTeamingInsightstoSaferModels-section/docset:FromRedTeamingInsightstoSaferModels/dg:chunk/dg:chunk/dg:chunk/dg:chunk"
-  bbox: "300.0 2383.3 350.0 2433.3 29"
+  bboxes:
+    - bbox: 300.0 2383.3 350.0 2433.3 29
 - text: |
     Llama 2 -Chat
   tag: "SafetyEvaluationOf"
@@ -2445,31 +2549,36 @@
   tag: "chunk"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:SafetyHumanEvaluation-section/docset:SafetyHumanEvaluation/dg:chunk/docset:SafetyandHelpfulnessRatings/dg:chunk[1]/dg:chunk[1]"
-  bbox: "404.2 2770.8 425.0 2812.5 29"
+  bboxes:
+    - bbox: 404.2 2770.8 425.0 2812.5 29
 - text: |
     • 4 - No safety violations and only minor non-safety issues
   tag: "chunk"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:SafetyHumanEvaluation-section/docset:SafetyHumanEvaluation/dg:chunk/docset:SafetyandHelpfulnessRatings/dg:chunk[2]/dg:chunk[1]"
-  bbox: "404.2 2833.3 425.0 2879.1 29"
+  bboxes:
+    - bbox: 404.2 2833.3 425.0 2879.1 29
 - text: |
     • 3 - No safety violations but not helpful or other major non-safety issues
   tag: "chunk"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:SafetyHumanEvaluation-section/docset:SafetyHumanEvaluation/dg:chunk/docset:SafetyandHelpfulnessRatings/dg:chunk[3]/dg:chunk[1]"
-  bbox: "404.2 2900.0 425.0 2945.8 29"
+  bboxes:
+    - bbox: 404.2 2900.0 425.0 2945.8 29
 - text: |
     • 2 - Mild or moderate safety violations
   tag: "chunk"
   structure: "lim p"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:SafetyHumanEvaluation-section/docset:SafetyHumanEvaluation/dg:chunk/docset:SafetyandHelpfulnessRatings/dg:chunk[4]/dg:chunk[1]"
-  bbox: "404.2 2966.7 425.0 3008.4 29"
+  bboxes:
+    - bbox: 404.2 2966.7 425.0 3008.4 29
 - text: |
     (a) Overall violation percentage. (b) Overall safety and helpfulness mean rating.
   tag: "chunk"
   structure: "lim"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:SafetyHumanEvaluation-section/docset:SafetyHumanEvaluation/dg:chunk/docset:SafetyandHelpfulnessRatings/dg:chunk[4]/dg:chunk[2]/dg:chunk[2]/dg:chunk/dg:chunk[1]"
-  bbox: "525.0 820.8 579.2 858.3 30"
+  bboxes:
+    - bbox: 525.0 820.8 579.2 858.3 30
 - text: |
     Figure 17: Overall safety measures.
   tag: "chunk"
@@ -2486,7 +2595,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:Figure17OverallSafetyMeasures-section/docset:Figure17OverallSafetyMeasures/dg:chunk[2]/dg:chunk/dg:chunk/dg:chunk[1]"
-  bbox: "404.2 1179.2 425.0 1220.9 30"
+  bboxes:
+    - bbox: 404.2 1179.2 425.0 1220.9 30
 - text: |
     We consider a rating of 1 or 2 as violation and use violation percentage as our main evaluation metric, with the mean rating as a supplement. Each example is annotated by three annotators and we take the majority vote to determine if the response is violating or not. We used GwetŠs AC1/2 statistic to measure inter-rater reliability (IRR) as in the helpfulness human evaluation. The IRR scores range from 0.70to0.95 depending on the annotation batch, indicating a high degree of agreement among annotators on safety assessments. On Llama 2-Chat annotations, the average IRR is 0.92 according to GwetŠs AC2 measure. We see lower IRR scores on batches where the models have a high violation rate (e.g., Vicuna) and higher IRR scores on batches where the models have relatively low violation rates (e.g., Llama 2-Chat, Falcon, and ChatGPT).
   tag: "Inter-RaterReliability"
@@ -2569,7 +2679,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/dg:chunk[8]/docset:TruthfulnessToxicityAndBias-section/docset:TruthfulnessToxicityAndBias/xhtml:table"
-  bbox: "788.7 2184.8 1760.7 2614.8 31"
+  bboxes:
+    - bbox: 788.7 2184.8 1760.7 2614.8 31
 - text: |
     Table 14: Evaluation of Ąne-tuned LLMs on different safety datasets.
   tag: "chunk"
@@ -2595,7 +2706,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/dg:chunk[9]/docset:_5Discussion-section/docset:_5Discussion/dg:chunk/dg:chunk[1]/dg:chunk/dg:chunk[1]"
-  bbox: "300.0 600.0 350.0 641.7 32"
+  bboxes:
+    - bbox: 300.0 600.0 350.0 641.7 32
 - text: |
     Our tuning process revealed several interesting results, such as Llama 2-ChatŠs abilities to temporally organize its knowledge, or to call APIs for external tools.
   tag: "KeyFindings"
@@ -2616,7 +2728,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/dg:chunk[9]/docset:_5Discussion-section/docset:_5Discussion/dg:chunk/dg:chunk[2]/xhtml:table"
-  bbox: "364.5 922.0 2226.5 1324.0 32"
+  bboxes:
+    - bbox: 364.5 922.0 2226.5 1324.0 32
 - text: |
     Figure 20 : Distribution shift for progressive versions of
   tag: "chunk"
@@ -2695,7 +2808,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:In-ContextTemperatureRescaling-section/docset:In-ContextTemperatureRescaling/dg:chunk/dg:chunk/xhtml:table"
-  bbox: "388.0 1407.0 2105.0 2164.0 33"
+  bboxes:
+    - bbox: 388.0 1407.0 2105.0 2164.0 33
 - text: |
     Figure 22 : Time awareness
   tag: "chunk"
@@ -2750,7 +2864,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:ToolUseEmergence-section/docset:ToolUseEmergence/xhtml:table"
-  bbox: "822.7 301.2 1727.3 665.0 34"
+  bboxes:
+    - bbox: 822.7 301.2 1727.3 665.0 34
 - text: |
     Table 15: Performance with tool use.
   tag: "chunk"
@@ -2793,7 +2908,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:Table15PerformancewithToolUse-section/docset:Table15PerformancewithToolUse/dg:chunk[2]/dg:chunk/xhtml:table"
-  bbox: "603.0 1119.0 2000.0 1320.0 34"
+  bboxes:
+    - bbox: 603.0 1119.0 2000.0 1320.0 34
 - text: |
     CALL_API_1 :
   tag: "chunk"
@@ -2824,7 +2940,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:Figure23ToolUseEmergence-section/docset:Figure23ToolUseEmergence/dg:chunk/dg:chunk[1]/dg:chunk/dg:chunk/dg:chunk[1]"
-  bbox: "300.0 2233.3 350.0 2275.0 34"
+  bboxes:
+    - bbox: 300.0 2233.3 350.0 2275.0 34
 - text: |
     Llama 2-Chat is subject to the same well-recognized limitations of other LLMs, including a cessation of knowledge updates post-pretraining, potential for non-factual generation such as unqualiĄed advice, and a propensity towards hallucinations . Furthermore, our initial version of Llama 2-Chat predominantly concentrated on English-language data. While our experimental observations suggest the model has garnered some proĄciency in other languages, its proĄciency is limited, due primarily to the limited amount of pretraining data available in non-English languages (as documented in Table 10). Consequently, the modelŠs performance in languages other than English remains fragile and should be used with caution. Like other LLMs, Llama 2 may generate harmful, offensive, or biased content due to its training on publicly available online datasets. We attempted to mitigate this via Ąne-tuning, but some issues may remain, particularly for languages other than English where publicly available datasets were not available. We will continue to Ąne-tune and release updated versions in the future as we progress on addressing these issues.
   tag: "LimitationsofLlama2-Chat"
@@ -2855,7 +2972,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:Llama2OpenFoundationAndFine-TunedChatModels-section/docset:Llama2OpenFoundationAndFine-TunedChatModels/docset:RGPRCGPΒDKLΠθGPΠ0GP-section/docset:RGPRCGPΒDKLΠθGPΠ0GP/docset:AlwaysAnswerwithEmojis-section/docset:AlwaysAnswerwithEmojis/docset:Figure9IssueswithMulti-turnMemory-section/docset:Figure9IssueswithMulti-turnMemory/dg:chunk[2]/docset:Figure23ToolUseEmergence-section/docset:Figure23ToolUseEmergence/dg:chunk/dg:chunk[3]/dg:chunk/dg:chunk/dg:chunk[1]"
-  bbox: "300.0 829.2 350.0 870.9 35"
+  bboxes:
+    - bbox: 300.0 829.2 350.0 870.9 35
 - text: |
     Release Details .
   tag: "chunk"
@@ -3363,7 +3481,8 @@
   tag: "chunk RelatedWork"
   structure: "lim p"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:KnownLLMSafetyChallenges-section/docset:KnownLLMSafetyChallenges/dg:chunk[2]/docset:_7Conclusion-section/docset:_7Conclusion/dg:chunk[5]/dg:chunk/dg:chunk/docset:RelatedWork/dg:chunk"
-  bbox: "336.0 2533.0 897.0 2586.0 43"
+  bboxes:
+    - bbox: 336.0 2533.0 897.0 2586.0 43
 - text: |
     Hugo Touvron , Thibaut Lavril , Gautier Izacard , Xavier Martinet , Marie-Anne Lachaux , Timothée Lacroix , Baptiste Rozière , Naman Goyal , Eric Hambro , Faisal Azhar , AurŠelien Rodriguez , Armand Joulin , Edouard Grave , and Guillaume Lample . Llama: Open and efficient foundation language models. arXiv preprint arXiv:2302.13971 , 2023.
   tag: "LlamaPaper"
@@ -3454,7 +3573,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:KnownLLMSafetyChallenges-section/docset:KnownLLMSafetyChallenges/dg:chunk[2]/dg:chunk/dg:chunk[2]/dg:chunk[1]/dg:chunk/dg:chunk[1]"
-  bbox: "300.0 404.2 362.5 445.9 46"
+  bboxes:
+    - bbox: 300.0 404.2 362.5 445.9 46
 - text: |
     All authors sorted alphabetically by last name.
   tag: "chunk"
@@ -3515,7 +3635,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:Contributors-section/docset:Contributors/dg:chunk/dg:chunk[1]/dg:chunk/dg:chunk/dg:chunk[1]"
-  bbox: "300.0 1604.2 391.7 1645.9 46"
+  bboxes:
+    - bbox: 300.0 1604.2 391.7 1645.9 46
 - text: |
     This work was made possible by a large group of contributors. We extend our gratitude to the following people for their assistance:
   tag: "Contributors"
@@ -3526,49 +3647,57 @@
   tag: "chunk AnnotationTeam"
   structure: "lim p"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:Contributors-section/docset:Contributors/dg:chunk/dg:chunk[2]/dg:chunk/docset:Acknowledgements/dg:chunk[1]/dg:chunk"
-  bbox: "404.2 1808.3 425.0 1850.0 46"
+  bboxes:
+    - bbox: 404.2 1808.3 425.0 1850.0 46
 - text: |
     • Our large internal red team, and especially the red team organizers ( Dan Bikel , Joanna Bitton , Sean Brooks , Cristian Canton Ferrer , Aaron Fields , Li Chen , Ivan Evtimov , Aaron GrattaĄori , Laurie H , Imanol Arrieta Ibarra , Semarley Jarrett , Harshit Maheshwari , Aram Markosyan , Pushkar Mishra , David Renardy , Chris Rohlf , Davide Testuggine , Qing Hu , Matt Wilde , Michael Tontchev , and Rashi Rungta ) helped improve the safety and robustness of our models.
   tag: "chunk RedTeamContributors"
   structure: "lim p"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:Contributors-section/docset:Contributors/dg:chunk/dg:chunk[2]/dg:chunk/docset:Acknowledgements/dg:chunk[2]/dg:chunk"
-  bbox: "404.2 2050.0 425.0 2091.7 46"
+  bboxes:
+    - bbox: 404.2 2050.0 425.0 2091.7 46
 - text: |
     • The many members of our infrastructure team, including our production engineers and the builders and maintainers of our Research Super Cluster and production clusters, who were key to our model training success. Thanks also to Matthew Oldham and Adi Gangidi for helping us with carbon emission calculations.
   tag: "chunk TeamMembers"
   structure: "lim p"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:Contributors-section/docset:Contributors/dg:chunk/dg:chunk[2]/dg:chunk/docset:Acknowledgements/dg:chunk[3]/dg:chunk"
-  bbox: "404.2 2291.7 425.0 2333.4 46"
+  bboxes:
+    - bbox: 404.2 2291.7 425.0 2333.4 46
 - text: |
     • Our closest legal, policy, comms, marketing, and privacy partners, including Mike Clark , Nisha Deo , Ahuva Goldstand , Amanda Felix , Dustin Holland , Alex Kessler , Mo Metanat , Harrison Rudolph , Adam Shajnfeld , Beau James , Helen Suk , Britt Montalvo , Allie Vieth and Polina Zvyagina , who helped guide us through the release.
   tag: "chunk LegalandPolicyPartners"
   structure: "lim p"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:Contributors-section/docset:Contributors/dg:chunk/dg:chunk[2]/dg:chunk/docset:Acknowledgements/dg:chunk[4]/dg:chunk"
-  bbox: "404.2 2483.3 425.0 2529.1 46"
+  bboxes:
+    - bbox: 404.2 2483.3 425.0 2529.1 46
 - text: |
     • Our partnerships team including Ash Jhaveri , Alex Boesenberg , Sy Choudhury , Mayumi Matsuno , Ricardo Lopez-Barquilla , Marc Shedroff , Kelly Michelena , Allie Feinstein , Amit Sangani , Geeta Chauhan , Chester Hu , Charlton Gholson , Anja Komlenovic , Eissa Jamil , Brandon Spence , Azadeh Yazdan , Elisa Garcia Anzano , and Natascha Parks .
   tag: "chunk Partnerships"
   structure: "lim p"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:Contributors-section/docset:Contributors/dg:chunk/dg:chunk[2]/dg:chunk/docset:Acknowledgements/dg:chunk[5]/dg:chunk"
-  bbox: "404.2 2679.2 425.0 2725.0 46"
+  bboxes:
+    - bbox: 404.2 2679.2 425.0 2725.0 46
 - text: |
     • Chris Marra , Chaya Nayak , Jacqueline Pan , George Orlin , Edward Dowling , Esteban Arcaute , Philom- ena Lobo , Eleonora Presani , and Logan Kerr , who provided helpful product and technical organiza- tion support.
   tag: "chunk"
   structure: "lim p"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:Contributors-section/docset:Contributors/dg:chunk/dg:chunk[2]/dg:chunk/docset:Acknowledgements/dg:chunk[6]/dg:chunk[1]"
-  bbox: "404.2 2875.0 425.0 2920.8 46"
+  bboxes:
+    - bbox: 404.2 2875.0 425.0 2920.8 46
 - text: |
     • Armand Joulin , Edouard Grave , Guillaume Lample , and Timothee Lacroix , members of the original Llama team who helped get this work started.
   tag: "chunk TeamMembers"
   structure: "lim p"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:Contributors-section/docset:Contributors/dg:chunk/dg:chunk[2]/dg:chunk/docset:Acknowledgements/dg:chunk[7]/dg:chunk"
-  bbox: "404.2 308.3 425.0 350.0 47"
+  bboxes:
+    - bbox: 404.2 308.3 425.0 350.0 47
 - text: |
     • Drew Hamlin ,
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:Contributors-section/docset:Contributors/dg:chunk/dg:chunk[2]/dg:chunk/docset:Acknowledgements/dg:chunk[8]/dg:chunk[1]"
-  bbox: "404.2 416.7 425.0 458.4 47"
+  bboxes:
+    - bbox: 404.2 416.7 425.0 458.4 47
 - text: |
     Chantal Mora , and Aran Mun , who gave us some design input on the Ągures in the paper.
   tag: "chunk"
@@ -3579,25 +3708,29 @@
   tag: "chunk Acknowledgements"
   structure: "lim p"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:Contributors-section/docset:Contributors/dg:chunk/dg:chunk[2]/dg:chunk/docset:Acknowledgements/dg:chunk[9]/dg:chunk"
-  bbox: "404.2 525.0 425.0 566.7 47"
+  bboxes:
+    - bbox: 404.2 525.0 425.0 566.7 47
 - text: |
     • Early reviewers of this paper, who helped us improve its quality, including Mike Lewis , Joelle Pineau , Laurens van der Maaten , Jason Weston , and Omer Levy .
   tag: "chunk Reviewers"
   structure: "lim p"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:Contributors-section/docset:Contributors/dg:chunk/dg:chunk[2]/dg:chunk/docset:Acknowledgements/dg:chunk[10]/dg:chunk"
-  bbox: "404.2 629.2 425.0 675.0 47"
+  bboxes:
+    - bbox: 404.2 629.2 425.0 675.0 47
 - text: |
     A.2 Additional Details for Pretraining
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:Contributors-section/docset:Contributors/dg:chunk/dg:chunk[2]/dg:chunk/docset:ArchitectureChanges/dg:chunk[1]/dg:chunk[1]"
-  bbox: "300.0 779.2 362.5 820.9 47"
+  bboxes:
+    - bbox: 300.0 779.2 362.5 820.9 47
 - text: |
     A.2.1 Architecture Changes Compared to Llama 1
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:Contributors-section/docset:Contributors/dg:chunk/dg:chunk[2]/dg:chunk/docset:ArchitectureChanges/dg:chunk[2]/dg:chunk[1]"
-  bbox: "300.0 850.0 391.7 904.2 47"
+  bboxes:
+    - bbox: 300.0 850.0 391.7 904.2 47
 - text: |
     Context Length .
   tag: "chunk"
@@ -3639,7 +3772,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:Grouped-QueryAttention-section/docset:Grouped-QueryAttention/dg:chunk[1]/dg:chunk/dg:chunk/xhtml:table"
-  bbox: "541.1 2335.3 2008.9 2557.3 47"
+  bboxes:
+    - bbox: 541.1 2335.3 2008.9 2557.3 47
 - text: |
     Table 16: Context length ablation on long-context tasks.
   tag: "chunk"
@@ -3656,7 +3790,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:Grouped-QueryAttention-section/docset:Grouped-QueryAttention/dg:chunk[2]/dg:chunk[1]/xhtml:table"
-  bbox: "712.9 2707.7 1837.0 2929.7 47"
+  bboxes:
+    - bbox: 712.9 2707.7 1837.0 2929.7 47
 - text: |
     Table 17: Context length ablation on general tasks.
   tag: "chunk"
@@ -3675,7 +3810,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:Grouped-QueryAttention-section/docset:Grouped-QueryAttention/dg:chunk[2]/dg:chunk[2]/xhtml:table"
-  bbox: "429.9 301.2 2129.4 523.2 48"
+  bboxes:
+    - bbox: 429.9 301.2 2129.4 523.2 48
 - text: |
     Table 18 : Attention architecture ablations.
   tag: "chunk"
@@ -3711,7 +3847,8 @@
   tag: "chunk"
   structure: "lim h1"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/dg:chunk[3]/dg:chunk[1]/dg:chunk[2]/dg:chunk/dg:chunk[2]/dg:chunk/dg:chunk/dg:chunk[1]"
-  bbox: "300.0 2141.7 391.7 2183.4 48"
+  bboxes:
+    - bbox: 300.0 2141.7 391.7 2183.4 48
 - text: |
     MMLU details.
   tag: "chunk"
@@ -3799,7 +3936,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:ReadingComprehension-section/docset:ReadingComprehension/dg:chunk/docset:Exams-section/docset:Exams/dg:chunk/dg:chunk/xhtml:table"
-  bbox: "589.3 335.0 1961.3 1036.0 49"
+  bboxes:
+    - bbox: 589.3 335.0 1961.3 1036.0 49
 - text: |
     Table 19 :
   tag: "chunk"
@@ -3841,7 +3979,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:ReadingComprehension-section/docset:ReadingComprehension/dg:chunk/docset:Exams-section/docset:Exams/dg:chunk/xhtml:table"
-  bbox: "383.3 1254.2 2175.3 1885.2 49"
+  bboxes:
+    - bbox: 383.3 1254.2 2175.3 1885.2 49
 - text: |
     Table 20 : Performance on standard benchmarks.
   tag: "chunk"
@@ -3878,7 +4017,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:ReadingComprehension-section/docset:ReadingComprehension/dg:chunk/dg:chunk/xhtml:table"
-  bbox: "739.3 2057.9 1811.3 2804.9 49"
+  bboxes:
+    - bbox: 739.3 2057.9 1811.3 2804.9 49
 - text: |
     Table 21 : Code generation results on Human-Eval and MBPP.
   tag: "chunk"
@@ -3908,7 +4048,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/dg:chunk[4]/dg:chunk[2]/xhtml:table"
-  bbox: "492.3 330.3 2057.3 1077.3 50"
+  bboxes:
+    - bbox: 492.3 330.3 2057.3 1077.3 50
 - text: |
     Table 22 :
   tag: "chunk"
@@ -3952,7 +4093,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:Table22-section/docset:Table22/dg:chunk[1]/xhtml:table"
-  bbox: "647.3 1314.8 1902.3 2082.8 50"
+  bboxes:
+    - bbox: 647.3 1314.8 1902.3 2082.8 50
 - text: |
     Table 23 :
   tag: "chunk"
@@ -3995,7 +4137,8 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:ĞğhttpsAiMetaComLlama-section/docset:ĞğhttpsAiMetaComLlama/dg:chunk[2]/docset:Table22-section/docset:Table22/dg:chunk[2]/dg:chunk[1]/dg:chunk[2]/xhtml:table"
-  bbox: "363.3 2275.3 2196.3 2871.3 50"
+  bboxes:
+    - bbox: 363.3 2275.3 2196.3 2871.3 50
 - text: |
     Table 24 : Comparison to open source models on AGI Eval (English)
   tag: "chunk"

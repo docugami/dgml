@@ -18,7 +18,8 @@
   tag: "table"
   structure: "table"
   xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFactualReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFactualReport/dg:chunk[1]/docset:AviationAccidentFactualReport/xhtml:table"
-  bbox: "201.0 592.6 2346.0 1008.4 1"
+  bboxes:
+    - bbox: 201.0 592.6 2346.0 1008.4 1
 - text: |
     On November 28,, 2007 , at 1800 UTC , a Cirrus Design Corporation SR-20, N141CD, serial number 1032 , while on approach for landing at Jaleg, Schleswig-Holsteinschen , Germany, struck power lines and subsequently impacted terrain. The airplane was destroyed and the private pilot, the sole person on board the airplane, was fatally injured. Instrument meteorological conditions prevailed at the time of the accident. The cross-country ferry flight originated in the Netherlands and was en route to Sylt, Germany.
   tag: "AccidentDescription"
@@ -71,7 +72,8 @@
   tag: "table"
   structure: "table"
   xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFactualReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFactualReport/dg:chunk[2]/dg:chunk[1]/docset:AircraftAndOwnerOperatorInformation/xhtml:table"
-  bbox: "202.5 366.7 2346.5 957.7 2"
+  bboxes:
+    - bbox: 202.5 366.7 2346.5 957.7 2
 - text: |
     Aircraft and Owner/Operator Information
   tag: "chunk"
@@ -104,7 +106,8 @@
   tag: "table"
   structure: "table"
   xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFactualReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFactualReport/dg:chunk[2]/dg:chunk[2]/docset:AircraftAndOwnerOperatorInformation/xhtml:table"
-  bbox: "202.5 1086.7 2346.5 1939.7 2"
+  bboxes:
+    - bbox: 202.5 1086.7 2346.5 1939.7 2
 - text: |
     Meteorological Information and Flight Plan
   tag: "chunk"
@@ -139,7 +142,8 @@
   tag: "table"
   structure: "table"
   xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFactualReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFactualReport/dg:chunk[2]/dg:chunk[3]/docset:MeteorologicalInformationAndFlightPlan/xhtml:table"
-  bbox: "202.5 367.0 2346.5 1336.0 3"
+  bboxes:
+    - bbox: 202.5 367.0 2346.5 1336.0 3
 - text: |
     Airport Information
   tag: "chunk"
@@ -158,7 +162,8 @@
   tag: "table"
   structure: "table"
   xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFactualReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFactualReport/dg:chunk[2]/dg:chunk[4]/docset:MeteorologicalInformationAndFlightPlan/xhtml:table"
-  bbox: "202.5 1460.0 2346.5 1710.0 3"
+  bboxes:
+    - bbox: 202.5 1460.0 2346.5 1710.0 3
 - text: |
     Wreckage and Impact Information
   tag: "chunk"
@@ -177,7 +182,8 @@
   tag: "table"
   structure: "table"
   xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFactualReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFactualReport/dg:chunk[2]/dg:chunk[5]/docset:MeteorologicalInformationAndFlightPlan/xhtml:table"
-  bbox: "202.5 1835.0 2346.5 2135.0 3"
+  bboxes:
+    - bbox: 202.5 1835.0 2346.5 2135.0 3
 - text: |
     Administrative Information
   tag: "chunk"
@@ -199,4 +205,5 @@
   tag: "table"
   structure: "table"
   xpath: "/docset:NationalTransportationSafetyBoardAviationAccidentFactualReport-section/docset:NationalTransportationSafetyBoardAviationAccidentFactualReport/dg:chunk[2]/dg:chunk[6]/docset:MeteorologicalInformationAndFlightPlan/xhtml:table"
-  bbox: "202.5 2259.0 2346.5 2617.0 3"
+  bboxes:
+    - bbox: 202.5 2259.0 2346.5 2617.0 3

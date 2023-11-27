@@ -1,6 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Dict, Optional
+from typing import Dict, List, Optional
 
 
 def merge_parents(ours: Optional[Chunk], theirs: Optional[Chunk]) -> Optional[Chunk]:
@@ -19,22 +19,6 @@ def merge_parents(ours: Optional[Chunk], theirs: Optional[Chunk]) -> Optional[Ch
     if theirs is None:
         return ours
     return ours if len(ours.text) >= len(theirs.text) else theirs
-
-
-def merge_bboxes(ours: Optional[BoundingBox], theirs: Optional[BoundingBox]) -> Optional[BoundingBox]:
-    """
-    Merges two bboxes, doing a union if both set or one if the other is None.
-
-    >>> bbox1 = BoundingBox(left=1, top=1, right=3, bottom=3, page=1)
-    >>> bbox2 = BoundingBox(left=1, top=1, right=4, bottom=5, page=1)
-    >>> merge_bboxes(bbox1, bbox2)
-    1 1 4 5 1
-    """
-    if ours is None:
-        return theirs
-    if theirs is None:
-        return ours
-    return ours.union(theirs)
 
 
 def merge_xpaths(ours: str, theirs: str):
@@ -85,7 +69,7 @@ class Chunk:
     structure: str
     xpath: str
     parent: Optional[Chunk] = None
-    bbox: Optional[BoundingBox] = None
+    bboxes: List[BoundingBox] = field(default_factory=list)
     metadata: Dict = field(default_factory=dict)
 
     def __add__(self, other: Chunk):
@@ -116,7 +100,7 @@ class Chunk:
             structure=(self.structure + " " + other.structure).strip(),
             xpath=merge_xpaths(self.xpath, other.xpath),
             parent=merge_parents(self.parent, other.parent),
-            bbox=merge_bboxes(self.bbox, other.bbox),
+            bboxes=self.bboxes + other.bboxes,
             metadata=updated_metadata,
         )
 
@@ -194,57 +178,69 @@ class BoundingBox:
         return False
 
     @classmethod
-    def from_style(cls, style: str) -> Optional[BoundingBox]:
+    def from_style(cls, style: str) -> List[BoundingBox]:
         """
-        Builds a bounding box from a DGML style attribute value.
-
+        Builds a list of bounding boxes from a DGML style attribute value.
         The style string can contain various attributes, but must include
-        'left', 'top', 'width', and 'height'. Optionally, 'page' can be included.
+        'left', 'top', 'width', and 'height' for each bounding box. Optionally, 'page' can be included.
 
         Doctests:
-        >>> style = "boundingBox:{left: 201.0; top: 592.6; width: 2145.0; height: 415.8; page: 1;}  "
-        >>> BoundingBox.from_style(style)
-        201.0 592.6 2346.0 1008.4 1
+        >>> style_single = "boundingBox:{left: 201.0; top: 592.6; width: 2145.0; height: 415.8; page: 1;}"
+        >>> BoundingBox.from_style(style_single)
+        [201.0 592.6 2346.0 1008.4 1]
+
+        >>> style_multiple = "list-style-type: decimal; boundingBox:{left: 300.0; top: 936.0; width: 30.0; height: 1881.0; page: 1;}; boundingBox:{left: 300.0; top: 309.0; width: 30.0; height: 777.0; page: 2;};"
+        >>> BoundingBox.from_style(style_multiple)
+        [300.0 936.0 330.0 2817.0 1, 300.0 309.0 330.0 1086.0 2]
         """
-        if not style or ";" not in style or ":" not in style:
-            return None
+        if not style:
+            return []
 
-        # Remove leading/trailing text
-        style = style.replace("boundingBox:", "")
-        style = style.strip("{} \t\n")
+        # Split the style string into individual bounding box declarations
+        bounding_boxes = style.split("boundingBox:")
+        bounding_boxes = [box for box in bounding_boxes if box.strip()]
 
-        # Extract key-value pairs
-        parts = style.split(";")
+        result = []
+        for box in bounding_boxes:
+            # Process each bounding box block
+            box = box.strip("{} \t\n;")
 
-        values = {}
-        for part in parts:
-            key_value = part.split(":")
-            if len(key_value) == 2:
-                key, value = key_value
-                key = key.strip().lower()  # Normalize the key
-                try:
-                    values[key] = float(value.strip())
-                except ValueError:
-                    continue  # Skip invalid entries
+            # Extract key-value pairs
+            parts = box.split(";")
 
-        # Check for required keys and calculate right and bottom
-        try:
-            left = values["left"]
-            top = values["top"]
-            width = values["width"]
-            height = values["height"]
-        except KeyError:
-            return None  # Required key not found
+            values = {}
+            for part in parts:
+                key_value = part.split(":")
+                if len(key_value) == 2:
+                    key, value = key_value
+                    key = key.strip().lower()  # Normalize the key
+                    try:
+                        values[key] = float(value.strip())
+                    except ValueError:
+                        continue  # Skip invalid entries
 
-        right = round(left + width, 1)
-        bottom = round(top + height, 1)
-        page = values.get("page")
+            # Check for required keys and calculate right and bottom
+            try:
+                left = values["left"]
+                top = values["top"]
+                width = values["width"]
+                height = values["height"]
+            except KeyError:
+                continue  # Skip if required key not found
 
-        # Create and return the BoundingBox object
-        return BoundingBox(
-            left,
-            top,
-            right,
-            bottom,
-            int(page) if page is not None else None,
-        )
+            right = round(left + width, 1)
+            bottom = round(top + height, 1)
+            page = values.get("page")
+
+            # Create and add the BoundingBox object to the result
+            result.append(
+                BoundingBox(
+                    left,
+                    top,
+                    right,
+                    bottom,
+                    int(page) if page is not None else None,
+                )
+            )
+
+        return result

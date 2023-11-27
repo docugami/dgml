@@ -1,11 +1,12 @@
 <dg:chunk xmlns:dg="http://www.docugami.com/2021/dgml" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:docset="http://www.docugami.com/2021/dgml/TaqiTest20231103/NDA">
-    <dg:chunk structure="h1"> Main Heading with <docset:CompanyName>Acme Corp</docset:CompanyName> as mixed
-        content </dg:chunk>
+    <dg:chunk structure="h1"> Main Heading with <docset:CompanyName>Acme Corp</docset:CompanyName>
+        as mixed content </dg:chunk>
     <dg:chunk structure="div">
         <dg:chunk structure="h1">Sub-Heading</dg:chunk>
-        <dg:chunk structure="div"> Paragraph with sub-elements like <docset:Date>Jan 1, 2023</docset:Date> and <docset:SignatoryName>John
-            Doe</docset:SignatoryName> as mixed content. </dg:chunk>
+        <dg:chunk structure="div"> Paragraph with sub-elements like <docset:Date>Jan 1, 2023</docset:Date>
+            and <docset:SignatoryName>John
+                Doe</docset:SignatoryName> as mixed content. </dg:chunk>
     </dg:chunk>
     <docset:ConfidentialityObligations structure="div">
         <dg:chunk structure="div">
@@ -28,39 +29,40 @@
     </docset:ConfidentialityObligations>
     <docset:Footer structure="div">pg.1</docset:Footer>
     <docset:Appendix>
-        <xhtml:table structure="table">
+        <xhtml:table structure="table"
+            style="list-style-type: decimal; boundingBox:{left: 300.0; top: 936.0; width: 30.0; height: 1881.0; page: 1;}; boundingBox:{left: 300.0; top: 309.0; width: 30.0; height: 777.0; page: 2;}; ">
             <xhtml:tbody structure="tbody">
-                <xhtml:tr structure="tr">
-                    <xhtml:td structure="td">
+                <xhtml:tr structure=" tr">
+                    <xhtml:td structure=" td">
                         <dg:chunk>Fruit</dg:chunk>
                     </xhtml:td>
-                    <xhtml:td structure="td">Color</xhtml:td>
-                    <xhtml:td structure="td">Taste</xhtml:td>
+                    <xhtml:td structure=" td">Color</xhtml:td>
+                    <xhtml:td structure=" td">Taste</xhtml:td>
                 </xhtml:tr>
-                <xhtml:tr structure="tr">
-                    <xhtml:td structure="td">
+                <xhtml:tr structure=" tr">
+                    <xhtml:td structure=" td">
                         <docset:Fruit>Apple</docset:Fruit>
                     </xhtml:td>
-                    <xhtml:td structure="td">
+                    <xhtml:td structure=" td">
                         <docset:Color>Red</docset:Color>
                     </xhtml:td>
-                    <xhtml:td structure="td">
+                    <xhtml:td structure=" td">
                         <docset:Taste>
-                            <dg:chunk structure="p"><docset:Fruit>Apples</docset:Fruit> are mostly sweet,
-                                sometimes tart if not ripe.</dg:chunk>
+                            <dg:chunk structure=" p"><docset:Fruit>Apples</docset:Fruit> are mostly
+                                sweet, sometimes tart if not ripe.</dg:chunk>
                         </docset:Taste>
                     </xhtml:td>
                 </xhtml:tr>
-                <xhtml:tr structure="tr">
-                    <xhtml:td structure="td">
+                <xhtml:tr structure=" tr">
+                    <xhtml:td structure=" td">
                         <docset:Fruit>Mango</docset:Fruit>
                     </xhtml:td>
-                    <xhtml:td structure="td">
+                    <xhtml:td structure=" td">
                         <docset:Color>Yellow</docset:Color>
                     </xhtml:td>
-                    <xhtml:td structure="td">
+                    <xhtml:td structure=" td">
                         <docset:Taste>
-                            <dg:chunk structure="p">Super sweet when ripe.</dg:chunk>
+                            <dg:chunk structure=" p">Super sweet when ripe.</dg:chunk>
                         </docset:Taste>
                     </xhtml:td>
                 </xhtml:tr>

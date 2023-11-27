@@ -91,9 +91,9 @@ def get_chunks(
                     tag=clean_tag(node),
                     text=text,
                     xml=etree.tostring(node, encoding="unicode"),
-                    structure=node.attrib.get(STRUCTURE_KEY) or "",
+                    structure=(node.attrib.get(STRUCTURE_KEY) or "").strip(),
                     xpath=xpath(node),
-                    bbox=BoundingBox.from_style(node.attrib.get(STYLE_KEY)),
+                    bboxes=BoundingBox.from_style(node.attrib.get(STYLE_KEY)),
                 )
             )
         return chunks

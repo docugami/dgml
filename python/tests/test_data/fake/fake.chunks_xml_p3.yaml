@@ -99,6 +99,9 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Appendix/xhtml:table"
+  bboxes:
+    - bbox: 300.0 936.0 330.0 2817.0 1
+    - bbox: 300.0 309.0 330.0 1086.0 2
 - text: |
     /td> </tr> <tr> <td> <Fruit>Mango</Fruit> </td> <td> <Color>Yellow</Color> </td> <td> <Taste> Super sweet when ripe. </Taste> </td> </tr> </tbody> </table>
   parent_text: |
@@ -110,3 +113,6 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Appendix/xhtml:table"
+  bboxes:
+    - bbox: 300.0 936.0 330.0 2817.0 1
+    - bbox: 300.0 309.0 330.0 1086.0 2

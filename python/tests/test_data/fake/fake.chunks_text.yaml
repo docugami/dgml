@@ -45,3 +45,6 @@
   tag: "table"
   structure: "table"
   xpath: "/dg:chunk/docset:Appendix/xhtml:table"
+  bboxes:
+    - bbox: 300.0 936.0 330.0 2817.0 1
+    - bbox: 300.0 309.0 330.0 1086.0 2

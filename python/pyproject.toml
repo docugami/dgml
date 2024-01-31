@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dgml-utils"
-version = "0.3.0"
+version = "0.3.1"
 description = "Python utilities to work with the Docugami Markup Language (DGML) format."
 authors = ["Docugami <contact@docugami.com>"]
 license = "MIT"
@@ -19,6 +19,7 @@ black = "*"
 pytest = "*"
 pyyaml = "*"
 ruff = "*"
+typer = "*"
 lxml-stubs = "*"
 
 [tool.black]
@@ -36,6 +37,9 @@ include = ["dgml_utils", "tests"]
 ignore = ["**/node_modules", "**/__pycache__", ".venv"]
 reportMissingImports = true
 reportMissingTypeStubs = false
+
+[tool.poetry.scripts]
+dgml_utils = "dgml_utils.cli:app"
 
 [build-system]
 requires = ["poetry-core"]
